@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- New Game Screen Strings -->
+
+    <string name="app_name">GameMaker</string>
+    <string name="newGameIntroText">Enter a name for your new game, and select the type.</string>
+    <string name="gameName">Game Name</string>
+    <string name="newGameSaveButtonText">Save and Continue</string>
+
+    <!-- List Selector Screen Strings -->
+
+    <string name="btnTextAttributes">Attributes</string>
+    <string name="btnTextRaces">Races</string>
+    <string name="btnTextClasses">Classes</string>
+    <string name="btnTextSkills">Skills</string>
+    <string name="btnTextTraits">Traits</string>
+    <string name="btnTextFeatures">Features</string>
+    <string name="lblListSelectIntro">Select a Characteristic Group to work on</string>
+
+    <!-- Game Type Spinner Array -->
+
+    <string-array name="GameTypes">
+        <item>Fantasy</item>
+        <item>Sci-Fi</item>
+        <item>Military</item>
+        <item>Mixed</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
