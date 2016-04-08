@@ -37,8 +37,7 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+
      * @return A new instance of fragment FragRaceEditorControlBar.
      */
     // TODO: Rename and change types and number of parameters
@@ -67,9 +66,9 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
     }
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed(String listType, Integer index) {
         if (mListener != null) {
-            mListener.onRaceEditButtonClicked(uri);
+            mListener.onRaceEditButtonClicked(listType, index);
         }
     }
 
@@ -107,6 +106,6 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onRaceEditButtonClicked(Uri uri);
+        void onRaceEditButtonClicked(String listType, Integer index);
     }
 }
