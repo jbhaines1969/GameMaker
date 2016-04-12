@@ -91,13 +91,6 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
         return rootView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(String message) {
-        if (mListener != null) {
-            mListener.onListEditSelectInList(message);
-        }
-    }
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -181,17 +174,14 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
         }
     }
 
-
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        if (parent == lstItemList) {
-            if (listType == "Attributes") {
+        Integer index = position;
 
-            }
+        if (mListener != null) {
+            mListener.onListEditSelectInList(listType, index);
         }
-
     }
 
     public ArrayAdapter makeListAdapter() {
@@ -232,7 +222,6 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
         }
 
         return listAdapter;
-
     }
 
     /**
@@ -247,6 +236,6 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListEditSelectInList(String message);
+        void onListEditSelectInList(String message, Integer index);
     }
 }

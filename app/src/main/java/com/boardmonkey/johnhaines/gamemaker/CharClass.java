@@ -36,6 +36,10 @@ public class CharClass extends Characteristic {
 	public void setDescription(String desc) {
 		this.description = desc;
 	}
+
+	public String getDescription() {
+		return this.description;
+	}
 	
 	public String toString() {
 		return this.name;

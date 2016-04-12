@@ -1,12 +1,14 @@
 package com.boardmonkey.johnhaines.gamemaker;
 
+import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
@@ -20,14 +22,21 @@ import android.view.ViewGroup;
 public class FragRaceEditorControlBar extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private String listType;
+    private Integer index;
 
     private OnFragmentInteractionListener mListener;
+
+    private TextView lblItemName;
+    private Button btnEditRaceDescription;
+    private Button btnEditRaceMovement;
+    private Button btnEditAllowedClasses;
+    private Button btnEditRaceAutoFeatures;
+    private Button btnEditRaceKnownSkills;
+    private Button btnEditRaceAttributeMods;
 
     public FragRaceEditorControlBar() {
         // Required empty public constructor
@@ -41,10 +50,11 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
      * @return A new instance of fragment FragRaceEditorControlBar.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragRaceEditorControlBar newInstance(String race) {
+    public static FragRaceEditorControlBar newInstance(String listType, Integer index) {
         FragRaceEditorControlBar fragment = new FragRaceEditorControlBar();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, race);
+        args.putString("listType", listType);
+        args.putInt("index", index);
         fragment.setArguments(args);
         return fragment;
     }
@@ -53,27 +63,50 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            listType = getArguments().getString("listType");
+            index = getArguments().getInt("index");
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_race_editor_control_bar, container, false);
-    }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(String listType, Integer index) {
-        if (mListener != null) {
-            mListener.onRaceEditButtonClicked(listType, index);
-        }
+
+        // Inflate the layout for this fragment
+        View rootView = inflater.inflate(R.layout.fragment_race_editor_control_bar, container, false);
+
+        lblItemName = (TextView) rootView.findViewById(R.id.lblItemName);
+        lblItemName.setText(getItemName());
+        btnEditRaceDescription = (Button) rootView.findViewById(R.id.btnEditRaceDescription);
+        btnEditRaceDescription.setOnClickListener(this);
+        btnEditRaceMovement = (Button) rootView.findViewById(R.id.btnEditRaceMovement);
+        btnEditRaceMovement.setOnClickListener(this);
+        btnEditAllowedClasses = (Button) rootView.findViewById(R.id.btnEditAllowedClasses);
+        btnEditAllowedClasses.setOnClickListener(this);
+        btnEditRaceAutoFeatures = (Button) rootView.findViewById(R.id.btnEditRaceAutoFeatures);
+        btnEditRaceAutoFeatures.setOnClickListener(this);
+        btnEditRaceKnownSkills = (Button) rootView.findViewById(R.id.btnEditRaceKnownSkills);
+        btnEditRaceKnownSkills.setOnClickListener(this);
+        btnEditRaceAttributeMods = (Button) rootView.findViewById(R.id.btnEditRaceAttributeMods);
+        btnEditRaceAttributeMods.setOnClickListener(this);
+
+        return rootView;
     }
 
     @Override
     public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onAttach(Activity context) {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
@@ -91,7 +124,35 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        String message = "";
 
+        if (v == btnEditRaceDescription) {
+            message = "Description";
+        }
+        if (v == btnEditRaceMovement) {
+            message = "Movement";
+        }
+        if (v == btnEditAllowedClasses) {
+            message = "Classes";
+        }
+        if (v == btnEditRaceAutoFeatures) {
+            message = "Features";
+        }
+        if (v == btnEditRaceKnownSkills) {
+            message = "Skills";
+        }
+        if (v == btnEditRaceAttributeMods) {
+            message = "AttributeMods";
+        }
+
+        if (mListener != null) {
+            mListener.onRaceEditorButtonClicked(message, listType, index);
+        }
+    }
+
+    public String getItemName() {
+        String name = ((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).getName();
+        return name;
     }
 
     /**
@@ -106,6 +167,6 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onRaceEditButtonClicked(String listType, Integer index);
+        void onRaceEditorButtonClicked(String message, String listType, Integer index);
     }
 }

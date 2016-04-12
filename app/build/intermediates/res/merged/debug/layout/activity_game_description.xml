@@ -30,24 +30,23 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:hint="Enter Game Description"
+            android:hint="@string/GameDescriptionHint"
             android:id="@+id/txtGameDescription"
             android:layout_gravity="center_vertical|top"
             android:layout_weight=".8"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:background="#ffffff"
             android:capitalize="sentences"
             android:editable="true"
             android:gravity="left|top"
             android:inputType="textMultiLine|textCapSentences"
-            android:scrollIndicators="right"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="Save and Continue"
+            android:text="@string/gameDescriptionSaveButton"
             android:id="@+id/btnSaveGameDescription"
             android:layout_weight=".1" />
     </LinearLayout>

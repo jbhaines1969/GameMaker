@@ -25,7 +25,8 @@
         <activity android:name="com.boardmonkey.johnhaines.gamemaker.ActNewGame" />
         <activity android:name="com.boardmonkey.johnhaines.gamemaker.ActGameEdit" />
         <activity android:name="com.boardmonkey.johnhaines.gamemaker.ActGameDescription" />
-        <activity android:name="com.boardmonkey.johnhaines.gamemaker.ActCharEditorFragHolder" />
+        <activity android:name="com.boardmonkey.johnhaines.gamemaker.ActListEditorFragHolder" />
+        <activity android:name="com.boardmonkey.johnhaines.gamemaker.ActRaceEditorFragmentHolder" />
     </application>
 
 </manifest>

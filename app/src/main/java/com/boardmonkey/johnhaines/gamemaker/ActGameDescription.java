@@ -12,7 +12,6 @@ public class ActGameDescription extends Activity implements View.OnClickListener
 
     TextView lblGameName;
     EditText txtGameDescription;
-    Game currentGame;
     Button btnSave;
 
     @Override
@@ -21,10 +20,12 @@ public class ActGameDescription extends Activity implements View.OnClickListener
         setContentView(R.layout.activity_game_description);
 
         txtGameDescription = (EditText) findViewById(R.id.txtGameDescription);
+        txtGameDescription.setText(((GameApplication) this.getApplication()).getGame().getDescription());
         lblGameName = (TextView) findViewById(R.id.lblGameName);
         btnSave = (Button) findViewById(R.id.btnSaveGameDescription);
         btnSave.setOnClickListener(this);
         lblGameName.setText(((GameApplication) this.getApplication()).getGame().getName());
+
     }
 
 

@@ -16,7 +16,7 @@ public class ActGameEdit extends Activity {
     /* Button Actions */
 
     public void editCharacteristicsClicked(View view) {
-        Intent intent = new Intent(this, ActCharEditorFragHolder.class);
+        Intent intent = new Intent(this, ActListEditorFragHolder.class);
         startActivity(intent);
     }
 

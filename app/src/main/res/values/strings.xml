@@ -5,7 +5,9 @@
     <string name="app_name">GameMaker</string>
     <string name="newGameIntroText">Enter a name for your new game, and select the type.</string>
     <string name="gameName">Game Name</string>
-    <string name="newGameSaveButtonText">Save and Continue</string>
+    <string name="newGameSaveButtonText">Continue</string>
+    <string name="gameDescriptionSaveButton">Save and Continue</string>
+    <string name="SaveButton">Save</string>
 
     <!-- List Selector Screen Strings -->
 
@@ -29,5 +31,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="CharacteristicDescriptionHint">Enter Description</string>
+    <string name="GameDescriptionHint">Enter Game Description</string>
 
 </resources>

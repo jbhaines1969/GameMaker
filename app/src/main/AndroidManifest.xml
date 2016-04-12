@@ -19,7 +19,8 @@
         <activity android:name=".ActNewGame" />
         <activity android:name=".ActGameEdit" />
         <activity android:name=".ActGameDescription" />
-        <activity android:name=".ActCharEditorFragHolder"></activity>
+        <activity android:name=".ActListEditorFragHolder" />
+        <activity android:name=".ActRaceEditorFragmentHolder"></activity>
     </application>
 
 </manifest>

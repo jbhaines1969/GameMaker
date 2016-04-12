@@ -21,6 +21,10 @@ public class CharAttribute extends Characteristic {
 	public void setDescription(String desc) {
 		this.description = desc;
 	}
+
+	public String getDescription() {
+		return this.description;
+	}
 	
 	public CharAttribute(String name) {
 		this.name = name;

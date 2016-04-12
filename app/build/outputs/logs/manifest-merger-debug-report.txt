@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml
@@ -14,10 +14,15 @@ ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest
 		INJECTED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:5:5-23:19
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:5:5-24:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:9:9-41
 	android:supportsRtl
@@ -56,15 +61,26 @@ activity#com.boardmonkey.johnhaines.gamemaker.ActGameDescription
 ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:21:9-56
 	android:name
 		ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:21:19-53
-activity#com.boardmonkey.johnhaines.gamemaker.ActCharEditorFragHolder
-ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:22:9-70
+activity#com.boardmonkey.johnhaines.gamemaker.ActListEditorFragHolder
+ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:22:9-61
 	android:name
 		ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:22:19-58
+activity#com.boardmonkey.johnhaines.gamemaker.ActRaceEditorFragmentHolder
+ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:23:9-74
+	android:name
+		ADDED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml:23:19-62
 uses-sdk
 INJECTED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] /Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/johnhaines/Google Drive/GameMaker/app/src/main/AndroidManifest.xml

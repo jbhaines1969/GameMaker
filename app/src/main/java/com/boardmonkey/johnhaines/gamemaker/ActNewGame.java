@@ -43,9 +43,12 @@ public class ActNewGame extends Activity {
     public void saveNewGame (View view){
         // initiate and save New game with Name and Type and default values
 
-        Game currentGame = new Game(txtGameName.getText().toString(), spnGameType.getSelectedItem().toString());
+        //Game currentGame = new Game(txtGameName.getText().toString(), spnGameType.getSelectedItem().toString());
 
-        ((GameApplication) this.getApplication()).setGame(currentGame);
+        ((GameApplication) this.getApplication()).getGame().setName(txtGameName.getText().toString());
+
+        ((GameApplication) this.getApplication()).getGame().setDescription(spnGameType.getSelectedItem().toString());
+
 
         Intent intent = new Intent(this, ActGameDescription.class);
         startActivity(intent);

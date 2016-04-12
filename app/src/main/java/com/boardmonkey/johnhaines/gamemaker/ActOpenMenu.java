@@ -14,6 +14,8 @@ public class ActOpenMenu extends Activity {
     }
 
     public void newGameClicked (View view){
+        Game newGame = new Game("New Game", "No Type Selected");
+        ((GameApplication) this.getApplication()).setGame(newGame);
         Intent intent = new Intent(this, ActNewGame.class);
         startActivity(intent);
     }
