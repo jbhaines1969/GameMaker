@@ -51,6 +51,7 @@ public class FragCharacteristicDescription extends Fragment implements View.OnCl
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+
             listType = getArguments().getString("listType");
             index = getArguments().getInt("index");
         }
@@ -60,8 +61,9 @@ public class FragCharacteristicDescription extends Fragment implements View.OnCl
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        listType = this.getArguments().getString("listType");
-        index = this.getArguments().getInt("index");
+        listType = getArguments().getString("listType");
+        index = getArguments().getInt("index");
+
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_characteristic_description, container, false);
 
@@ -99,23 +101,23 @@ public class FragCharacteristicDescription extends Fragment implements View.OnCl
             String description = txtCharacteristicDescription.getText().toString();
             String name = txtCharacteristicName.getText().toString();
 
-            if (listType == "Attributes") {
+            if (listType.equals("Attributes")) {
                 ((GameApplication) getActivity().getApplication()).getGame().getAttributes().get(index).setName(name);
                 ((GameApplication) getActivity().getApplication()).getGame().getAttributes().get(index).setDescription(description);
             }
-            if (listType == "Races") {
+            if (listType.equals("Races")) {
                 ((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).setName(name);
                 ((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).setDescription(description);
             }
-            if (listType == "Classes") {
+            if (listType.equals("Classes")) {
                 ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setName(name);
                 ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setDescription(description);
             }
-            if (listType == "Skills") {
+            if (listType.equals("Skills")) {
                 ((GameApplication) getActivity().getApplication()).getGame().getSkills().get(index).setName(name);
                 ((GameApplication) getActivity().getApplication()).getGame().getSkills().get(index).setDescription(description);
             }
-            if (listType == "Traits") {
+            if (listType.equals("Traits")) {
                 ((GameApplication) getActivity().getApplication()).getGame().getTraits().get(index).setName(name);
                 ((GameApplication) getActivity().getApplication()).getGame().getTraits().get(index).setDescription(description);
             }
@@ -130,22 +132,22 @@ public class FragCharacteristicDescription extends Fragment implements View.OnCl
 
         String name = "";
 
-        if (listType == "Attributes") {
+        if (listType.equals("Attributes")) {
             name = ((GameApplication) getActivity().getApplication()).getGame().getAttributes().get(index).getName();
         }
-        if (listType == "Races") {
+        if (listType.equals("Races")) {
             name = ((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).getName();
         }
-        if (listType == "Classes") {
+        if (listType.equals("Classes")) {
             name = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getName();
         }
-        if (listType == "Skills") {
+        if (listType.equals("Skills")) {
             name = ((GameApplication) getActivity().getApplication()).getGame().getSkills().get(index).getName();
         }
-        if (listType == "Traits") {
+        if (listType.equals("Traits")) {
             name = ((GameApplication) getActivity().getApplication()).getGame().getTraits().get(index).getName();
         }
-        if (listType == "Features") {
+        if (listType.equals("Features")) {
             name = ((GameApplication) getActivity().getApplication()).getGame().getFeatures().get(index).getName();
         }
 
@@ -157,22 +159,22 @@ public class FragCharacteristicDescription extends Fragment implements View.OnCl
 
         String description = "";
 
-        if (listType == "Attributes") {
+        if (listType.equals("Attributes")) {
             description = ((GameApplication) getActivity().getApplication()).getGame().getAttributes().get(index).getDescription();
         }
-        if (listType == "Races") {
+        if (listType.equals("Races")) {
             description = ((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).getDescription();
         }
-        if (listType == "Classes") {
+        if (listType.equals("Classes")) {
             description = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getDescription();
         }
-        if (listType == "Skills") {
+        if (listType.equals("Skills")) {
             description = ((GameApplication) getActivity().getApplication()).getGame().getSkills().get(index).getDescription();
         }
-        if (listType == "Traits") {
+        if (listType.equals("Traits")) {
             description = ((GameApplication) getActivity().getApplication()).getGame().getTraits().get(index).getDescription();
         }
-        if (listType == "Features") {
+        if (listType.equals("Features")) {
             description = ((GameApplication) getActivity().getApplication()).getGame().getFeatures().get(index).getDescription();
         }
 

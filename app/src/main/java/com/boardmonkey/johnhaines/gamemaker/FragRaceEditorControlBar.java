@@ -63,21 +63,19 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            listType = getArguments().getString("listType");
             index = getArguments().getInt("index");
+            listType = getArguments().getString("listType");
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_race_editor_control_bar, container, false);
 
         lblItemName = (TextView) rootView.findViewById(R.id.lblItemName);
-        lblItemName.setText(getItemName());
+        lblItemName.setText(((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).getName());
         btnEditRaceDescription = (Button) rootView.findViewById(R.id.btnEditRaceDescription);
         btnEditRaceDescription.setOnClickListener(this);
         btnEditRaceMovement = (Button) rootView.findViewById(R.id.btnEditRaceMovement);
@@ -146,13 +144,8 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
         }
 
         if (mListener != null) {
-            mListener.onRaceEditorButtonClicked(message, listType, index);
+            mListener.onRaceEditorButtonClicked(message, index);
         }
-    }
-
-    public String getItemName() {
-        String name = ((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).getName();
-        return name;
     }
 
     /**
@@ -167,6 +160,6 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onRaceEditorButtonClicked(String message, String listType, Integer index);
+        void onRaceEditorButtonClicked(String message, Integer index);
     }
 }

@@ -33,6 +33,9 @@ public class FragListSelector extends Fragment implements View.OnClickListener{
     Button btnAttributes;
     Button btnRaces;
     Button btnClasses;
+    Button btnSkills;
+    Button btnTraits;
+    Button btnFeatures;
 
 
     public FragListSelector() {
@@ -76,13 +79,13 @@ public class FragListSelector extends Fragment implements View.OnClickListener{
         btnAttributes.setOnClickListener(this);
         btnRaces = (Button) rootView.findViewById(R.id.btnRaces);
         btnRaces.setOnClickListener(this);
-        Button btnClasses = (Button) rootView.findViewById(R.id.btnClasses);
+        btnClasses = (Button) rootView.findViewById(R.id.btnClasses);
         btnClasses.setOnClickListener(this);
-        Button btnSkills = (Button) rootView.findViewById(R.id.btnSkills);
+        btnSkills = (Button) rootView.findViewById(R.id.btnSkills);
         btnSkills.setOnClickListener(this);
-        Button btnTraits = (Button) rootView.findViewById(R.id.btnTraits);
+        btnTraits = (Button) rootView.findViewById(R.id.btnTraits);
         btnTraits.setOnClickListener(this);
-        Button btnFeatures = (Button) rootView.findViewById(R.id.btnFeatures);
+        btnFeatures = (Button) rootView.findViewById(R.id.btnFeatures);
         btnFeatures.setOnClickListener(this);
 
         return rootView;

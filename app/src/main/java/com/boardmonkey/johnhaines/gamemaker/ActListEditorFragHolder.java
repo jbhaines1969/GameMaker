@@ -36,13 +36,13 @@ public class ActListEditorFragHolder extends Activity implements FragListSelecto
     @Override
     public void onListEditSelectInList(String listType, Integer index) {
 
-
-
         if (listType == "Races") {
 
             Intent intent = new Intent(this, ActRaceEditorFragmentHolder.class);
-            intent.putExtra("listType", listType);
-            intent.putExtra("index", index);
+            Bundle bundle = new Bundle();
+            bundle.putString("listType", listType);
+            bundle.putInt("index", index);
+            intent.putExtras(bundle);
             startActivity(intent);
 
             //FragRaceEditorControlBar fragRE = new FragRaceEditorControlBar();

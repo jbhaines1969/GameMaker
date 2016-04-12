@@ -47,7 +47,7 @@ public class ActNewGame extends Activity {
 
         ((GameApplication) this.getApplication()).getGame().setName(txtGameName.getText().toString());
 
-        ((GameApplication) this.getApplication()).getGame().setDescription(spnGameType.getSelectedItem().toString());
+        ((GameApplication) this.getApplication()).getGame().setType(spnGameType.getSelectedItem().toString());
 
 
         Intent intent = new Intent(this, ActGameDescription.class);
