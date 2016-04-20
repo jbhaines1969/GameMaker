@@ -86,9 +86,16 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
         txtAddItem = (EditText) rootView.findViewById(R.id.txtAddItem);
         listAdapter = makeListAdapter();
         lstItemList.setAdapter(listAdapter);
-
+        listAdapter.notifyDataSetChanged();
 
         return rootView;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        ((GameApplication) getActivity().getApplication()).getGame().sortList(listType);
+        listAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -138,6 +145,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
 
                 String newItem = txtAddItem.getText().toString();
 
+                // This section is for Characteristic Creation
+
                 if (listType == "Attributes") {
                     CharAttribute charAt = new CharAttribute(newItem);
                     ((GameApplication) getActivity().getApplication()).getGame().addAttribute(charAt);
@@ -169,6 +178,11 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
                     listAdapter.notifyDataSetChanged();
                 }
 
+                // This section if for Race Editing
+
+
+                // This section is for Class Editing
+
                 txtAddItem.setText("");
             }
         }
@@ -189,6 +203,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemSelected
         ArrayList<String> emptyList = new ArrayList<String>();
 
         ArrayAdapter listAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, emptyList);
+
+        ((GameApplication) getActivity().getApplication()).getGame().sortList(listType);
 
         if (listType == "Attributes") {
             listAdapter = new ArrayAdapter<>(
