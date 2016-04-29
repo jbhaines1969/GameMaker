@@ -231,10 +231,14 @@
     <string name="btnTextTraits">Traits</string>
     <string name="gameDescriptionSaveButton">Save and Continue</string>
     <string name="gameName">Game Name</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lblFly">Flying</string>
     <string name="lblListSelectIntro">Select a Characteristic Group to work on</string>
+    <string name="lblRun">Running</string>
+    <string name="lblSwim">Swimming</string>
+    <string name="lblWalk">Walking</string>
     <string name="newGameIntroText">Enter a name for your new game, and select the type.</string>
     <string name="newGameSaveButtonText">Continue</string>
+    <string name="race_movement_intro_text">Enter the base movement speed for each Movement type.</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

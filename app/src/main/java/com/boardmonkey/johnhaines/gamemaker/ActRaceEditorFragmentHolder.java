@@ -45,11 +45,17 @@ public class ActRaceEditorFragmentHolder extends Activity implements FragRaceEdi
         Bundle bundle = new Bundle();
         bundle.putInt("index", index);
 
-        if (message == "Description") {
+        if (message.equals("Description")) {
             bundle.putString("listType", listType);
             FragCharacteristicDescription fragCD = new FragCharacteristicDescription();
             fragCD.setArguments(bundle);
             getFragmentManager().beginTransaction().replace(R.id.race_fragment_container,fragCD).addToBackStack(null).commit();
+        }
+
+        if (message.equals("Movement")) {
+            FragRaceMovementEditor fragME = new FragRaceMovementEditor();
+            fragME.setArguments(bundle);
+            getFragmentManager().beginTransaction().replace(R.id.race_fragment_container, fragME).addToBackStack(null).commit();
         }
     }
 }

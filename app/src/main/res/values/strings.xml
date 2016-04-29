@@ -29,9 +29,19 @@
     </string-array>
 
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Description Screen Strings -->
+
     <string name="CharacteristicDescriptionHint">Enter Description</string>
     <string name="GameDescriptionHint">Enter Game Description</string>
+
+    <!-- Race Movement Screen Strings -->
+
+    <string name="race_movement_intro_text">Enter the base movement speed for each Movement type.</string>
+    <string name="lblWalk">Walking</string>
+    <string name="lblRun">Running</string>
+    <string name="lblSwim">Swimming</string>
+    <string name="lblFly">Flying</string>
+
+
 
 </resources>
