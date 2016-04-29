@@ -125,6 +125,8 @@ public class FragCharacteristicDescription extends Fragment implements View.OnCl
                 ((GameApplication) getActivity().getApplication()).getGame().getFeatures().get(index).setName(name);
                 ((GameApplication) getActivity().getApplication()).getGame().getFeatures().get(index).setDescription(description);
             }
+
+            getFragmentManager().popBackStack();
         }
     }
 

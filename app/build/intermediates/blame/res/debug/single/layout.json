@@ -64,12 +64,12 @@
         "source": "/Users/johnhaines/Google Drive/GameMaker/app/src/main/res/layout/activity_new_game.xml"
     },
     {
-        "merged": "/Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_activity_chooser_view_list_item.xml"
-    },
-    {
         "merged": "/Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/res/merged/debug/layout/activity_game_description.xml",
         "source": "/Users/johnhaines/Google Drive/GameMaker/app/src/main/res/layout/activity_game_description.xml"
+    },
+    {
+        "merged": "/Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "/Users/johnhaines/Google Drive/GameMaker/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",

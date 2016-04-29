@@ -44,10 +44,6 @@ public class ActListEditorFragHolder extends Activity implements FragListSelecto
             bundle.putInt("index", index);
             intent.putExtras(bundle);
             startActivity(intent);
-
-            //FragRaceEditorControlBar fragRE = new FragRaceEditorControlBar();
-            //fragRE.setArguments(bundle);
-            //getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragRE).addToBackStack(null).commit();
         }
     }
 }
