@@ -31,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/attributes_for_health"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textColor="@android:color/black" />
 
             <Space
                 android:layout_width="match_parent"
@@ -61,7 +62,8 @@
                 android:layout_weight=".2"
                 android:gravity="center"
                 android:text="@string/input_modifiers"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textColor="@android:color/black" />
 
             <Space
                 android:layout_width="match_parent"
@@ -80,7 +82,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="30sp"
                     android:paddingRight="10dp"
-                    android:text="@string/health_attribute_multiplier" />
+                    android:text="@string/health_attribute_multiplier"
+                    android:textColor="@android:color/black" />
 
                 <EditText
                     android:id="@+id/edtHealthMultiplier"
@@ -105,7 +108,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="30sp"
                     android:paddingRight="10dp"
-                    android:text="@string/attribute_additive" />
+                    android:text="@string/attribute_additive"
+                    android:textColor="@android:color/black" />
 
                 <EditText
                     android:id="@+id/edtHealthAdditive"
