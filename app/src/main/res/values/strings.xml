@@ -47,10 +47,10 @@
 
     </string-array>
 
-    <string-array name="HitTypeCreationMethods">
+    <string-array name="HealthCreationMethods">
         <item>Dice Roll</item>
         <item>Attribute</item>
-        <item>Modified Attribute</item>
+        <item>Accessory</item>
     </string-array>
 
 
@@ -136,8 +136,8 @@
     <string name="edit_game">Edit Game</string>
     <string name="delete_game">Delete Game</string>
     <string name="share_game">Share Game</string>
-    <string name="select_hit_type_method">Select Hit Type Method</string>
-    <string name="hit_type_creation">Hit Type Creation</string>
+    <string name="select_health_creation_method">Select Health Type Method</string>
+    <string name="health_type_creation">Health Type Creation</string>
     <string name="modified_by_characteristics">Modified by Attributes</string>
     <string name="health_creation_modified_text">Using this method, the characters health/damage points will be determined by equipment. Check Modified if this score will be modified by Attribute Scores</string>
     <string name="attributes_for_health">Select the Attributes which will be added to Health Points</string>

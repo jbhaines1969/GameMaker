@@ -20,7 +20,6 @@
         <item>Dice Roll</item>
         <item>Attribute</item>
         <item>Modified Attribute</item>
-        <item>Accessory</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -242,10 +241,12 @@
     <string name="allowed_classes">Allowed Classes</string>
     <string name="app_name">GameMaker</string>
     <string name="assign_points">Points to Assign</string>
+    <string name="attribute_additive">Attribute Additive</string>
     <string name="attribute_creation">Attribute Creation</string>
     <string name="attribute_modifiers">Attribute Modifiers</string>
     <string name="attribute_requirements">Attribute Requirements</string>
     <string name="attributes">Attributes</string>
+    <string name="attributes_for_health">Select the Attributes which will be added to Health Points</string>
     <string name="base_attribute_points">Base Attribute Points:\u0020</string>
     <string name="base_dice_points">Base + Dice + Points</string>
     <string name="base_plus_dice">Base + Dice</string>
@@ -285,11 +286,13 @@
     <string name="gameDescriptionSaveButton">Save and Continue</string>
     <string name="gameName">Game Name</string>
     <string name="game_description">Game Description</string>
+    <string name="health_attribute_multiplier">Attribute Multiplier</string>
+    <string name="health_creation_modified_text">Using this method, the characters health/damage points will be determined by equipment. Check Modified if this score will be modified by Attribute Scores</string>
     <string name="health_type_creation">Health Type Creation</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hit_type_creation">Hit Type Creation</string>
     <string name="how_many_rolls">How many Rolls?</string>
     <string name="how_many_sides_per_dice">How many sides per dice?</string>
+    <string name="input_modifiers">Input Modifiers</string>
     <string name="instructions">Instructions</string>
     <string name="known_skills">Known Skills</string>
     <string name="lblFly">Flying</string>
@@ -307,6 +310,7 @@
     <string name="maximum_points">Maximum Points</string>
     <string name="minimum_attributes">Minimum Attributes</string>
     <string name="minimum_points">Minimum Points</string>
+    <string name="modified_by_characteristics">Modified by Attributes</string>
     <string name="movement">Movement</string>
     <string name="name">Name</string>
     <string name="newGameIntroText">Enter a name for your game, and select the type.</string>
@@ -320,8 +324,7 @@
     <string name="races">Races</string>
     <string name="racial_traits">Racial Traits</string>
     <string name="select_attribute_creation_method">Select Attribute Creation Method</string>
-    <string name="select_health_creation_method">Select Health Creation Method</string>
-    <string name="select_hit_type_method">Select Hit Type Method</string>
+    <string name="select_health_creation_method">Select Health Type Method</string>
     <string name="share_game">Share Game</string>
     <string name="skill_points">Skill Points</string>
     <string name="skills">Skills</string>

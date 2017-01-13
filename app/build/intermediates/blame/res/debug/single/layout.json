@@ -40,6 +40,10 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
     },
     {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_dice_roll.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_dice_roll.xml"
+    },
+    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_info_text.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_info_text.xml"
     },
@@ -84,6 +88,10 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
     },
     {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_modified_attribute.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_modified_attribute.xml"
+    },
+    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
     },
@@ -94,6 +102,10 @@
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_accessory.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_accessory.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
@@ -186,6 +198,10 @@
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_game_edit.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_game_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_attribute.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_attribute.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_movement.xml",

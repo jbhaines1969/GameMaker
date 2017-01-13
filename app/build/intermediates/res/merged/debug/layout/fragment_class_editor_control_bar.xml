@@ -25,7 +25,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -64,7 +64,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -77,7 +77,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -90,7 +90,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -103,7 +103,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -116,7 +116,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"/>
+            android:layout_weight=".2" />
 
         <Button
             android:layout_width="match_parent"
@@ -127,7 +127,6 @@
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
-
 
 
 </FrameLayout>
