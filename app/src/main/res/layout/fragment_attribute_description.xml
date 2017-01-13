@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.johnhaines.boardmonkey.gamemaker.FragAttributeDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/lblCharacteristicName"
+                android:textColor="#ffffff"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/txtCharacteristicName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:inputType="textCapWords"
+                android:selectAllOnFocus="true" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtCharacteristicDescription"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical|top"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight=".8"
+            android:background="#ffffff"
+            android:capitalize="sentences"
+            android:editable="true"
+            android:gravity="left|top"
+            android:hint="@string/CharacteristicDescriptionHint"
+            android:inputType="textMultiLine|textCapSentences"
+            android:textSize="20sp"
+            android:textIsSelectable="true"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/btnSaveDescription"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/SaveButton"
+            android:layout_weight=".1" />
+    </LinearLayout>
+</FrameLayout>

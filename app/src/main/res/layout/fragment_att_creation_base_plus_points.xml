@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.johnhaines.boardmonkey.gamemaker.FragAttCreationBasePlusPoints">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".9">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/base_points"
+                    android:textColor="#000000"
+                    android:textSize="36sp"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtBasePointsBasePlusPoints"
+                    android:background="#ffffff"
+                    android:textColor="#000000"
+                    android:textSize="36sp"
+                    android:selectAllOnFocus="true"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/assign_points"
+                    android:textColor="#000000"
+                    android:textSize="36sp"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtPointsBasePlusPoints"
+                    android:background="#ffffff"
+                    android:textColor="#000000"
+                    android:textSize="36sp"
+                    android:selectAllOnFocus="true"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight=".15">
+
+            <Button
+                android:id="@+id/btnSaveBasePlusPoints"
+                android:layout_width="500dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/SaveButton"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,212 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.johnhaines.boardmonkey.gamemaker.FragClassEditorLevelUpPoints">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/class_text"
+            android:id="@+id/lblClassNameLevelUpScreen"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions"
+            android:id="@+id/btnLevelUpPointsInstructions"
+            android:layout_gravity="center_horizontal" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal">
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/levels"
+                    android:id="@+id/lblLevelUpLevels"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/points"
+                    android:id="@+id/lblLevelUpPoints"
+                    android:textColor="#000000" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/attributes"
+                    android:id="@+id/lblLevelUpAttributes"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpAttributesLevels"
+                    android:selectAllOnFocus="true" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpAttributesPoints"
+                    android:selectAllOnFocus="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/skills"
+                    android:id="@+id/lblLevelUpSkills"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpSkillLevels"
+                    android:selectAllOnFocus="true" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpSkillPoints"
+                    android:selectAllOnFocus="true" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/traits"
+                    android:id="@+id/lblLevelUpTraits"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpTraitLevels"
+                    android:selectAllOnFocus="true" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpTraitPoints"
+                    android:selectAllOnFocus="true" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/features"
+                    android:id="@+id/lblLevelUpFeatures"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpFeaturesLevels"
+                    android:selectAllOnFocus="true" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:id="@+id/edtLevelUpFeaturesPoints"
+                    android:selectAllOnFocus="true" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:text="@string/SaveButton"
+            android:textSize="30sp"
+            android:id="@+id/btnSaveLevelUpPoints" />
+
+    </LinearLayout>
+
+</FrameLayout>
