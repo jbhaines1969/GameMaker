@@ -46,9 +46,9 @@ public class ActHealthCreationFragmentHolder extends Activity {
 
                 Fragment fragHealthCreationEditor;
 
-                /*switch (position) {
+                switch (position) {
                     case 0:
-                        fragHealthCreationEditor = new FragAttCreationDiceOnly();
+                        fragHealthCreationEditor = new FragHealthCreationDiceRoll();
                         getFragmentManager().beginTransaction().
                                 replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
                                 commit();
@@ -56,7 +56,7 @@ public class ActHealthCreationFragmentHolder extends Activity {
                         break;
 
                     case 1:
-                        fragHealthCreationEditor = new FragAttCreationDiceOnly();
+                        fragHealthCreationEditor = new FragHealthCreationAttributeBased();
                         getFragmentManager().beginTransaction().
                                 replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
                                 commit();
@@ -64,39 +64,7 @@ public class ActHealthCreationFragmentHolder extends Activity {
                         break;
 
                     case 2:
-                        fragHealthCreationEditor = new FragAttCreationPointAssignment();
-                        getFragmentManager().beginTransaction().
-                                replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
-                                commit();
-
-                        break;
-
-                    case 3:
-                        fragHealthCreationEditor = new FragAttCreationBasePoints();
-                        getFragmentManager().beginTransaction().
-                                replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
-                                commit();
-
-                        break;
-
-                    case 4:
-                        fragHealthCreationEditor = new FragAttCreationBasePlusDice();
-                        getFragmentManager().beginTransaction().
-                                replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
-                                commit();
-
-                        break;
-
-                    case 5:
-                        fragHealthCreationEditor = new FragAttCreationDicePlusPoints();
-                        getFragmentManager().beginTransaction().
-                                replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
-                                commit();
-
-                        break;
-
-                    case 6:
-                        fragHealthCreationEditor = new FragAttCreationBasePlusPoints();
+                        fragHealthCreationEditor = new FragHealthCreationAccessory();
                         getFragmentManager().beginTransaction().
                                 replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
                                 commit();
@@ -106,7 +74,7 @@ public class ActHealthCreationFragmentHolder extends Activity {
                     default:
 
                         break;
-                }*/
+                }
             }
 
             @Override

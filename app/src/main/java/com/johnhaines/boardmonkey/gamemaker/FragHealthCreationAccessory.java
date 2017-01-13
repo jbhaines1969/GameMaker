@@ -1,19 +1,17 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
-
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ListView;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragHealthCreationAccessory extends Fragment {
+public class FragHealthCreationAccessory extends Fragment implements View.OnClickListener {
 
     private CheckBox chkModifiedByAtts;
     private ListView lstAttList;
@@ -34,4 +32,16 @@ public class FragHealthCreationAccessory extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onClick(View view) {
+        if (view == chkModifiedByAtts) {
+            if (chkModifiedByAtts.isChecked()) {
+                lstAttList.setVisibility(View.INVISIBLE);
+                lstAttList.setClickable(false);
+            } else {
+                lstAttList.setVisibility(View.VISIBLE);
+                lstAttList.setClickable(true);
+            }
+        }
+    }
 }
