@@ -3,12 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_bordertest_4"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/vine_background_1000_1667"
     tools:context=".ActOpenMenu">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container_middle"
+        android:clickable="false" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -17,11 +23,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <Space
             android:layout_width="0dp"
             android:layout_weight=".25"
-            android:layout_height="match_parent"></LinearLayout>
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -45,9 +50,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="New Game"
+                    android:text="@string/new_game"
                     android:id="@+id/btnNewGame"
-                    android:onClick="newGameClicked"/>
+                    android:onClick="newGameClicked"
+                    android:textSize="36sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -59,9 +65,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="Edit Game"
+                    android:text="@string/edit_game"
                     android:id="@+id/btnEditGame"
-                    android:onClick="editGameClicked"/>
+                    android:onClick="editGameClicked"
+                    android:textSize="36sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -73,9 +80,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="Delete Game"
+                    android:text="@string/delete_game"
                     android:id="@+id/btnDeleteGame"
-                    android:onClick="deleteGameClicked"/>
+                    android:onClick="deleteGameClicked"
+                    android:textSize="36sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -87,9 +95,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="Share Game"
+                    android:text="@string/share_game"
                     android:id="@+id/btnShareGame"
-                    android:onClick="shareGameClicked"/>
+                    android:onClick="shareGameClicked"
+                    android:textSize="36sp" />
 
             </LinearLayout>
 
@@ -99,12 +108,10 @@
                 android:layout_weight=".15"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
+        <Space
             android:layout_width="0dp"
             android:layout_weight=".25"
-            android:layout_height="match_parent"></LinearLayout>
-
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 </RelativeLayout>

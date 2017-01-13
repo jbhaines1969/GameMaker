@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.boardmonkey.johnhaines.gamemaker">
+    package="com.johnhaines.boardmonkey.gamemaker">
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:requiresSmallestWidthDp="600"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".GameApplication"
@@ -16,11 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActNewGame" />
+        <activity android:name=".ActGameName" />
         <activity android:name=".ActGameEdit" />
-        <activity android:name=".ActGameDescription" />
-        <activity android:name=".ActListEditorFragHolder" />
-        <activity android:name=".ActRaceEditorFragmentHolder"></activity>
+        <activity android:name=".ActCharacteristicEditorFragHolder" />
+        <activity android:name=".ActAttributeCreationFragmentHolder" />
+        <activity android:name=".ActCreationMethods"></activity>
+        <activity android:name=".ActHealthCreationFragmentHolder"></activity>
     </application>
 
 </manifest>

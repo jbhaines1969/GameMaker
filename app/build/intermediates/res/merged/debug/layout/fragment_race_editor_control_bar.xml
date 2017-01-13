@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragRaceEditorControlBar"
-    android:background="@drawable/bg_bordertest_4">
+    tools:context=".FragRaceEditorControlBar">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,7 +17,7 @@
             android:layout_weight=".5"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
-            android:id="@+id/lblItemName"
+            android:id="@+id/lblRaceName"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="#000000" />
@@ -32,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Description"
+            android:text="@string/description"
             android:id="@+id/btnEditRaceDescription"
             android:layout_gravity="center_horizontal" />
 
@@ -45,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Movement"
+            android:text="@string/movement"
             android:id="@+id/btnEditRaceMovement"
             android:layout_gravity="center_horizontal" />
 
@@ -58,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Allowed Classes"
+            android:text="@string/allowed_classes"
             android:id="@+id/btnEditAllowedClasses"
             android:layout_gravity="center_horizontal" />
 
@@ -71,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Features Possessed"
+            android:text="@string/features_possessed"
             android:id="@+id/btnEditRaceAutoFeatures"
             android:layout_gravity="center_horizontal" />
 
@@ -84,7 +83,20 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Known Skills"
+            android:text="@string/racial_traits"
+            android:id="@+id/btnEditRaceTraits"
+            android:layout_gravity="center_horizontal" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/known_skills"
             android:id="@+id/btnEditRaceKnownSkills"
             android:layout_gravity="center_horizontal" />
 
@@ -97,8 +109,21 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Attribute Modifiers"
+            android:text="@string/attribute_modifiers"
             android:id="@+id/btnEditRaceAttributeMods"
+            android:layout_gravity="center_horizontal" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/attribute_requirements"
+            android:id="@+id/btnEditRaceAttributeRequirements"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>

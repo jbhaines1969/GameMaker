@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActCharacteristicEditorFragHolder">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/lblAttributeModsRaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRace"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_weight=".5"
+                android:layout_gravity="left"
+                android:id="@+id/lblAttribute"
+                android:textColor="#000000"
+                android:text="@string/attributes" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="right"
+                android:id="@+id/lblMinMax"
+                android:text="Min/Max"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:choiceMode="multipleChoice"
+            android:id="@+id/lstAttributeMods"
+            android:layout_gravity="top|left|center_horizontal"
+            android:layout_weight=".9" />
+
+        <Button
+            android:id="@+id/btnSaveAttributeMods"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/SaveButton"
+            android:textSize="30sp" />
+    </LinearLayout>
+</FrameLayout>

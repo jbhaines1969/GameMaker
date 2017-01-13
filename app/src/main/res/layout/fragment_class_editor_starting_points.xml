@@ -1,0 +1,117 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragClassEditorStartingPoints">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/lblStartingPointsClassName"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/class_base_points_instructions"
+            android:id="@+id/lblClassStartingPointsInstructions"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skills"
+                android:id="@+id/lblStartingSkills"
+                android:textSize="25sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/edtStartingSkills"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:selectAllOnFocus="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/traits"
+                android:id="@+id/lblStartingTraits"
+                android:textSize="25sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/edtStartingTraits"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:selectAllOnFocus="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/features"
+                android:id="@+id/lblStartingFeatures"
+                android:textSize="25sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/edtStartingFeatures"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:selectAllOnFocus="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveStartingPoints"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/SaveButton"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+</FrameLayout>

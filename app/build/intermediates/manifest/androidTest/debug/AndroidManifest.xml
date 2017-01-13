@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.boardmonkey.johnhaines.gamemaker.test">
+    package="com.johnhaines.boardmonkey.gamemaker.test">
 
-    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
 
     <application>
         <uses-library android:name="android.test.runner" />
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.boardmonkey.johnhaines.gamemaker"
+                     android:targetPackage="com.johnhaines.boardmonkey.gamemaker"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.boardmonkey.johnhaines.gamemaker"/>
+                     android:label="Tests for com.johnhaines.boardmonkey.gamemaker"/>
 </manifest>
