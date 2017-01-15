@@ -19,7 +19,7 @@
     <string-array name="HealthCreationMethods">
         <item>Dice Roll</item>
         <item>Attribute</item>
-        <item>Modified Attribute</item>
+        <item>Accessory</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -288,6 +288,7 @@
     <string name="game_description">Game Description</string>
     <string name="health_attribute_multiplier">Attribute Multiplier</string>
     <string name="health_creation_modified_text">Using this method, the characters health/damage points will be determined by equipment. Check Modified if this score will be modified by Attribute Scores</string>
+    <string name="health_dice_sides">Health Dice Sides</string>
     <string name="health_type_creation">Health Type Creation</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="how_many_rolls">How many Rolls?</string>

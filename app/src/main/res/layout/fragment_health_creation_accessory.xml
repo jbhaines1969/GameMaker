@@ -7,58 +7,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
 
         <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".1" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".05" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".8"
+        <CheckBox
+            android:id="@+id/chkModifiedByChar"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
             android:layout_gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/health_creation_modified_text"
-                android:textColor="@android:color/black"
-                android:gravity="center"
-                android:textSize="30sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="41dp" />
-
-            <CheckBox
-                android:text="@string/modified_by_characteristics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/chkModifiedByChar"
-                android:textSize="30sp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@android:color/black" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="41dp" />
-
-            <ListView
-                android:id="@+id/lstHealthCreationAttList"
-                android:layout_width="640dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal" />
-
-        </LinearLayout>
+            android:text="@string/modified_by_characteristics"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight=".1" />
+
+        <ListView
+            android:id="@+id/lstHealthCreationAccAttList"
+            android:layout_width="440dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:choiceMode="multipleChoice"
+            android:layout_gravity="center_horizontal" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1" />
+
+        <Button
+            android:id="@+id/btnSaveHealthAccessory"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:text="@string/SaveButton"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp" />
 
     </LinearLayout>
+
 </FrameLayout>

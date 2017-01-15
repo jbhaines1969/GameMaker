@@ -2,12 +2,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context="com.johnhaines.boardmonkey.gamemaker.FragHealthCreationDiceRoll">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="Use the Class Editor section to set health point dice"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:text="@string/SaveButton"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:id="@+id/btnSaveHealthDice"
+        android:layout_gravity="bottom|center_horizontal" />
 
 </FrameLayout>

@@ -16,7 +16,11 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/lblStartingPointsClassName"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:text="@string/class_name"
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,8 +42,32 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/health_dice_sides"
+                android:textSize="25sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/edtHealthDice"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:selectAllOnFocus="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/skills"
-                android:id="@+id/lblStartingSkills"
                 android:textSize="25sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />

@@ -48,7 +48,7 @@ public class FragListEditorKnownSkills extends Fragment implements View.OnClickL
         View rootView = inflater.inflate(R.layout.fragment_list_editor_known_skills, container, false);
 
         lblKnownSkillsItemName = (TextView) rootView.findViewById(R.id.lblKnownSkillsItemName);
-        lblKnownSkillsItemName.setText("Known Skills");
+        lblKnownSkillsItemName.setText(getResources().getString(R.string.known_skills));
         lstKnownSkills = (ListView) rootView.findViewById(R.id.lstKnownSkills);
         btnSaveKnownSkills = (Button) rootView.findViewById(R.id.btnSaveKnownSkills);
         btnSaveKnownSkills.setOnClickListener(this);

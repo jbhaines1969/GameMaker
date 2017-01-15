@@ -38,6 +38,7 @@ public class ActHealthCreationFragmentHolder extends Activity {
 
         spnHealthCreationMethod = (Spinner) findViewById(R.id.spnHealthCreationMethod);
         spnHealthCreationMethod.setAdapter(SAdapter);
+
         spnHealthCreationMethod.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -50,29 +51,25 @@ public class ActHealthCreationFragmentHolder extends Activity {
                     case 0:
                         fragHealthCreationEditor = new FragHealthCreationDiceRoll();
                         getFragmentManager().beginTransaction().
-                                replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
+                                replace(R.id.fragment_container_health_creation, fragHealthCreationEditor).
                                 commit();
-
                         break;
 
                     case 1:
                         fragHealthCreationEditor = new FragHealthCreationAttributeBased();
                         getFragmentManager().beginTransaction().
-                                replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
+                                replace(R.id.fragment_container_health_creation, fragHealthCreationEditor).
                                 commit();
-
                         break;
 
                     case 2:
                         fragHealthCreationEditor = new FragHealthCreationAccessory();
                         getFragmentManager().beginTransaction().
-                                replace(R.id.fragment_container_att_creation, fragHealthCreationEditor).
+                                replace(R.id.fragment_container_health_creation, fragHealthCreationEditor).
                                 commit();
-
                         break;
 
                     default:
-
                         break;
                 }
             }
@@ -87,7 +84,7 @@ public class ActHealthCreationFragmentHolder extends Activity {
     }
 
     private int getSpinnerPosition() {
-        int position = ((GameApplication) getApplication()).getGame().getAttCreation().getCreationType() - 1;
+        int position = ((GameApplication) getApplication()).getGame().getHitsType().getType() - 1;
         return position;
     }
 

@@ -144,6 +144,8 @@
     <string name="input_modifiers">Input Modifiers</string>
     <string name="health_attribute_multiplier">Attribute Multiplier</string>
     <string name="attribute_additive">Attribute Additive</string>
+    <string name="health_dice_sides">Health Dice Sides</string>
+    <string name="advancement_method">Advancement Method</string>
 
 
 </resources>

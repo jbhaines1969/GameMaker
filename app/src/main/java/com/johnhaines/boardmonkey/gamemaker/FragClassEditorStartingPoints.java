@@ -20,12 +20,11 @@ public class FragClassEditorStartingPoints extends Fragment implements View.OnCl
 
     private Integer index;
 
-    private TextView lblStartingSkills;
-    private TextView lblStartingTraits;
-    private TextView lblStartingFeatures;
+
     private EditText edtStartingSkills;
     private EditText edtStartingTraits;
     private EditText edtStartingFeatures;
+    private EditText edtHealthDice;
     private Button btnSave;
 
     public FragClassEditorStartingPoints() {
@@ -65,9 +64,8 @@ public class FragClassEditorStartingPoints extends Fragment implements View.OnCl
 
         View rootView = inflater.inflate(R.layout.fragment_class_editor_starting_points, container, false);
 
-        lblStartingSkills = (TextView) rootView.findViewById(R.id.lblStartingSkills);
-        lblStartingTraits = (TextView) rootView.findViewById(R.id.lblStartingTraits);
-        lblStartingFeatures = (TextView) rootView.findViewById(R.id.lblStartingFeatures);
+        edtHealthDice = (EditText) rootView.findViewById(R.id.edtHealthDice);
+        edtHealthDice.setText(getHealthDiceSides());
         edtStartingSkills = (EditText) rootView.findViewById(R.id.edtStartingSkills);
         edtStartingSkills.setText(getSkillPoints());
         edtStartingTraits = (EditText) rootView.findViewById(R.id.edtStartingTraits);
@@ -88,8 +86,10 @@ public class FragClassEditorStartingPoints extends Fragment implements View.OnCl
             Integer skillPoints = 0;
             Integer traitPoints = 0;
             Integer featurePoints = 0;
+            Integer healthDie = 0;
 
             try {
+                healthDie = Integer.parseInt(edtHealthDice.getText().toString());
                 skillPoints = Integer.parseInt(edtStartingSkills.getText().toString());
                 traitPoints = Integer.parseInt(edtStartingTraits.getText().toString());
                 featurePoints = Integer.parseInt(edtStartingFeatures.getText().toString());
@@ -97,6 +97,7 @@ public class FragClassEditorStartingPoints extends Fragment implements View.OnCl
                 // TODO make toast warning about using integers for points.
             }
 
+            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setHealthDiceSides(healthDie);
             ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setStartingSkillPoints(skillPoints);
             ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setStartingTraitPoints(traitPoints);
             ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setStartingFeatPoints(featurePoints);
@@ -104,6 +105,12 @@ public class FragClassEditorStartingPoints extends Fragment implements View.OnCl
             ((ActCharacteristicEditorFragHolder) getActivity()).saveGameToFile();
 
         }
+    }
+
+    public String getHealthDiceSides() {
+        Integer sides = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getHealthDiceSides();
+        String healthDiceText = Integer.toString(sides);
+        return healthDiceText;
     }
 
     public String getSkillPoints() {

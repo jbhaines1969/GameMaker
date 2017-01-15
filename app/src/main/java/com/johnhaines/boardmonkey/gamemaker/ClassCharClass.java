@@ -13,6 +13,8 @@ public class ClassCharClass extends ClassCharacteristic {
 
     private TreeMap<Integer, String> levelNameMap = new TreeMap<>();
 
+    private int healthDiceSides;
+
     private int startingSkillPoints;
     private int startingTraitPoints;
     private int startingFeatPoints;
@@ -100,6 +102,14 @@ public class ClassCharClass extends ClassCharacteristic {
 
     public void setMaxAttributes(TreeMap<ClassCharAttribute, Integer> maxAttributes) {
         this.maxAttributes = maxAttributes;
+    }
+
+    public int getHealthDiceSides() {
+        return healthDiceSides;
+    }
+
+    public void setHealthDiceSides(int healthDiceSides) {
+        this.healthDiceSides = healthDiceSides;
     }
 
     public int getStartingSkillPoints() {

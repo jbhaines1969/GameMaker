@@ -354,17 +354,7 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
         }
         if (listType.equals(getString(R.string.traits))) {
             maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().getMaxTraitPoints();
-            listAdapter = new ArrayAdapter<ClassCharTrait>(
-                    getActivity(), android.R.layout.simple_list_item_1, ((GameApplication) getActivity().
-                    getApplication()).getGame().getTraits()) {
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    View view = super.getView(position, convertView, parent);
-                    TextView text = (TextView) view.findViewById(android.R.id.text1);
-                    text.setTextColor(Color.BLACK);
-                    return view;
-                }
-            };
+
         }
         if (listType.equals(getString(R.string.features))) {
             maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().getMaxFeatPoints();

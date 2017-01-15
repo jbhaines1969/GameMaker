@@ -39,8 +39,10 @@
                 android:layout_height="30dp" />
 
             <ListView
+                android:id="@+id/lstHealthCreationAttList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:choiceMode="multipleChoice" />
         </LinearLayout>
 
         <Space
@@ -91,7 +93,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="30sp"
                     android:background="@android:color/white"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:selectAllOnFocus="true" />
 
             </LinearLayout>
 
@@ -117,7 +120,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="30sp"
                     android:background="@android:color/white"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:selectAllOnFocus="true" />
 
             </LinearLayout>
 
@@ -137,6 +141,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnSaveHealthAttribute"
         android:layout_width="500dp"
         android:layout_height="0dp"
         android:layout_weight=".1"

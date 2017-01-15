@@ -4,12 +4,12 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_attribute_creation_fragment_holder.xml"
     },
     {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_attribute_description.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_attribute_description.xml"
-    },
-    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_attribute_description.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_attribute_description.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
@@ -72,10 +72,6 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_creation_methods.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_creation_methods.xml"
-    },
-    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_editor_skills.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_list_editor_skills.xml"
     },
@@ -86,10 +82,6 @@
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_modified_attribute.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_modified_attribute.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",

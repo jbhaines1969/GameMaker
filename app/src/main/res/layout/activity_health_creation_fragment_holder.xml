@@ -31,23 +31,15 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent" />
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_height="match_parent">
-
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:id="@+id/lblHealthCreationControlBar"
                     android:gravity="center"
-                    android:layout_gravity="center"
                     android:text="@string/game"
                     android:textColor="#000000"
                     android:textSize="36sp" />
-
-            </FrameLayout>
 
             <Space
                 android:layout_width="0dp"
@@ -55,11 +47,6 @@
                 android:layout_height="match_parent" />
 
         </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".075" />
 
         <TextView
             android:layout_width="match_parent"
