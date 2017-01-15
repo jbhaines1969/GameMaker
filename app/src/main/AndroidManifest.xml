@@ -31,7 +31,8 @@
         <activity android:name=".ActGameEdit" />
         <activity android:name=".ActCharacteristicEditorFragHolder" />
         <activity android:name=".ActAttributeCreationFragmentHolder" />
-        <activity android:name=".ActHealthCreationFragmentHolder"></activity>
+        <activity android:name=".ActHealthCreationFragmentHolder" />
+        <activity android:name=".ActAdvancementMethodFragmentHolder"></activity>
     </application>
 
 </manifest>

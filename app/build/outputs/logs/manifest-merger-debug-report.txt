@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml
@@ -38,7 +38,7 @@ ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest
 	android:name
 		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:14:22-77
 application
-ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:16:5-35:19
+ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:16:5-36:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
@@ -86,9 +86,13 @@ ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest
 	android:name
 		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:33:19-69
 activity#com.johnhaines.boardmonkey.gamemaker.ActHealthCreationFragmentHolder
-ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:34:9-78
+ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:34:9-69
 	android:name
 		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:34:19-66
+activity#com.johnhaines.boardmonkey.gamemaker.ActAdvancementMethodFragmentHolder
+ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:35:9-81
+	android:name
+		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:35:19-69
 uses-sdk
 INJECTED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78

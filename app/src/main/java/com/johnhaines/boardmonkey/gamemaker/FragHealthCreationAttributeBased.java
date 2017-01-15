@@ -56,7 +56,7 @@ public class FragHealthCreationAttributeBased extends Fragment implements View.O
         if (view == btnSave) {
 
             int attPlus = Integer.parseInt(edtAttPlus.getText().toString());
-            int attTimes = Integer.parseInt(edtAttTimes.getText().toString());
+            float attTimes = Float.parseFloat(edtAttTimes.getText().toString());
 
             ((GameApplication) getActivity().getApplication()).getGame().getHitsType().setAttPlus(attPlus);
             ((GameApplication) getActivity().getApplication()).getGame().getHitsType().setAttTimes(attTimes);

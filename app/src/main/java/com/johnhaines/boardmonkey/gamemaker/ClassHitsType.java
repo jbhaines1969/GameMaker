@@ -20,7 +20,7 @@ public class ClassHitsType implements Serializable {
     private int hitDiceSides = 0;
     private int hitDiceRolls = 0;
 
-    private int attTimes = 1;
+    private float attTimes = 1;
     private int attPlus = 0;
 
     private boolean isModifiedByAtts;
@@ -55,11 +55,11 @@ public class ClassHitsType implements Serializable {
         this.hitDiceRolls = hitDiceRolls;
     }
 
-    public int getAttTimes() {
+    public float getAttTimes() {
         return attTimes;
     }
 
-    public void setAttTimes(int attTimes) {
+    public void setAttTimes(float attTimes) {
         this.attTimes = attTimes;
     }
 
