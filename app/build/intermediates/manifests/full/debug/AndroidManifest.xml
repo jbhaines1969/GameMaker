@@ -38,7 +38,7 @@
         <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActCharacteristicEditorFragHolder" />
         <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActAttributeCreationFragmentHolder" />
         <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActHealthCreationFragmentHolder" />
-        <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActAdvancementMethodFragmentHolder" />
+        <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActAdvancementMethod" />
     </application>
 
 </manifest>

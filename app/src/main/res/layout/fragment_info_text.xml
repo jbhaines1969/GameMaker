@@ -3,12 +3,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/vine_background_1000_1667"
     tools:context="com.johnhaines.boardmonkey.gamemaker.FragInfoTextFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
         android:id="@+id/txtInfoFragmentText" />
 
     <Button

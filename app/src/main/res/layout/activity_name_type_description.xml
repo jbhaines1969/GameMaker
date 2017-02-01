@@ -31,17 +31,18 @@
                 android:text="@string/newGameIntroText"
                 android:id="@+id/lblNewGameIntro"
                 android:gravity="center"
-                android:textSize="36sp"
+                android:textSize="24sp"
                 android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".15"
+            android:layout_weight=".2"
             android:layout_gravity="center|right|top"
-            android:focusableInTouchMode="true">
+            android:focusableInTouchMode="true"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,16 +50,18 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/gameName"
                 android:id="@+id/lblGameName"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
                 android:textColor="@android:color/black"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
             <EditText
                 android:layout_width="500dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtGameName"
                 android:gravity="center_horizontal"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:inputType="textCapWords"
                 android:background="#ffffff"
                 android:selectAllOnFocus="true"
@@ -81,12 +84,12 @@
                 android:id="@+id/txt"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".9"
+                android:layout_weight=".5"
                 android:inputType="textMultiLine"
                 android:ems="10"
                 android:background="#ffffffff"

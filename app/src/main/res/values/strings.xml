@@ -53,6 +53,12 @@
         <item>Accessory</item>
     </string-array>
 
+    <string-array name="AdvancementMethods">
+        <item>Character Levels</item>
+        <item>Spending Experience on Abilities</item>
+        <item>Event Based or GM Discretion</item>
+    </string-array>
+
 
     <!-- Description Screen Strings -->
 
@@ -146,6 +152,19 @@
     <string name="attribute_additive">Attribute Additive</string>
     <string name="health_dice_sides">Health Dice Sides</string>
     <string name="advancement_method">Advancement Method</string>
+    <string name="preferred_classes">Preferred Classes</string>
+    <string name="preferred_races">Preferred Races</string>
+    <string name="effect_type">Effect Type</string>
+    <string name="skill_name">Skill Name</string>
+    <string name="adv_method_level_based_text">Use Class Editor to set point gains per Character Level</string>
+    <string name="point_cost">Point Cost</string>
+    <string name="ability_type">Ability Type</string>
+    <string name="preferred_points">Preferred Points</string>
+    <string name="non_preferred_penalty">Non-Preferred Penalty</string>
+    <string name="cost_multiplier">Cost Multiplier</string>
+    <string name="max_level">Max Level</string>
+    <string name="info">Info</string>
+    <string name="choose_advancement_method">Choose Advancement Method</string>
 
 
 </resources>

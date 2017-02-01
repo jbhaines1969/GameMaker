@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.TreeMap;
 
 
-public class ClassCharRace extends ClassCharacteristic {
+public class ClassCharRace extends ClassAbility {
 
     private int baseMoveSpeed = 0;
     private int baseFlySpeed = 0;

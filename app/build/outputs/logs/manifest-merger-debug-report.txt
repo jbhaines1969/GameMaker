@@ -89,10 +89,10 @@ activity#com.johnhaines.boardmonkey.gamemaker.ActHealthCreationFragmentHolder
 ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:34:9-69
 	android:name
 		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:34:19-66
-activity#com.johnhaines.boardmonkey.gamemaker.ActAdvancementMethodFragmentHolder
-ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:35:9-81
+activity#com.johnhaines.boardmonkey.gamemaker.ActAdvancementMethod
+ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:35:9-67
 	android:name
-		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:35:19-69
+		ADDED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml:35:19-55
 uses-sdk
 INJECTED from C:\Users\John\Android Projects\GameMaker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78

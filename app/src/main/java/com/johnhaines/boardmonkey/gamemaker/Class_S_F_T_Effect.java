@@ -6,9 +6,9 @@ import java.io.Serializable;
  * Created by Terri on 12/11/2016.
  */
 
-public class ClassS_F_T_Effect implements Serializable {
+public class Class_S_F_T_Effect implements Serializable {
 
-    public ClassS_F_T_Effect(Integer type) {
+    public Class_S_F_T_Effect(Integer type) {
         this.effectType = type;
     }
 

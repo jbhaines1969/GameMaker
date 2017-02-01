@@ -85,7 +85,6 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
                 saveToExternalStorage();
 
                 Intent intent = new Intent(this, ActGameName.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
             }
 

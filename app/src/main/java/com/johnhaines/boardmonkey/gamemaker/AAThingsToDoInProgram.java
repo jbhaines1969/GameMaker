@@ -6,9 +6,17 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 public class AAThingsToDoInProgram {
 
-    // TODO Add Button for info screen to Attribute creation screen
+    // TODO Info Fragment texts
 
-    // TODO Add Button for info screen to fragments
+    // TODO Edit Game, Share Game, Delete Game access pre-existing GameMaker folder on reinstall
+
+    // TODO Fragments for Ability Editing
+
+    // TODO ability editor activity layout
+
+    // TODO Code ability editor activity to handle fragments
+
+    // TODO Add Button for info screen to all screens
 
     // TODO change all fragment interactions using string messages to use hardcoded strings
 

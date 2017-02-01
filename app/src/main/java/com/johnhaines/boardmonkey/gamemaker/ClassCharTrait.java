@@ -10,7 +10,7 @@ public class ClassCharTrait extends ClassCharacteristic {
     private int maxPoints = 0;
 
 
-    private ClassS_F_T_Effect effectType = new ClassS_F_T_Effect(0);
+    private Class_S_F_T_Effect effectType = new Class_S_F_T_Effect(0);
 
     @Override
     public boolean equals(Object object) {

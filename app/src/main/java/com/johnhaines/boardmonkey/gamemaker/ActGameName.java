@@ -53,17 +53,7 @@ public class ActGameName extends Activity {
         spnGameType.setAdapter(SAdapter);
         spnGameType.setSelection(setSpinnerSelection());
 
-        spnGameType.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
     public int setSpinnerSelection() {
@@ -176,7 +166,6 @@ public class ActGameName extends Activity {
         }
 
         Intent intent = new Intent(this, ActGameEdit.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
 }

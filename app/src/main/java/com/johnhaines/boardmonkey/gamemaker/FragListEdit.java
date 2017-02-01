@@ -47,15 +47,11 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
     private int levelNumber;
     private TextView lblGroupName;
     private Button btnAddItem;
-    private Button btnSavePoints;
     private ListView lstItemList;
     private EditText txtAddItem;
     private BaseAdapter listAdapter;
     private AdapterTreeIntegerKeyAndStringValue listAdapterLevelNames;
-    private int maxPoints;
-    private EditText edtMaxPoints;
     private EditText edtLevelNumber;
-    private boolean usesPoints = false;
     private boolean isLevelNames = false;
 
     public FragListEdit() {
@@ -99,17 +95,11 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
         }
 
         View rootView = null;
-        if (listType.equals("Skills") || listType.equals("Features") || listType.equals("Traits")) {
-            rootView = inflater.inflate(R.layout.fragment_list_editor_skills, container, false);
-            usesPoints = true;
-            isLevelNames = false;
-        } else if (listType.equals("Level Names")) {
+        if (listType.equals("Level Names")) {
             rootView = inflater.inflate(R.layout.fragment_list_editor_level_names, container, false);
-            usesPoints = false;
             isLevelNames = true;
         } else {
             rootView = inflater.inflate(R.layout.fragment_list_editor, container, false);
-            usesPoints = false;
             isLevelNames = false;
         }
 
@@ -124,14 +114,6 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
         listAdapter = makeListAdapter();
         lstItemList.setAdapter(listAdapter);
         listAdapter.notifyDataSetChanged();
-
-        if (usesPoints) {
-
-            edtMaxPoints = (EditText) rootView.findViewById(R.id.edtMaxSkillPoints);
-            edtMaxPoints.setText(String.format(Locale.getDefault(), "%d", maxPoints));
-            btnSavePoints = (Button) rootView.findViewById(R.id.btnSaveCharList);
-            btnSavePoints.setOnClickListener(this);
-        }
 
         if (isLevelNames) {
             edtLevelNumber = (EditText) rootView.findViewById(R.id.edtLevelNumber);
@@ -196,7 +178,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
                             race.addMinAttribute(item, 0);
                             race.addMaxAttribute(item, 0);
                         }
-                        for (ClassCharClass thisClass : ((GameApplication) getActivity().getApplication()).getGame().getClasses()) {
+                        for (ClassCharClass thisClass : ((GameApplication) getActivity().getApplication()).getGame().
+                                getClasses()) {
                             thisClass.addMinAttribute(item, 0);
                         }
                     }
@@ -205,7 +188,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
                     ClassCharRace item = new ClassCharRace(newItem);
                     if (!((GameApplication) getActivity().getApplication()).getGame().getRaces().contains(item)) {
                         ((GameApplication) getActivity().getApplication()).getGame().addRace(item);
-                        for (ClassCharAttribute attribute : ((GameApplication) getActivity().getApplication()).getGame().getAttributes()) {
+                        for (ClassCharAttribute attribute : ((GameApplication) getActivity().getApplication()).getGame().
+                                getAttributes()) {
                             item.addAttributeModMale(attribute, 0);
                             item.addAttributeModFemale(attribute, 0);
                             item.addMinAttribute(attribute, 0);
@@ -217,7 +201,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
                     ClassCharClass charAt = new ClassCharClass(newItem);
                     if (!((GameApplication) getActivity().getApplication()).getGame().getClasses().contains(charAt)) {
                         ((GameApplication) getActivity().getApplication()).getGame().addClass(charAt);
-                        for (ClassCharAttribute attribute : ((GameApplication) getActivity().getApplication()).getGame().getAttributes()) {
+                        for (ClassCharAttribute attribute : ((GameApplication) getActivity().getApplication()).getGame().
+                                getAttributes()) {
                             charAt.addMinAttribute(attribute, 0);
                             charAt.addMaxAttribute(attribute, 0);
                         }
@@ -225,18 +210,24 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
                 }
                 if (listType.equals(getString(R.string.skills))) {
                     ClassCharSkill charAt = new ClassCharSkill(newItem);
+                    int maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getMaxSkillPoints();
+                    charAt.setMaxPoints(maxPoints);
                     if (!((GameApplication) getActivity().getApplication()).getGame().getSkills().contains(charAt)) {
                         ((GameApplication) getActivity().getApplication()).getGame().addSkill(charAt);
                     }
                 }
                 if (listType.equals(getString(R.string.traits))) {
                     ClassCharTrait charAt = new ClassCharTrait(newItem);
+                    int maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getMaxTraitPoints();
+                    charAt.setMaxPoints(maxPoints);
                     if (!((GameApplication) getActivity().getApplication()).getGame().getTraits().contains(charAt)) {
                         ((GameApplication) getActivity().getApplication()).getGame().addTrait(charAt);
                     }
                 }
                 if (listType.equals(getString(R.string.features))) {
                     ClassCharFeature charAt = new ClassCharFeature(newItem);
+                    int maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getMaxFeatPoints();
+                    charAt.setMaxPoints(maxPoints);
                     if (!((GameApplication) getActivity().getApplication()).getGame().getFeatures().contains(charAt)) {
                         ((GameApplication) getActivity().getApplication()).getGame().addFeature(charAt);
                     }
@@ -245,7 +236,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
                 if (listType.equals(getString(R.string.level_names))) {
                     if (!(edtLevelNumber.getText().toString().trim().isEmpty())) {
                         int nameListIndex = Integer.parseInt(edtLevelNumber.getText().toString());
-                        ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).addLevelName(nameListIndex, newItem);
+                        ((GameApplication) getActivity().getApplication()).getGame().
+                                getClasses().get(index).addLevelName(nameListIndex, newItem);
                         edtLevelNumber.setText("");
                     } else {
                         //TODO make toast telling them to put in a level number
@@ -261,26 +253,7 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
             }
         }
 
-        if (v == btnSavePoints) {
 
-            int saveMaxPoints = Integer.parseInt(edtMaxPoints.getText().toString());
-
-
-            switch (listType) {
-                case "Skills":
-                    ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().setMaxSkillPoints(saveMaxPoints);
-                    break;
-
-                case "Traits":
-                    ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().setMaxTraitPoints(saveMaxPoints);
-                    break;
-                case "Features":
-                    ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().setMaxFeatPoints(saveMaxPoints);
-                    break;
-                default:
-                    break;
-            }
-        }
     }
 
     @Override
@@ -339,7 +312,6 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
             };
         }
         if (listType.equals(getString(R.string.skills))) {
-            maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().getMaxSkillPoints();
             listAdapter = new ArrayAdapter<ClassCharSkill>(
                     getActivity(), android.R.layout.simple_list_item_1, ((GameApplication) getActivity().
                     getApplication()).getGame().getSkills()) {
@@ -353,11 +325,20 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
             };
         }
         if (listType.equals(getString(R.string.traits))) {
-            maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().getMaxTraitPoints();
+            listAdapter = new ArrayAdapter<ClassCharTrait>(
+                    getActivity(), android.R.layout.simple_list_item_1, ((GameApplication) getActivity().
+                    getApplication()).getGame().getTraits()) {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    View view = super.getView(position, convertView, parent);
+                    TextView text = (TextView) view.findViewById(android.R.id.text1);
+                    text.setTextColor(Color.BLACK);
+                    return view;
+                }
+            };
 
         }
         if (listType.equals(getString(R.string.features))) {
-            maxPoints = ((GameApplication) getActivity().getApplication()).getGame().getPointRanges().getMaxFeatPoints();
             listAdapter = new ArrayAdapter<ClassCharFeature>(
                     getActivity(), android.R.layout.simple_list_item_1, ((GameApplication) getActivity().
                     getApplication()).getGame().getFeatures()) {
@@ -371,7 +352,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
             };
         }
         if (listType.equals(getString(R.string.level_names))) {
-            listAdapter = new AdapterTreeIntegerKeyAndStringValue(((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getLevelNameList());
+            listAdapter = new AdapterTreeIntegerKeyAndStringValue(((GameApplication) getActivity().
+                    getApplication()).getGame().getClasses().get(index).getLevelNameList());
         }
 
         return listAdapter;
@@ -407,7 +389,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
                 .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         if (listType == "Attributes") {
-                            ClassCharAttribute charAt = ((GameApplication) getActivity().getApplication()).getGame().getAttributes().get(index);
+                            ClassCharAttribute charAt = ((GameApplication) getActivity().getApplication()).getGame().
+                                    getAttributes().get(index);
                             ((GameApplication) getActivity().getApplication()).getGame().removeAttribute(index);
                             for (ClassCharRace race : ((GameApplication) getActivity().getApplication()).getGame().getRaces()) {
                                 race.removeAttributeModMale(charAt);
@@ -415,7 +398,8 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
                                 race.removeMinAttribute(charAt);
                                 race.removeMaxAttribute(charAt);
                             }
-                            for (ClassCharClass eachClass : ((GameApplication) getActivity().getApplication()).getGame().getClasses()) {
+                            for (ClassCharClass eachClass : ((GameApplication) getActivity().getApplication()).getGame().
+                                    getClasses()) {
                                 eachClass.removeMinAttribute(charAt);
                             }
                         }

@@ -7,11 +7,15 @@ import java.util.Comparator;
 
 public class ClassGame implements Serializable {
 
+    private int maxTraitPoints;
+    private int maxSkillPoints;
+    private int maxFeatPoints;
+
     private String name = "";
     private String type = "";
     private String description = "";
 
-    private ClassCharacteristicPointRanges pointRanges = new ClassCharacteristicPointRanges();
+    private ClassAdvancementMethod advancementMethod = new ClassAdvancementMethod();
     private ClassAttributeCreation attCreation = new ClassAttributeCreation();
     private ClassHitsType hitsType = new ClassHitsType();
 
@@ -54,6 +58,30 @@ public class ClassGame implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getMaxTraitPoints() {
+        return maxTraitPoints;
+    }
+
+    public void setMaxTraitPoints(int maxTraitPoints) {
+        this.maxTraitPoints = maxTraitPoints;
+    }
+
+    public int getMaxSkillPoints() {
+        return maxSkillPoints;
+    }
+
+    public void setMaxSkillPoints(int maxSkillPoints) {
+        this.maxSkillPoints = maxSkillPoints;
+    }
+
+    public int getMaxFeatPoints() {
+        return maxFeatPoints;
+    }
+
+    public void setMaxFeatPoints(int maxFeatPoints) {
+        this.maxFeatPoints = maxFeatPoints;
     }
 
     public ArrayList<ClassCharRace> getRaces() {
@@ -158,11 +186,6 @@ public class ClassGame implements Serializable {
         features.remove(index);
     }
 
-
-    public ClassCharacteristicPointRanges getPointRanges() {
-        return this.pointRanges;
-    }
-
     public ClassAttributeCreation getAttCreation() {
         return this.attCreation;
     }
@@ -171,6 +194,9 @@ public class ClassGame implements Serializable {
         return this.hitsType;
     }
 
+    public ClassAdvancementMethod getAdvancementMethod() {
+        return advancementMethod;
+    }
 
     public void sortList(String listType) {
 

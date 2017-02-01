@@ -32,7 +32,7 @@
         <activity android:name=".ActCharacteristicEditorFragHolder" />
         <activity android:name=".ActAttributeCreationFragmentHolder" />
         <activity android:name=".ActHealthCreationFragmentHolder" />
-        <activity android:name=".ActAdvancementMethodFragmentHolder"></activity>
+        <activity android:name=".ActAdvancementMethod"></activity>
     </application>
 
 </manifest>
