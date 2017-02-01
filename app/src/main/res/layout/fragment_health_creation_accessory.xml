@@ -18,8 +18,7 @@
         <CheckBox
             android:id="@+id/chkModifiedByChar"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight=".1"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/modified_by_characteristics"
             android:textColor="@android:color/black"
@@ -49,7 +48,7 @@
             android:layout_height="wrap_content"
             android:text="@string/SaveButton"
             android:layout_gravity="center_horizontal"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 
