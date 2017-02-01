@@ -37,6 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="@string/SaveButton"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 </FrameLayout>

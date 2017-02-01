@@ -43,7 +43,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
     private FrameLayout frmInfoFrame;
     private Spinner spnAdvancementMethod;
     private SpinnerAdapter SAdapter;
-    private TextView txtAdvancementMethodText;
+    private TextView lblGameName;
     private EditText edtAttPointCost;
     private EditText edtAttNonPrefPenalty;
     private EditText edtAttCostMultiplier;
@@ -70,6 +70,8 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmAdvancementMethodInfo);
         frmInfoFrame.bringToFront();
+        lblGameName = (TextView) findViewById(R.id.lblGameNameAdvancementMethod);
+        lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
         edtAttPointCost = (EditText) findViewById(R.id.edtAttPointCost);
         edtAttPointCost.setText(setCurrentValues(ATT_POINT_COST));
         edtAttNonPrefPenalty = (EditText) findViewById(R.id.edtAttNonPrefPenalty);
