@@ -146,7 +146,7 @@
     <string name="health_type_creation">Health Type Creation</string>
     <string name="modified_by_characteristics">Modified by Attributes</string>
     <string name="health_creation_modified_text">Using this method, the characters health/damage points will be determined by equipment. Check Modified if this score will be modified by Attribute Scores</string>
-    <string name="attributes_for_health">Select the Attributes which will be added to Health Points</string>
+    <string name="attributes_for_health">Select Attributes</string>
     <string name="input_modifiers">Input Modifiers</string>
     <string name="health_attribute_multiplier">Attribute Multiplier</string>
     <string name="attribute_additive">Attribute Additive</string>
