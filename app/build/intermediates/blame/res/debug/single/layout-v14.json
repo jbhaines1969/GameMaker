@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\fragment_list_select.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout-v14\\fragment_list_select.xml"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\fragment_list_select.xml",
+        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout-v14\\fragment_list_select.xml"
     }
 ]
