@@ -124,8 +124,8 @@
     <string name="select_attribute_creation_method">Select Attribute Creation Method</string>
     <string name="points_available">Points Available:\u0020</string>
     <string name="base_attribute_points">Base Attribute Points:\u0020</string>
-    <string name="how_many_sides_per_dice">How many sides per dice?</string>
-    <string name="how_many_rolls">How many Rolls?</string>
+    <string name="how_many_sides_per_dice">Dice Sides</string>
+    <string name="how_many_rolls">Dice Rolls</string>
     <string name="choose_file">Choose Game to Edit</string>
     <string name="open">Open</string>
     <string name="click_item_to_edit">Click item to edit</string>
