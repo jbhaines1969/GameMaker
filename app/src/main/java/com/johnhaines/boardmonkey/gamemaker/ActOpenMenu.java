@@ -102,7 +102,7 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
         bundle.putString("selectType", "Edit");
         bundle.putString("fileType", ".gmgt");
         picker.setArguments(bundle);
-        getFragmentManager().beginTransaction().add(R.id.fragment_container_middle, picker).commit();
+        getFragmentManager().beginTransaction().add(R.id.fragment_container_middle, picker).addToBackStack(null).commit();
     }
 
     public void deleteGameClicked(View view) {
@@ -112,7 +112,7 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
         bundle.putString("selectType", "Delete");
         bundle.putString("fileType", ".gmgt");
         picker.setArguments(bundle);
-        getFragmentManager().beginTransaction().add(R.id.fragment_container_middle, picker).commit();
+        getFragmentManager().beginTransaction().add(R.id.fragment_container_middle, picker).addToBackStack(null).commit();
     }
 
     public void shareGameClicked(View view) {
