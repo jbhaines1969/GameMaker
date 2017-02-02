@@ -1,97 +1,92 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.johnhaines.boardmonkey.gamemaker.FragAttCreationBasePlusPoints">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight=".9"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".9">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_weight=".5"
-                android:layout_height="match_parent"
-                android:gravity="center">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/base_points"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="28sp" />
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/base_points"
-                    android:textColor="#000000"
-                    android:textSize="36sp"
-                    android:textAlignment="center"
-                    android:gravity="center" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
+            <EditText
+                android:id="@+id/edtBasePointsBasePlusPoints"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:selectAllOnFocus="true"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+        </LinearLayout>
 
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edtBasePointsBasePlusPoints"
-                    android:background="#ffffff"
-                    android:textColor="#000000"
-                    android:textSize="36sp"
-                    android:selectAllOnFocus="true"
-                    android:gravity="center" />
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_weight=".5"
-                android:layout_height="match_parent"
-                android:gravity="center">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/assign_points"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="28sp" />
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/assign_points"
-                    android:textColor="#000000"
-                    android:textSize="36sp"
-                    android:textAlignment="center"
-                    android:gravity="center" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edtPointsBasePlusPoints"
-                    android:background="#ffffff"
-                    android:textColor="#000000"
-                    android:textSize="36sp"
-                    android:selectAllOnFocus="true"
-                    android:gravity="center" />
-
-            </LinearLayout>
+            <EditText
+                android:id="@+id/edtPointsBasePlusPoints"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:selectAllOnFocus="true"
+                android:textColor="#000000"
+                android:textSize="28sp" />
 
         </LinearLayout>
 
-
-            <Button
-                android:id="@+id/btnSaveBasePlusPoints"
-                android:layout_width="500dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/SaveButton"
-                android:textColor="#000000"
-                android:textSize="24sp" />
-
     </LinearLayout>
 
-</FrameLayout>
+
+    <Button
+        android:id="@+id/btnSaveBasePlusPoints"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/SaveButton"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+
+</LinearLayout>

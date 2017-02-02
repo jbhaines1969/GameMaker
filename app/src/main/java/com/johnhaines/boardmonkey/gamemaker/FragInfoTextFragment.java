@@ -33,7 +33,7 @@ public class FragInfoTextFragment extends Fragment implements View.OnClickListen
         if (savedInstanceState != null) {
             text = savedInstanceState.getString("text");
         } else {
-            text = "try it this way, see what happens";
+            text = getArguments().getString("text");
         }
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_info_text, container, false);

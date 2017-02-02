@@ -28,7 +28,7 @@ public class ActAttributeCreationFragmentHolder extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attribute_creation_fragment_holder);
 
-        fragFrame = (FrameLayout) findViewById(R.id.fragment_container_info_att_creation);
+        fragFrame = (FrameLayout) findViewById(R.id.frmAttCreationInfo);
         fragFrame.bringToFront();
 
         lblGameName = (TextView) findViewById(R.id.lblAttCreationControlBar);

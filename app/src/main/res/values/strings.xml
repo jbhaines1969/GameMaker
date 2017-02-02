@@ -163,8 +163,11 @@
     <string name="non_preferred_penalty">Non-Preferred Penalty</string>
     <string name="cost_multiplier">Cost Multiplier</string>
     <string name="max_level">Max Level</string>
-    <string name="info">Info</string>
+    <string name="info">\?</string>
     <string name="choose_advancement_method">Choose Advancement Method</string>
+
+    <string name="advancement_method_info">This is a test of the advancement method info,
+    and of multiline string in xml resource.</string>
 
 
 </resources>

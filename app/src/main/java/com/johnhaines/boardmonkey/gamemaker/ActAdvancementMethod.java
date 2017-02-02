@@ -293,7 +293,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
     private void loadInfoFragment() {
 
-        String infoText = "This is a test";
+        String infoText = getResources().getString(R.string.advancement_method_info);
 
         FragInfoTextFragment fragInfo = new FragInfoTextFragment();
         Bundle bundle = new Bundle();
