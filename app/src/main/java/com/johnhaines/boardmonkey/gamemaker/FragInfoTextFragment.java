@@ -85,8 +85,9 @@ public class FragInfoTextFragment extends Fragment implements View.OnClickListen
 
         if (view == btnDone) {
 
-            getActivity().getFragmentManager().beginTransaction().
-                    remove(getActivity().getFragmentManager().findFragmentById(R.id.frmAdvancementMethodInfo)).commit();
+            if (mListener != null) {
+                mListener.onDoneButtonClicked();
+            }
         }
     }
 

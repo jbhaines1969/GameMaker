@@ -55,7 +55,7 @@ public class ActGameEdit extends Activity {
                 mPlayer.setLooping(false);
                 mPlayer.start();
             }
-        }, 1500);
+        }, 10);
     }
 
     /* Button Actions */

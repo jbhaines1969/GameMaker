@@ -24,8 +24,8 @@
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -45,23 +45,31 @@
                 android:layout_weight=".8"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="20dp"
                     android:gravity="center"
-                    android:text="@string/choose_advancement_method"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
+                    android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spnAdvancementMethod"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight=".2"
-                    android:gravity="center" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/choose_advancement_method"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <Spinner
+                        android:id="@+id/spnAdvancementMethod"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -76,7 +84,7 @@
                         android:gravity="center"
                         android:text="@string/ability_type"
                         android:textColor="@android:color/black"
-                        android:textSize="28sp" />
+                        android:textSize="24sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -85,7 +93,7 @@
                         android:gravity="center"
                         android:text="@string/point_cost"
                         android:textColor="@android:color/black"
-                        android:textSize="28sp" />
+                        android:textSize="24sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -94,7 +102,7 @@
                         android:gravity="center"
                         android:text="@string/non_preferred_penalty"
                         android:textColor="@android:color/black"
-                        android:textSize="28sp" />
+                        android:textSize="24sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -103,7 +111,7 @@
                         android:gravity="center"
                         android:text="@string/cost_multiplier"
                         android:textColor="@android:color/black"
-                        android:textSize="28sp" />
+                        android:textSize="24sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -112,7 +120,7 @@
                         android:gravity="center"
                         android:text="@string/max_level"
                         android:textColor="@android:color/black"
-                        android:textSize="28sp" />
+                        android:textSize="24sp" />
 
                 </LinearLayout>
 
@@ -480,7 +488,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/SaveButton"
-                android:textSize="28sp" />
+                android:textSize="24sp" />
 
 
         </LinearLayout>

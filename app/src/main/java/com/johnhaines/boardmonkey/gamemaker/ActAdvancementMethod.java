@@ -306,7 +306,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
     @Override
     public void onDoneButtonClicked() {
-        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmAdvancementMethodInfo));
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmAdvancementMethodInfo)).commit();
     }
 
     private void saveGameToFile() {
