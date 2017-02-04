@@ -286,7 +286,7 @@
 
     Dice + Base:  All Attributes start at a base number of points, and dice results are added to the base for each attribute.\n\n
 
-    Dice + Point Assignment:  Players roll dice for each attribute, and get a number of points to assign to the results.\n\n
+    Dice + Point Assignment:  Players roll dice for each attribute, and get a number of additional points to assign to the results.\n\n
 
     Base + Point Assignment:  All Attributes start at a base number, and players get a number of points to assign to attributes
     until no points remain.</string>
@@ -315,6 +315,7 @@
     <string name="characteristic">Characteristic</string>
     <string name="choose_advancement_method">Choose Advancement Method</string>
     <string name="choose_file">Choose Game to Edit</string>
+    <string name="choose_name_for_game">Please choose a name for this game. \"New Game\" is not allowed.</string>
     <string name="class_base_points_instructions">Enter the base points for a newly created character</string>
     <string name="class_name">Class</string>
     <string name="class_text">Class</string>
@@ -339,7 +340,18 @@
     <string name="game">Game</string>
     <string name="gameDescriptionSaveButton">Save and Continue</string>
     <string name="gameName">Game Name</string>
+    <string name="game_already_exists">A Game with this name already exists. Do you want to overwrite it?</string>
     <string name="game_description">Game Description</string>
+    <string name="game_edit_info">Name:  Edit Game Name, Description, and Type\n\n
+
+    Characteristics:  Use these screens to edit character specific information, such as race, class, and abilities\n\n
+
+    Attribute Creation:  Attributes make up the core abilities of characters. Use this section to specify the method
+    used to determine a character\'s attribute scores.\n\n
+
+    Health Type Creation:  Use this section to set up rules for determining the damage a character is able to take.\n\n
+
+    Advancement Method:  Set the method of character progression, and the costs for ability advancement.</string>
     <string name="health_attribute_multiplier">Attribute Multiplier</string>
     <string name="health_creation_info">Set method for determining how much damage a character can take. \n\n
 
@@ -347,12 +359,12 @@
     and number of rolls used to determine health.\n\n
 
     Attribute:  Health is determined by Attribute scores, either a single Attribute or a sum of Attributes.  Select which Attributes
-    will be added to the total.\n
-    Multiplier:  Sum of Attributes will be multiplied by this number to determine health points.\n
+    will be added to the total using the Attribute List.\n\n
+    Multiplier:  Sum of Attributes will be multiplied by this number to determine health points.\n\n
     Additive:  This will be added to health score after multiplier is applied.\n\n
 
     Accessory:  Health will be determined by equipment/accessories in game.\n
-    Example:  A space opera where play always takes place in a ship would use ships armor and shield ratings to determine how
+    Example:  A space opera where play always takes place in a ship would use ship\'s armor and shield ratings to determine how
     much damage the player could take.\n
     Use Attribute list if Attributes will modify the health rating in this case.</string>
     <string name="health_creation_modified_text">Using this method, the characters health/damage points will be determined by equipment. Check Modified if this score will be modified by Attribute Scores</string>
@@ -387,6 +399,7 @@
     <string name="newGameIntroText">Enter a name for your game, and select the type.</string>
     <string name="newGameSaveButtonText">Continue</string>
     <string name="new_game">New Game</string>
+    <string name="no">No</string>
     <string name="non_preferred_penalty">Non-Preferred Penalty</string>
     <string name="open">Open</string>
     <string name="point_cost">Point Cost</string>
@@ -408,6 +421,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="straight_dice">Straight Dice</string>
     <string name="traits">Traits</string>
+    <string name="yes">Yes</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

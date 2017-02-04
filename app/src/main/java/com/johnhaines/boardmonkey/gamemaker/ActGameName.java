@@ -87,9 +87,9 @@ public class ActGameName extends Activity {
         boolean nameNotChanged = (newName.equals(oldName));
 
         //  is so, save new information into saveGame
-        if (newName.equals("New Game") || (!(newName.length() > 0))) {
+        if (newName.equals(R.string.new_game) || (!(newName.length() > 0))) {
 
-            Toast toast = Toast.makeText(ActGameName.this, "Please choose a name for this game. \"New Game\" is not allowed.", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(ActGameName.this, R.string.choose_name_for_game, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
 
@@ -101,8 +101,8 @@ public class ActGameName extends Activity {
 
             if (newFile.exists()) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(ActGameName.this);
-                alert.setMessage("A ClassGame with this name already exists. Do you want to overwrite it?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                alert.setMessage(R.string.game_already_exists)
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 newSaveGame.setName(newName);
@@ -112,7 +112,7 @@ public class ActGameName extends Activity {
                                 saveGame(newName + extension, newSaveGame);
                             }
                         })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 

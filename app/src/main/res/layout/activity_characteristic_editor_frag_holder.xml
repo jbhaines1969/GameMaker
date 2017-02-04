@@ -13,7 +13,7 @@
     <FrameLayout
         android:id="@+id/frmCharEditorInfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -42,12 +42,13 @@
             android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/btnCharEditInfo"
+            android:id="@+id/btnCharEditInformation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|end"
             android:text="@string/info"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:onClick="charEditInfoButtonClicked" />
     </LinearLayout>
 
 

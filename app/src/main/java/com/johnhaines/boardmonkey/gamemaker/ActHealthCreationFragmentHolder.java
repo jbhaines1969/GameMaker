@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -96,6 +97,7 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
             String infoText = getResources().getString(R.string.health_creation_info);
             Bundle bundle = new Bundle();
             bundle.putString("text", infoText);
+            fragInfo.setArguments(bundle);
             getFragmentManager().beginTransaction().add(R.id.frmHealthCreationInfo, fragInfo).addToBackStack(null).commit();
         }
     }

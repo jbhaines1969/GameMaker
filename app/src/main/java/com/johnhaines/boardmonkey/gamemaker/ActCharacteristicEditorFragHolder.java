@@ -3,7 +3,9 @@ package com.johnhaines.boardmonkey.gamemaker;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
@@ -15,7 +17,7 @@ import java.io.ObjectOutputStream;
 import static android.os.Environment.DIRECTORY_DCIM;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
-public class ActCharacteristicEditorFragHolder extends Activity implements View.OnClickListener, FragListSelector.OnFragmentInteractionListener,
+public class ActCharacteristicEditorFragHolder extends Activity implements FragListSelector.OnFragmentInteractionListener,
         FragListEdit.OnFragmentInteractionListener, FragRaceEditorControlBar.OnFragmentInteractionListener,
         FragClassEditorControlBar.OnFragmentInteractionListener, FragInfoTextFragment.OnFragmentInteractionListener {
 
@@ -23,13 +25,14 @@ public class ActCharacteristicEditorFragHolder extends Activity implements View.
     public static final String INDEX_KEY = "index";
 
     private FrameLayout frmInfoFrame;
-    private Button btnInfo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_characteristic_editor_frag_holder);
+
+        frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
 
         if (savedInstanceState != null) {
             return;
@@ -38,10 +41,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements View.
             getFragmentManager().beginTransaction().add(R.id.fragment_container_left, fragLS).commit();
         }
 
-        frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
-        frmInfoFrame.bringToFront();
-        btnInfo = (Button) findViewById(R.id.btnCharEditInfo);
-        btnInfo.setOnClickListener(this);
+
     }
 
     @Override
@@ -57,16 +57,17 @@ public class ActCharacteristicEditorFragHolder extends Activity implements View.
         super.onBackPressed();
     }
 
-    @Override
-    public void onClick(View view) {
-        if (view == btnInfo) {
+    public void charEditInfoButtonClicked(View view) {
 
-            FragInfoTextFragment fragInfo = new FragInfoTextFragment();
-            String infoText = getInfoText();
-            Bundle bundle = new Bundle();
-            bundle.putString("text", infoText);
-            getFragmentManager().beginTransaction().add(R.id.frmCharEditorInfo, fragInfo).addToBackStack(null).commit();
-        }
+        frmInfoFrame.bringToFront();
+
+        FragInfoTextFragment fragInfo = new FragInfoTextFragment();
+        String infoText = getInfoText();
+        Bundle bundle = new Bundle();
+        bundle.putString("text", infoText);
+        fragInfo.setArguments(bundle);
+        getFragmentManager().beginTransaction().add(R.id.frmCharEditorInfo, fragInfo).addToBackStack(null).commit();
+
     }
 
     @Override
@@ -473,8 +474,8 @@ public class ActCharacteristicEditorFragHolder extends Activity implements View.
     }
 
     private String getInfoText() {
-        String infoText = getResources().getString(R.string.char_edit_info);
-        return infoText;
+        return getResources().getString(R.string.char_edit_info);
+
     }
 
     @Override

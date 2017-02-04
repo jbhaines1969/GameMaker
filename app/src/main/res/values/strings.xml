@@ -206,7 +206,7 @@
 
     Dice + Base:  All Attributes start at a base number of points, and dice results are added to the base for each attribute.\n\n
 
-    Dice + Point Assignment:  Players roll dice for each attribute, and get a number of points to assign to the results.\n\n
+    Dice + Point Assignment:  Players roll dice for each attribute, and get a number of additional points to assign to the results.\n\n
 
     Base + Point Assignment:  All Attributes start at a base number, and players get a number of points to assign to attributes
     until no points remain.</string>
@@ -217,17 +217,32 @@
     and number of rolls used to determine health.\n\n
 
     Attribute:  Health is determined by Attribute scores, either a single Attribute or a sum of Attributes.  Select which Attributes
-    will be added to the total.\n
-    Multiplier:  Sum of Attributes will be multiplied by this number to determine health points.\n
+    will be added to the total using the Attribute List.\n\n
+    Multiplier:  Sum of Attributes will be multiplied by this number to determine health points.\n\n
     Additive:  This will be added to health score after multiplier is applied.\n\n
 
     Accessory:  Health will be determined by equipment/accessories in game.\n
-    Example:  A space opera where play always takes place in a ship would use ships armor and shield ratings to determine how
+    Example:  A space opera where play always takes place in a ship would use ship\'s armor and shield ratings to determine how
     much damage the player could take.\n
     Use Attribute list if Attributes will modify the health rating in this case.</string>
 
     <string name="char_edit_info">This is actually going to be a shitload of text strings, one for each control bar and one for each
     individual editor screen.  Fuck.  I\'m going to grow old writing all of these.  I need a drink.</string>
+
+    <string name="game_edit_info">Name:  Edit Game Name, Description, and Type\n\n
+
+    Characteristics:  Use these screens to edit character specific qualities, such as races, classes, and abilities\n\n
+
+    Attribute Creation:  Attributes make up the core abilities of characters. Use this section to specify the method
+    used to determine a character\'s attribute scores.\n\n
+
+    Health Type Creation:  Use this section to set up rules for determining the damage a character is able to take.\n\n
+
+    Advancement Method:  Set the method of character progression, and the costs for ability advancement.</string>
+    <string name="game_already_exists">A Game with this name already exists. Do you want to overwrite it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="choose_name_for_game">Please choose a name for this game. \"New Game\" is not allowed.</string>
 
 
 </resources>

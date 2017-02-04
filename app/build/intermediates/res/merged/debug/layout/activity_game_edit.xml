@@ -130,7 +130,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|end"
             android:text="@string/info"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:onClick="gameEditInfoButtonClicked"/>
 
     </LinearLayout>
 
