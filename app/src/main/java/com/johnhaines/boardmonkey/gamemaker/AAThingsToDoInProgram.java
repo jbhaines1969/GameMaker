@@ -6,7 +6,6 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 public class AAThingsToDoInProgram {
 
-
     // TODO Info Fragment texts
 
     // TODO Edit Game, Share Game, Delete Game access pre-existing GameMaker folder on reinstall

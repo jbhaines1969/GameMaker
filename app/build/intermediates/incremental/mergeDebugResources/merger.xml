@@ -1394,8 +1394,31 @@
         <item>Dice Roll</item>
         <item>Attribute</item>
         <item>Accessory</item>
-    </string-array><string name="class_text">Class</string><string name="open">Open</string><string name="advancement_method_info">This is a test of the advancement method info,
-    and of multiline string in xml resource.</string><string name="lblFly">Flying</string><string name="game_description">Game Description</string><string name="health_dice_sides">Health Dice Sides</string><string name="dice_plus_points">Dice + Points</string><string name="skills">Skills</string><string name="gameName">Game Name</string><string name="level">Level</string><string name="click_item_to_edit">Click item to edit</string><string name="modified_by_characteristics">Modified by Attributes</string><string name="base_points">Base Points</string><string name="features_possessed">Features Possessed</string><string-array name="AdvancementMethods">
+    </string-array><string name="class_text">Class</string><string name="open">Open</string><string name="advancement_method_info">Character Levels: Select this method when characters will gain ability points
+    or abilities at specific levels of experience gain.\n
+        Example:  1000 exp. points = level 2. 2000 = level 3. \n\n
+
+    Spending Experience Points on Abilities:  This method is used when player experience is gained directly as spendable ability points.\n
+        Example: Character completes mission, gains one point to spend on skills, and one to spend on traits.
+    \n\n
+
+        Event Based:  Choose this method when ability advancement is triggered by in game events, or at the discretion of the Game Master.
+    \nExample:  Character picks lock 100 times successfully, pick lock skill advances to next level.
+        \nAlternatively, Game Master determines Character has practiced lockpicking sufficiently, and awards an advancement to the skill. \n\n
+
+        Point Cost:  Amount of ability points necessary to gain the initial level of the skill. \n\n
+
+        Non-Preferred Penalty:  Amount of extra points necessary for a non-preferred class or race to gain or advance a skill. Use the Skill
+        editor screen to set preferred classes and races.
+        If 0, all classes and races will spend the same amount to advance a skill.\n\n
+
+        Cost Multiplier:  Cost to advance an ability or attribute after the initial point.  If zero, all advancement is at the same cost,
+        otherwise the new level will cost as many points as the current level times the mulitiplier.
+        \n Example:  Multiplier of one will cost three points to go from level three to level four, and four points to go from level four to level five. \n\n
+
+        Max Level:  Sets the highest level abilities can reach.  If zero, abilities will have no upper limit.  If one, they are either
+        possessed or not possessed.
+    </string><string name="lblFly">Flying</string><string name="game_description">Game Description</string><string name="health_dice_sides">Health Dice Sides</string><string name="dice_plus_points">Dice + Points</string><string name="skills">Skills</string><string name="gameName">Game Name</string><string name="level">Level</string><string name="click_item_to_edit">Click item to edit</string><string name="modified_by_characteristics">Modified by Attributes</string><string name="base_points">Base Points</string><string name="features_possessed">Features Possessed</string><string-array name="AdvancementMethods">
         <item>Character Levels</item>
         <item>Spending Experience on Abilities</item>
         <item>Event Based or GM Discretion</item>

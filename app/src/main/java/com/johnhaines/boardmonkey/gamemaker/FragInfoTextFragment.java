@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,7 @@ public class FragInfoTextFragment extends Fragment implements View.OnClickListen
 
         txtInfoText = (TextView) rootView.findViewById(R.id.txtInfoFragmentText);
         txtInfoText.setText(text);
+        txtInfoText.setMovementMethod(new ScrollingMovementMethod());
         btnDone = (Button) rootView.findViewById(R.id.btnCloseInfo);
         btnDone.setOnClickListener(this);
 
