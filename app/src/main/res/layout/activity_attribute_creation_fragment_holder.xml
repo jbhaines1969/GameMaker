@@ -75,7 +75,7 @@
             android:gravity="center"
             android:text="@string/select_attribute_creation_method"
             android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
 
         <Spinner
             android:layout_width="wrap_content"

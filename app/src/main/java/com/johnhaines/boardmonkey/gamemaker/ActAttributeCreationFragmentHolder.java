@@ -7,6 +7,7 @@ import android.os.Environment;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,20 +17,24 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class ActAttributeCreationFragmentHolder extends Activity {
+public class ActAttributeCreationFragmentHolder extends Activity implements View.OnClickListener, FragInfoTextFragment.OnFragmentInteractionListener {
 
     private TextView lblGameName;
     private Spinner spnAttCreationMethod;
     private ArrayAdapter SAdapter;
-    private FrameLayout fragFrame;
+    private FrameLayout frmInfoFrame;
+    private Button btnInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attribute_creation_fragment_holder);
 
-        fragFrame = (FrameLayout) findViewById(R.id.frmAttCreationInfo);
-        fragFrame.bringToFront();
+        frmInfoFrame = (FrameLayout) findViewById(R.id.frmAttCreationInfo);
+        frmInfoFrame.bringToFront();
+
+        btnInfo = (Button) findViewById(R.id.btnAttCreationInfo);
+        btnInfo.setOnClickListener(this);
 
         lblGameName = (TextView) findViewById(R.id.lblAttCreationControlBar);
         lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
@@ -119,6 +124,19 @@ public class ActAttributeCreationFragmentHolder extends Activity {
         return position;
     }
 
+    @Override
+    public void onClick(View view) {
+        if (view == btnInfo) {
+
+            String infoText = getResources().getString(R.string.att_creation_info_base);
+            FragInfoTextFragment fragInfo = new FragInfoTextFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("text", infoText);
+            fragInfo.setArguments(bundle);
+            getFragmentManager().beginTransaction().add(R.id.frmAttCreationInfo, fragInfo).addToBackStack(null).commit();
+        }
+    }
+
     public void saveCreationMethod() {
         ((GameApplication) getApplication()).getGame().getAttCreation().setCreationType(spnAttCreationMethod.getSelectedItemPosition() + 1);
         ClassGame game = (((GameApplication) getApplication()).getGame());
@@ -144,5 +162,10 @@ public class ActAttributeCreationFragmentHolder extends Activity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void onDoneButtonClicked() {
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmAttCreationInfo)).commit();
     }
 }

@@ -3,6 +3,8 @@ package com.johnhaines.boardmonkey.gamemaker;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 
 import java.io.File;
@@ -13,14 +15,16 @@ import java.io.ObjectOutputStream;
 import static android.os.Environment.DIRECTORY_DCIM;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
-public class ActCharacteristicEditorFragHolder extends Activity implements FragListSelector.OnFragmentInteractionListener,
+public class ActCharacteristicEditorFragHolder extends Activity implements View.OnClickListener, FragListSelector.OnFragmentInteractionListener,
         FragListEdit.OnFragmentInteractionListener, FragRaceEditorControlBar.OnFragmentInteractionListener,
-        FragClassEditorControlBar.OnFragmentInteractionListener {
+        FragClassEditorControlBar.OnFragmentInteractionListener, FragInfoTextFragment.OnFragmentInteractionListener {
 
     public static final String LIST_TYPE_KEY = "listType";
     public static final String INDEX_KEY = "index";
 
-    private FrameLayout fragFrame;
+    private FrameLayout frmInfoFrame;
+    private Button btnInfo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,11 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
             FragListSelector fragLS = new FragListSelector();
             getFragmentManager().beginTransaction().add(R.id.fragment_container_left, fragLS).commit();
         }
+
+        frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
+        frmInfoFrame.bringToFront();
+        btnInfo = (Button) findViewById(R.id.btnCharEditInfo);
+        btnInfo.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +55,18 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
             getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.fragment_container_right)).commit();
         }
         super.onBackPressed();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == btnInfo) {
+
+            FragInfoTextFragment fragInfo = new FragInfoTextFragment();
+            String infoText = getInfoText();
+            Bundle bundle = new Bundle();
+            bundle.putString("text", infoText);
+            getFragmentManager().beginTransaction().add(R.id.frmCharEditorInfo, fragInfo).addToBackStack(null).commit();
+        }
     }
 
     @Override
@@ -451,6 +472,16 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         }
     }
 
+    private String getInfoText() {
+        String infoText = getResources().getString(R.string.char_edit_info);
+        return infoText;
+    }
+
+    @Override
+    public void onDoneButtonClicked() {
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmCharEditorInfo)).commit();
+    }
+
     public void saveGameToFile() {
 
         ClassGame game = (((GameApplication) getApplication()).getGame());
@@ -477,4 +508,5 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
             }
         }
     }
+
 }

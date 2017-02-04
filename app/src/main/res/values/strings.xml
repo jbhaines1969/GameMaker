@@ -194,5 +194,40 @@
         possessed or not possessed.
     </string>
 
+    <string name="att_creation_info_base">Sets the rules by which Character Attributes will be created.\n\n
+    Straight Dice:  Players roll a number of dice, add the results, and the total is the Attribute score.\n\n
+
+    Dice Minus Lowest Roll:  Players roll the number of dice needed to create the Attribute, plus one extra roll,
+    add all results and subtract the lowest roll.\n\n
+
+    Point Assignment:  Players are given a set number of points, and assign points to the Attributes until no points remain\n\n
+
+    Base Points: All Attributes start at a base number of points.  Advancement points are gained through experience.\n\n
+
+    Dice + Base:  All Attributes start at a base number of points, and dice results are added to the base for each attribute.\n\n
+
+    Dice + Point Assignment:  Players roll dice for each attribute, and get a number of points to assign to the results.\n\n
+
+    Base + Point Assignment:  All Attributes start at a base number, and players get a number of points to assign to attributes
+    until no points remain.</string>
+
+    <string name="health_creation_info">Set method for determining how much damage a character can take. \n\n
+
+    Dice Roll:  Player will roll dice to determine character health.  Use the Class editor screens to set Dice sides
+    and number of rolls used to determine health.\n\n
+
+    Attribute:  Health is determined by Attribute scores, either a single Attribute or a sum of Attributes.  Select which Attributes
+    will be added to the total.\n
+    Multiplier:  Sum of Attributes will be multiplied by this number to determine health points.\n
+    Additive:  This will be added to health score after multiplier is applied.\n\n
+
+    Accessory:  Health will be determined by equipment/accessories in game.\n
+    Example:  A space opera where play always takes place in a ship would use ships armor and shield ratings to determine how
+    much damage the player could take.\n
+    Use Attribute list if Attributes will modify the health rating in this case.</string>
+
+    <string name="char_edit_info">This is actually going to be a shitload of text strings, one for each control bar and one for each
+    individual editor screen.  Fuck.  I\'m going to grow old writing all of these.  I need a drink.</string>
+
 
 </resources>
