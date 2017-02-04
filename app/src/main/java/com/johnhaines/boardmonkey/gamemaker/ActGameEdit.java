@@ -109,6 +109,6 @@ public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFrag
 
     @Override
     public void onDoneButtonClicked() {
-        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmGameEditInfo));
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmGameEditInfo)).commit();
     }
 }
