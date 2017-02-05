@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:textSize="36sp"
+                android:textSize="28sp"
                 android:gravity="center" />
 
             <EditText
@@ -32,7 +32,7 @@
                 android:background="#ffffff"
                 android:textColor="#000000"
                 android:id="@+id/edtPointAssignment"
-                android:textSize="36sp"
+                android:textSize="28sp"
                 android:gravity="center" />
         </LinearLayout>
 

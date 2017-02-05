@@ -14,9 +14,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:textSize="24sp"
+            android:text="@string/lblRace"
+            android:textSize="28sp"
             android:id="@+id/lblRaceName"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
@@ -32,6 +31,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/description"
+            android:textSize="24sp"
             android:id="@+id/btnEditRaceDescription"
             android:layout_gravity="center_horizontal" />
 
@@ -45,6 +45,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/movement"
+            android:textSize="24sp"
             android:id="@+id/btnEditRaceMovement"
             android:layout_gravity="center_horizontal" />
 
@@ -58,6 +59,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/allowed_classes"
+            android:textSize="24sp"
             android:id="@+id/btnEditAllowedClasses"
             android:layout_gravity="center_horizontal" />
 
@@ -71,6 +73,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/features_possessed"
+            android:textSize="24sp"
             android:id="@+id/btnEditRaceAutoFeatures"
             android:layout_gravity="center_horizontal" />
 
@@ -84,6 +87,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/racial_traits"
+            android:textSize="24sp"
             android:id="@+id/btnEditRaceTraits"
             android:layout_gravity="center_horizontal" />
 
@@ -97,6 +101,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/known_skills"
+            android:textSize="24sp"
             android:id="@+id/btnEditRaceKnownSkills"
             android:layout_gravity="center_horizontal" />
 
@@ -110,6 +115,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/attribute_modifiers"
+            android:textSize="24sp"
             android:id="@+id/btnEditRaceAttributeMods"
             android:layout_gravity="center_horizontal" />
 
@@ -123,6 +129,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/attribute_requirements"
+            android:textSize="24sp"
             android:id="@+id/btnEditRaceAttributeRequirements"
             android:layout_gravity="center_horizontal" />
 

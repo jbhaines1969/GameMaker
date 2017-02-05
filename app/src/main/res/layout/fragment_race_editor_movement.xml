@@ -14,8 +14,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/lblRMovementRaceName"
+            android:textSize="28sp"
             android:layout_gravity="center_horizontal" />
 
         <TextView
@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:textColor="#000000"
             android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/lblWalk"
                 android:id="@+id/lblWalk"
-                android:textSize="25sp"
+                android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />
 
@@ -51,6 +51,7 @@
                 android:id="@+id/txtWalk"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
+                android:textSize="24sp"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
@@ -66,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/lblFly"
                 android:id="@+id/lblFly"
-                android:textSize="25sp"
+                android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />
 
@@ -77,6 +78,7 @@
                 android:id="@+id/txtFly"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
+                android:textSize="24sp"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
@@ -92,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/lblSwim"
                 android:id="@+id/lblSwim"
-                android:textSize="25sp"
+                android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />
 
@@ -103,15 +105,16 @@
                 android:id="@+id/txtSwim"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
+                android:textSize="24sp"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
         <Button
             android:id="@+id/btnSaveMovement"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/SaveButton"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 </FrameLayout>

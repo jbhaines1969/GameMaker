@@ -308,6 +308,7 @@
     Lunar Strength might give a player a bonus to physical strength in direct moonlight\n
     Material Weakness (with selected material) might make a character practically powerless against
     a particular object or material.</string>
+    <string name="health_creation_dice_message_text">Use the Class Editor section to set health point dice</string>
 
 
 </resources>

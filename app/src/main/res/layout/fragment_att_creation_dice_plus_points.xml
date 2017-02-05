@@ -29,7 +29,7 @@
                     android:layout_gravity="center"
                     android:text="@string/assign_points"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:textAlignment="center"
                     android:gravity="center" />
 
@@ -43,7 +43,7 @@
                     android:id="@+id/edtPointsDicePlusPoints"
                     android:background="#ffffff"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:selectAllOnFocus="true"
                     android:gravity="center" />
             </LinearLayout>
@@ -61,7 +61,7 @@
                     android:layout_gravity="center"
                     android:text="@string/how_many_sides_per_dice"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:textAlignment="center"
                     android:gravity="center" />
 
@@ -75,7 +75,7 @@
                     android:id="@+id/edtDiceSidesDicePlusPoints"
                     android:background="#ffffff"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:selectAllOnFocus="true"
                     android:gravity="center" />
             </LinearLayout>
@@ -93,7 +93,7 @@
                     android:layout_gravity="center"
                     android:text="@string/how_many_rolls"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:textAlignment="center"
                     android:gravity="center" />
 
@@ -107,16 +107,13 @@
                     android:id="@+id/edtDiceRollsDicePlusPoints"
                     android:background="#ffffff"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:selectAllOnFocus="true"
                     android:gravity="center" />
 
             </LinearLayout>
 
-
         </LinearLayout>
-
-
 
             <Button
                 android:id="@+id/btnSaveDicePlusPoints"
