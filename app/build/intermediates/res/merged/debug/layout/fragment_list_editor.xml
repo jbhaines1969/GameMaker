@@ -12,14 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblTextGroup"
+        android:textSize="24sp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight=".1"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
@@ -30,15 +29,16 @@
             android:background="#ffffff"
             android:imeActionId="666"
             android:imeActionLabel="Add"
+            android:textSize="24sp"
             android:inputType="textCapWords"
             android:selectAllOnFocus="true" />
 
         <Button
             android:id="@+id/btnAddItem"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".2"
-            android:text="Add" />
+            android:text="@string/add"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <Space
@@ -53,8 +53,7 @@
         android:layout_weight=".07"
         android:text="Click item to edit"
         android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="normal|bold" />
+        android:textSize="24sp" />
 
     <Space
         android:layout_width="match_parent"

@@ -20,7 +20,6 @@ public class FragClassEditorLevelUpPoints extends Fragment implements View.OnCli
 
     private TextView lblClassNameLevelUpScreen;
     private Button btnSaveLevelUpPoints;
-    private Button btnLevelUpPointsInstructions;
     private EditText edtLevelUpAttributesLevels;
     private EditText edtLevelUpAttributesPoints;
     private EditText edtLevelUpSkillLevels;
@@ -53,8 +52,6 @@ public class FragClassEditorLevelUpPoints extends Fragment implements View.OnCli
         lblClassNameLevelUpScreen.setText("Point Gains per Level");
         btnSaveLevelUpPoints = (Button) rootView.findViewById(R.id.btnSaveLevelUpPoints);
         btnSaveLevelUpPoints.setOnClickListener(this);
-        btnLevelUpPointsInstructions = (Button) rootView.findViewById(R.id.btnLevelUpPointsInstructions);
-        btnLevelUpPointsInstructions.setOnClickListener(this);
         edtLevelUpAttributesLevels = (EditText) rootView.findViewById(R.id.edtLevelUpAttributesLevels);
         edtLevelUpAttributesLevels.setText(getEntry("AttributeLevels"));
         edtLevelUpAttributesPoints = (EditText) rootView.findViewById(R.id.edtLevelUpAttributesPoints);
@@ -110,12 +107,6 @@ public class FragClassEditorLevelUpPoints extends Fragment implements View.OnCli
 
     @Override
     public void onClick(View v) {
-
-        if (v == btnLevelUpPointsInstructions) {
-
-            //TODO set up instructions fragment or toast
-
-        }
 
         if (v == btnSaveLevelUpPoints) {
 
