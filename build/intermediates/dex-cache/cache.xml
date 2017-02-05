@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="3bd3882ac7264e56a990dc7faeb3da0bc041d99f">
+        sha1="e68a693ef695a7971ede02948fb0f6349a33346c">
         <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0f1c54cfb1626379606d2f8fed87a3041565dd99\classes.dex" />
     </item>
     <item
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="2a7ce4bafcf53a817ebb3306fb1cae0b5758affb">
+        sha1="b2fd130e55312a452163442a77b2a675782478f2">
         <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_26e9b45a69fdfa7d98fbce162bfbc41d27ae8c69\classes.dex" />
     </item>
     <item

@@ -25,6 +25,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
     public static final String INDEX_KEY = "index";
 
     private FrameLayout frmInfoFrame;
+    private String infoText;
 
 
     @Override
@@ -33,6 +34,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         setContentView(R.layout.activity_characteristic_editor_frag_holder);
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
+        infoText = getResources().getString(R.string.list_selector_info);
 
         if (savedInstanceState != null) {
             return;
@@ -62,7 +64,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         frmInfoFrame.bringToFront();
 
         FragInfoTextFragment fragInfo = new FragInfoTextFragment();
-        String infoText = getInfoText();
         Bundle bundle = new Bundle();
         bundle.putString("text", infoText);
         fragInfo.setArguments(bundle);
@@ -75,7 +76,28 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         // Interface from List Selector screen FragListSelector
         // listType determines which ArrayList the Adapter uses to populate ListView
-        // in FragListEdit
+        // in FragListEdit, and which text to load in the info screen
+
+        switch (message) {
+            case "Attributes":
+                infoText = getResources().getString(R.string.attribute_list_info);
+                break;
+            case "Races":
+                infoText = getResources().getString(R.string.race_list_info);
+                break;
+            case "Classes":
+                infoText = getResources().getString(R.string.class_list_info);
+                break;
+            case "Skills":
+                infoText = getResources().getString(R.string.skill_list_info);
+                break;
+            case "Traits":
+                infoText = getResources().getString(R.string.trait_list_info);
+                break;
+            case "Features":
+                infoText = getResources().getString(R.string.feature_list_info);
+                break;
+        }
 
         Bundle bundle = new Bundle();
         bundle.putString(LIST_TYPE_KEY, message);
@@ -83,6 +105,8 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         FragListEdit fragLE = new FragListEdit();
         fragLE.setArguments(bundle);
         getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragLE).commit();
+
+
     }
 
     @Override
@@ -100,6 +124,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         fragLE.setArguments(bundle);
 
         if (listType.equals("Races")) {
+
 
             FragRaceEditorControlBar fragEditor = new FragRaceEditorControlBar();
             fragEditor.setArguments(bundle);

@@ -292,6 +292,11 @@
     until no points remain.</string>
     <string name="attribute_additive">Attribute Additive</string>
     <string name="attribute_creation">Attribute Creation</string>
+    <string name="attribute_list_info">Attributes are the core abilities of characters, an inherent set of qualities
+    that all characters share.  They are often used to determine success in actions, give bonuses to outcomes, or set
+    limits to other abilities.  You should create only attributes which will have real effects in your game.\n\n
+    Example:  A game based on physical combat might use Strength and Agility, while a game based on aircraft dogfights
+    would not need to know Character strength, but might need Reflex Speed and Spatial Awareness as attributes.</string>
     <string name="attribute_modifiers">Attribute Modifiers</string>
     <string name="attribute_requirements">Attribute Requirements</string>
     <string name="attributes">Attributes</string>
@@ -317,6 +322,8 @@
     <string name="choose_file">Choose Game to Edit</string>
     <string name="choose_name_for_game">Please choose a name for this game. \"New Game\" is not allowed.</string>
     <string name="class_base_points_instructions">Enter the base points for a newly created character</string>
+    <string name="class_list_info">Classes are the professions a character can take on, and the skills and bonuses,
+    as well as weaknesses, reflect the training and experiences the character has recieved for that role.</string>
     <string name="class_name">Class</string>
     <string name="class_text">Class</string>
     <string name="class_traits">Class Traits</string>
@@ -335,6 +342,22 @@
     <string name="edit_game">Edit Game</string>
     <string name="edit_name">Edit Name</string>
     <string name="effect_type">Effect Type</string>
+    <string name="feature_list_info">Features are abilities or conditions that are granted to the character
+    which are not natural to the game world.  They generally share the qualities of Traits, being either always on
+    or requiring no significant time to use, although they could include Skill-like abilities which require a process to
+        utilize.\n
+        Common origins include abilities granted by powerful magical or divine beings,
+    special objects, or traits which are so rare as to be considered supernatural or paranormal.\n\n
+    Features tend to have powerful game effects, and are often limited in some way, such as having a maximum amount of usages per day or week, only
+    being usable under certain conditions, or any number of other limitations which keep them from overbalancing the
+    game.\n\n
+    Like Traits, Features can be detrimental as well as beneficial, or both at the same time (think powerful curses, or
+    clairvoyance that leaves the character weak and disoriented for a period of time after use)\n\n
+
+    Examples:  Flaming Breath might allow the character to spit fire once a day.\n
+    Lunar Strength might give a player a bonus to physical strength in direct moonlight\n
+    Material Weakness (with selected material) might make a character practically powerless against
+    a particular object or material.</string>
     <string name="features">Features</string>
     <string name="features_possessed">Features Possessed</string>
     <string name="game">Game</string>
@@ -344,7 +367,7 @@
     <string name="game_description">Game Description</string>
     <string name="game_edit_info">Name:  Edit Game Name, Description, and Type\n\n
 
-    Characteristics:  Use these screens to edit character specific information, such as race, class, and abilities\n\n
+    Characteristics:  Use these screens to edit character specific qualities, such as races, classes, and abilities\n\n
 
     Attribute Creation:  Attributes make up the core abilities of characters. Use this section to specify the method
     used to determine a character\'s attribute scores.\n\n
@@ -389,6 +412,8 @@
     <string name="level_points_instructions">Enter the levels needed to gain new points, and the points gained for each Characteristic</string>
     <string name="levels">Levels</string>
     <string name="levels_for_skills">Levels for Skills</string>
+    <string name="list_selector_info">Select the Characteristic you wish to work on, and add items to the Characteristic
+    list.  Select an item in the list to edit that item. Use the Help (?) button with list loaded to get item specific help.</string>
     <string name="max_level">Max Level</string>
     <string name="maximum_points">Maximum Points</string>
     <string name="minimum_attributes">Minimum Attributes</string>
@@ -409,17 +434,50 @@
     <string name="preferred_classes">Preferred Classes</string>
     <string name="preferred_points">Preferred Points</string>
     <string name="preferred_races">Preferred Races</string>
+    <string name="race_list_info">Races each have their own strengths and weaknesses, and can be used to enhance roleplay
+    as well as determining starting skills and backgrounds for characters.\n\n</string>
     <string name="race_movement_intro_text">Enter the base movement speed for each Movement type.</string>
     <string name="races">Races</string>
     <string name="racial_traits">Racial Traits</string>
     <string name="select_attribute_creation_method">Select Attribute Creation Method</string>
     <string name="select_health_creation_method">Select Health Type Method</string>
     <string name="share_game">Share Game</string>
+    <string name="skill_list_info">Skills are the list of abilities which require a process to complete.  Skills are usually
+    learned, either through lessons or through diligent practice, although in some cases natural talent is as good as learning.
+    Skills might modify other game events (such as acrobatic skills modifying falling damage), but they also have
+    success outcomes of their own (such as checking against the acrobatic skill to successfully tumble after a dodge, and come up
+        ready to strike).\n
+        The main aspect to keep in mind in determining if an ability fits in the Skill set is whether or not it is a process
+        that takes time to achieve a final result when using the skill for its own sake.\n\n
+        Skill levels will act as either bonuses to success chances, increased quality of produced materials, or additional
+        options available to the character using the skill.
+    Examples:  Painting (additional levels could increase quality of painting, or add mediums the artist is
+        capable of working in)\n
+        Auto-Mechanics(additional levels could add to the types of engines/vehicles the character can
+        work on, decrease time for diagnostics, etc.)\n
+        Driving\n
+        Wall-Climbing</string>
     <string name="skill_name">Skill Name</string>
     <string name="skill_points">Skill Points</string>
     <string name="skills">Skills</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="straight_dice">Straight Dice</string>
+    <string name="trait_list_info">Traits are characteristics and abilities which are either always on, or have instant effects when
+    a situation calls on them.  Traits can be developed through training, natural qualities the character possesses,
+    or, in some games, granted by objects the character possesses.\n\n
+        Traits can be detrimental as well as beneficial.  Near-Sightedness would be a Trait,
+        just as Perfect Vision would be. In these cases, a Game Master could include a negative cost to the Trait, and allow
+        players to gain extra Trait points to spend by selecting a few detrimental characteristics.\n\n
+        Included in this group would be any racial characteristics the game includes. If the game includes a race that
+        can see in the dark, then "Night Sight" would be included in the trait list, but might only be usable by that race
+        or by characters who gain it through objects or other game events.\n\n
+    Traits generally act as modifiers to game events or success checks, and have no significant outcome of their own.\n\n
+
+        Examples: Quick-Draw might reduce the reaction time penalty for drawing or changing weapons during combat\n
+        Night-Sight would reduce or eliminate penalties for operating in low light conditions.\n
+        Truth-Sense could allow a character a success check to realize they are being lied to.
+        Near-Sightedness might give a penalty to success checks to notice concealed items.
+    </string>
     <string name="traits">Traits</string>
     <string name="yes">Yes</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
