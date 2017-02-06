@@ -30,7 +30,6 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
     private Button btnEditRaceDescription;
     private Button btnEditRaceMovement;
     private Button btnEditAllowedClasses;
-    private Button btnEditRaceAutoFeatures;
     private Button btnEditRaceKnownSkills;
     private Button btnEditRaceAttributeMods;
     private Button btnEditRaceTraits;
@@ -79,8 +78,6 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
         btnEditRaceMovement.setOnClickListener(this);
         btnEditAllowedClasses = (Button) rootView.findViewById(R.id.btnEditAllowedClasses);
         btnEditAllowedClasses.setOnClickListener(this);
-        btnEditRaceAutoFeatures = (Button) rootView.findViewById(R.id.btnEditRaceAutoFeatures);
-        btnEditRaceAutoFeatures.setOnClickListener(this);
         btnEditRaceKnownSkills = (Button) rootView.findViewById(R.id.btnEditRaceKnownSkills);
         btnEditRaceKnownSkills.setOnClickListener(this);
         btnEditRaceAttributeMods = (Button) rootView.findViewById(R.id.btnEditRaceAttributeMods);
@@ -134,9 +131,6 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
         }
         if (v == btnEditAllowedClasses) {
             message = "Classes";
-        }
-        if (v == btnEditRaceAutoFeatures) {
-            message = "Features";
         }
         if (v == btnEditRaceKnownSkills) {
             message = "Skills";

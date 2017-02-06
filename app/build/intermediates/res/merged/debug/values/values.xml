@@ -321,12 +321,41 @@
     <string name="choose_advancement_method">Choose Advancement Method</string>
     <string name="choose_file">Choose Game to Edit</string>
     <string name="choose_name_for_game">Please choose a name for this game. \"New Game\" is not allowed.</string>
+    <string name="class_att_req_info">Many Classes have minimum required attributes in order to be successful in that profession.
+    A college professsor won\'t do very well if he\'s of very low intelligence, and an easily distracted person does not make
+    a good bomb-technician.  Use this screen to set the minimum Attribute scores necessary to choose this Class.</string>
     <string name="class_base_points_instructions">Enter the base points for a newly created character</string>
+    <string name="class_description_info">Edit name and enter a basic description for this Class, including background, role
+    in the game, and standard expectations of the Class within the game world</string>
+    <string name="class_level_names_info">Purely optional, Level Names often have no real effect on game mechanics, but can add an
+    extra layer of depth to roleplay.  Use this section to set the titles by which characters of a particular rank are known.
+    /n/n
+    These ranks can be used to add a game element, if the game includes a heirarchy of command, such as in military scenarios or
+    guild based games.</string>
+    <string name="class_level_points_info">If using the Character Levels advancement method, these will be the points earned by
+    characters of this class upon advancing to new levels.\n\n
+
+        Some abilities may gain points every level, while others may only advance after a certain number of levels have been reached.\n\n
+
+    Points:  Number of points gained at each advancement level.\n\n
+
+    Levels:  How many levels are needed to gain advancement points.</string>
     <string name="class_list_info">Classes are the professions a character can take on, and the skills and bonuses,
     as well as weaknesses, reflect the training and experiences the character has recieved for that role.</string>
     <string name="class_name">Class</string>
+    <string name="class_skills_info">Select the Skills which are common to all members of this Class. These reflect the
+    training and experiences of those in this profession, and cost no ability points for initial levels.</string>
+    <string name="class_start_points_info">Use this screen to set the number of starting spendable ability points a player
+    has when creating a new character, for each ability type.  If using a single point pool for all abilities, set how many total points
+    new characters of this class start with.</string>
     <string name="class_text">Class</string>
     <string name="class_traits">Class Traits</string>
+    <string name="class_traits_info">Select the Traits which are common to all members of this Class. These reflect both
+    experience and training, as well as qualities which might be required to be recruited into this profession.\n\n
+
+    Examples:\n\n
+
+    All members of the Sharpshooter Class might have Steady Hands as a Trait, giving a bonus to aiming actions.</string>
     <string name="classes">Classes</string>
     <string name="click_item_to_edit">Click item to edit</string>
     <string name="close_text">Close</string>
@@ -345,7 +374,7 @@
     <string name="feature_list_info">Features are abilities or conditions that are granted to the character
     which are not natural to the game world.  They generally share the qualities of Traits, being either always on
     or requiring no significant time to use, although they could include Skill-like abilities which require a process to
-        utilize.\n
+        utilize.\n\n
         Common origins include abilities granted by powerful magical or divine beings,
     special objects, or traits which are so rare as to be considered supernatural or paranormal.\n\n
     Features tend to have powerful game effects, and are often limited in some way, such as having a maximum amount of usages per day or week, only
@@ -354,7 +383,8 @@
     Like Traits, Features can be detrimental as well as beneficial, or both at the same time (think powerful curses, or
     clairvoyance that leaves the character weak and disoriented for a period of time after use)\n\n
 
-    Examples:  Flaming Breath might allow the character to spit fire once a day.\n
+    Examples:\n
+        Flaming Breath might allow the character to spit fire once a day.\n
     Lunar Strength might give a player a bonus to physical strength in direct moonlight\n
     Material Weakness (with selected material) might make a character practically powerless against
     a particular object or material.</string>
@@ -435,24 +465,47 @@
     <string name="preferred_classes">Preferred Classes</string>
     <string name="preferred_points">Preferred Points</string>
     <string name="preferred_races">Preferred Races</string>
+    <string name="race_allowed_classes_info">Many games limit the Class/Profession choices of certain Races. Use this
+    area to choose which Classes will be allowed to this Race.  Leaving all Classes unselected will allow this Race to choose any
+    Class.</string>
+    <string name="race_att_mods_info">Races each have their own strengths and weaknesses.  Use this section to
+    set any bonuses or negatives this Race will have to core Attribute scores.</string>
+    <string name="race_att_req_info">Many games set limits to the core Attributes for certain races, such as small
+    tree dwellers having a maximum Strengh rating (due to size), or a monstrous race being limited in Intelligence (reflecting
+    their barbaric nature and distrust of arcane knowledge).\n\n
+
+    Use this screen to set upper and lower limits for Attributes for this race.</string>
+    <string name="race_description_info">Edit name and enter basic description for this race, including appearance, history,
+    and preferred living environment</string>
     <string name="race_list_info">Races each have their own strengths and weaknesses, and can be used to enhance roleplay
     as well as determining starting skills and backgrounds for characters.\n\n</string>
+    <string name="race_movement_info">Enter the distance in base game units that a character of this Race
+        can move in one action round when unencumbered and moving freely, for each movement type.</string>
     <string name="race_movement_intro_text">Enter the base movement speed for each Movement type.</string>
+    <string name="race_skills_info">Use this screen to select any Skills which are commonly known to members of this Race.
+        These reflect the conditions under which members of the Race are raised, and cost no ability points for initial levels.\n\n
+    Examples might include Mountaineering for a Race which lives in mountains,
+        or a race of forest people which learn Foraging as a matter of course. </string>
+    <string name="race_traits_info">Use this screen to select any Traits which are commonly known to members of this Race.\n\n
+    Examples might include a race of tree dwellers which are inherently Ambidextrous, or a Water Breathing undersea race.</string>
     <string name="races">Races</string>
     <string name="racial_traits">Racial Traits</string>
     <string name="select_attribute_creation_method">Select Attribute Creation Method</string>
     <string name="select_health_creation_method">Select Health Type Method</string>
     <string name="share_game">Share Game</string>
     <string name="skill_list_info">Skills are the list of abilities which require a process to complete.  Skills are usually
-    learned, either through lessons or through diligent practice, although in some cases natural talent is as good as learning.
+    learned, either through lessons or through diligent practice, although in some cases natural talent is as good as learning.\n\n
+
+        Skills also include knowledges, such as extra languages spoken, or a background in ancient history.\n\n
     Skills might modify other game events (such as acrobatic skills modifying falling damage), but they also have
     success outcomes of their own (such as checking against the acrobatic skill to successfully tumble after a dodge, and come up
-        ready to strike).\n
+        ready to strike).\n\n
         The main aspect to keep in mind in determining if an ability fits in the Skill set is whether or not it is a process
         that takes time to achieve a final result when using the skill for its own sake.\n\n
         Skill levels will act as either bonuses to success chances, increased quality of produced materials, or additional
-        options available to the character using the skill.
-    Examples:  Painting (additional levels could increase quality of painting, or add mediums the artist is
+        options available to the character using the skill.\n\n
+    Examples:\n
+        Painting (additional levels could increase quality of painting, or add mediums the artist is
         capable of working in)\n
         Auto-Mechanics(additional levels could add to the types of engines/vehicles the character can
         work on, decrease time for diagnostics, etc.)\n
@@ -474,9 +527,10 @@
         or by characters who gain it through objects or other game events.\n\n
     Traits generally act as modifiers to game events or success checks, and have no significant outcome of their own.\n\n
 
-        Examples: Quick-Draw might reduce the reaction time penalty for drawing or changing weapons during combat\n
+        Examples:\n
+        Quick-Draw might reduce the reaction time penalty for drawing or changing weapons during combat\n
         Night-Sight would reduce or eliminate penalties for operating in low light conditions.\n
-        Truth-Sense could allow a character a success check to realize they are being lied to.
+        Truth-Sense could allow a character a success check to realize they are being lied to.\n
         Near-Sightedness might give a penalty to success checks to notice concealed items.
     </string>
     <string name="traits">Traits</string>

@@ -13,15 +13,13 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight=".5"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
             android:text="@string/skill_name"
-            android:id="@+id/lblAbilityName"
+            android:id="@+id/lblNameAbilityEditorControlBar"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="#000000"
-            android:textSize="36sp" />
+            android:textSize="28sp" />
 
         <Space
             android:layout_width="match_parent"

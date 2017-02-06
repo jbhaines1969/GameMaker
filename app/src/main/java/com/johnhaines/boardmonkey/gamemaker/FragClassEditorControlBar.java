@@ -30,7 +30,6 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
     private Button btnEditClassDescription;
     private Button btnEditClassStartingPoints;
     private Button btnEditLevelUpPoints;
-    private Button btnEditClassAutoFeatures;
     private Button btnEditClassKnownSkills;
     private Button btnEditClassAttributeRequirements;
     private Button btnEditClassTraits;
@@ -79,8 +78,6 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
         btnEditClassStartingPoints.setOnClickListener(this);
         btnEditLevelUpPoints = (Button) rootView.findViewById(R.id.btnEditLevelUpPoints);
         btnEditLevelUpPoints.setOnClickListener(this);
-        btnEditClassAutoFeatures = (Button) rootView.findViewById(R.id.btnEditClassAutoFeatures);
-        btnEditClassAutoFeatures.setOnClickListener(this);
         btnEditClassKnownSkills = (Button) rootView.findViewById(R.id.btnEditClassKnownSkills);
         btnEditClassKnownSkills.setOnClickListener(this);
         btnEditClassAttributeRequirements = (Button) rootView.findViewById(R.id.btnEditClassAttributeRequirements);
@@ -133,9 +130,6 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
         }
         if (v == btnEditLevelUpPoints) {
             message = "Level Points";
-        }
-        if (v == btnEditClassAutoFeatures) {
-            message = "Features";
         }
         if (v == btnEditClassKnownSkills) {
             message = "Skills";

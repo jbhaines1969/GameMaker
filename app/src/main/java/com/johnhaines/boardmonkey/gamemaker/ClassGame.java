@@ -1,11 +1,14 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class ClassGame implements Serializable {
+public class ClassGame implements Serializable, Parcelable {
 
     private int maxTraitPoints;
     private int maxSkillPoints;
@@ -261,5 +264,15 @@ public class ClassGame implements Serializable {
                 }
             });
         }
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
     }
 }

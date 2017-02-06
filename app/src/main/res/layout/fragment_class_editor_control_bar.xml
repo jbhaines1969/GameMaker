@@ -73,20 +73,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/features_possessed"
-            android:id="@+id/btnEditClassAutoFeatures"
-            android:layout_gravity="center_horizontal"
-            android:textSize="24sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
             android:text="@string/class_traits"
             android:id="@+id/btnEditClassTraits"
             android:layout_gravity="center_horizontal"
