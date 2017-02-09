@@ -47,14 +47,15 @@
                 android:layout_gravity="center_horizontal">
 
                 <Button
-                    android:background="@drawable/vine_background_1000_1667"
+                    android:background="@drawable/decal2"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="@string/new_game"
                     android:id="@+id/btnNewGame"
                     android:onClick="newGameClicked"
-                    android:textSize="28sp" />
+                    android:textSize="28sp"
+                    android:textColor="@android:color/background_light" />
 
                 <Space
                     android:layout_width="match_parent"
