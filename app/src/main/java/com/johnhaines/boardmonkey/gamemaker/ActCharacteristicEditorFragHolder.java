@@ -1,6 +1,7 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -35,7 +36,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         setContentView(R.layout.activity_characteristic_editor_frag_holder);
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
-        infoText = getResources().getString(R.string.list_selector_info);
+        infoText = getInfoText();
 
         if (savedInstanceState != null) {
             return;
@@ -43,7 +44,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
             FragListSelector fragLS = new FragListSelector();
             getFragmentManager().beginTransaction().add(R.id.fragment_container_left, fragLS).commit();
         }
-
 
     }
 
@@ -53,14 +53,23 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         // Clear all fragments before popping backstack, as some fragments in right hand container
         // will change after transaction is added to stack
 
-        if (getFragmentManager().findFragmentById(R.id.fragment_container_right) != null) {
+        if (getFragmentManager().findFragmentById(R.id.frmCharEditorInfo) != null) {
+            getFragmentManager().beginTransaction().remove(getFragmentManager().
+                    findFragmentById(R.id.frmCharEditorInfo)).commit();
+        } else if (getFragmentManager().findFragmentById(R.id.fragment_container_right) != null) {
 
-            getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.fragment_container_right)).commit();
+            getFragmentManager().beginTransaction().remove(getFragmentManager().
+                    findFragmentById(R.id.fragment_container_right)).commit();
+
+            super.onBackPressed();
+        } else {
+            super.onBackPressed();
         }
-        super.onBackPressed();
     }
 
     public void charEditInfoButtonClicked(View view) {
+
+        infoText = getInfoText();
 
         frmInfoFrame.bringToFront();
 
@@ -108,6 +117,12 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragLE).commit();
 
 
+    }
+
+    public String getInfoText() {
+        String text = "";
+
+        return text;
     }
 
     @Override
@@ -241,7 +256,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Description")) {
 
-            infoText = getResources().getString(R.string.race_description_info);
 
             FragAttributeDescription fragAD = new FragAttributeDescription();
             fragAD.setArguments(bundle);
@@ -258,7 +272,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Movement")) {
 
-            infoText = getResources().getString(R.string.race_movement_info);
 
             FragRaceEditorMovement fragRM = new FragRaceEditorMovement();
             fragRM.setArguments(bundle);
@@ -275,7 +288,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Classes")) {
 
-            infoText = getResources().getString(R.string.race_allowed_classes_info);
 
             FragRaceEditorClassesAllowed fragRCA = new FragRaceEditorClassesAllowed();
             fragRCA.setArguments(bundle);
@@ -292,7 +304,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Skills")) {
 
-            infoText = getResources().getString(R.string.race_skills_info);
 
             FragListEditorKnownSkills fragKS = new FragListEditorKnownSkills();
             fragKS.setArguments(bundle);
@@ -309,7 +320,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Traits")) {
 
-            infoText = getResources().getString(R.string.race_traits_info);
 
             FragListEditorTraitsPossessed fragTP = new FragListEditorTraitsPossessed();
             fragTP.setArguments(bundle);
@@ -326,7 +336,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("AttributeMods")) {
 
-            infoText = getResources().getString(R.string.race_att_mods_info);
 
             FragRaceEditorAttributeMods fragREAM = new FragRaceEditorAttributeMods();
             fragREAM.setArguments(bundle);
@@ -343,7 +352,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Attribute Requirements")) {
 
-            infoText = getResources().getString(R.string.race_att_req_info);
 
             FragRaceEditorAttributeRequirements fragREAR = new FragRaceEditorAttributeRequirements();
             fragREAR.setArguments(bundle);
@@ -375,7 +383,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Description")) {
 
-            infoText = getResources().getString(R.string.class_description_info);
 
             FragAttributeDescription fragAD = new FragAttributeDescription();
             fragAD.setArguments(bundle);
@@ -392,7 +399,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Starting Points")) {
 
-            infoText = getResources().getString(R.string.class_start_points_info);
 
             FragClassEditorStartingPoints fragSP = new FragClassEditorStartingPoints();
             fragSP.setArguments(bundle);
@@ -409,7 +415,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Level Points")) {
 
-            infoText = getResources().getString(R.string.class_level_points_info);
 
             FragClassEditorLevelUpPoints fragLP = new FragClassEditorLevelUpPoints();
             fragLP.setArguments(bundle);
@@ -426,7 +431,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Skills")) {
 
-            infoText = getResources().getString(R.string.class_skills_info);
 
             FragListEditorKnownSkills fragKS = new FragListEditorKnownSkills();
             fragKS.setArguments(bundle);
@@ -443,7 +447,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Traits")) {
 
-            infoText = getResources().getString(R.string.class_traits_info);
 
             FragListEditorTraitsPossessed fragTP = new FragListEditorTraitsPossessed();
             fragTP.setArguments(bundle);
@@ -460,7 +463,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Attribute Requirements")) {
 
-            infoText = getResources().getString(R.string.class_att_req_info);
 
             FragClassEditorMinimumAttributes fragMA = new FragClassEditorMinimumAttributes();
             fragMA.setArguments(bundle);
@@ -477,7 +479,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
 
         if (message.equals("Level Names")) {
 
-            infoText = getResources().getString(R.string.class_level_names_info);
 
             FragListEdit fragLE = new FragListEdit();
             Bundle newBundle = new Bundle();

@@ -46,14 +46,6 @@
         android:layout_height="0dp"
         android:layout_weight=".05" />
 
-    <TextView
-        android:id="@+id/lblClickToEdit"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".07"
-        android:text="Click item to edit"
-        android:textColor="#000000"
-        android:textSize="24sp" />
 
     <Space
         android:layout_width="match_parent"
