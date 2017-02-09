@@ -1,6 +1,6 @@
 <resources>
 
-    <!-- New ClassGame Screen Strings -->
+    <!-- New Game Screen Strings -->
 
     <string name="app_name">GameMaker</string>
     <string name="newGameIntroText">Enter a name for your game, and select the type.</string>
@@ -8,6 +8,10 @@
     <string name="newGameSaveButtonText">Continue</string>
     <string name="gameDescriptionSaveButton">Save and Continue</string>
     <string name="SaveButton">Save</string>
+    <string name="game_already_exists">A Game with this name already exists. Do you want to overwrite it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="choose_name_for_game">Please choose a name for this game. \"New Game\" is not allowed.</string>
 
     <!-- List Selector Screen Strings -->
 
@@ -163,8 +167,217 @@
     <string name="non_preferred_penalty">Non-Preferred Penalty</string>
     <string name="cost_multiplier">Cost Multiplier</string>
     <string name="max_level">Max Level</string>
-    <string name="info">Info</string>
+    <string name="info">\?</string>
     <string name="choose_advancement_method">Choose Advancement Method</string>
+    <string name="health_creation_dice_message_text">Use the Class Editor section to set health point dice</string>
+
+
+    // info screen strings
+
+    <string name="advancement_method_info">Character Levels: Select this method when characters will gain ability points
+    or abilities at specific levels of experience gain.\n
+        Example:  1000 exp. points = level 2. 2000 = level 3. \n\n
+
+    Spending Experience Points on Abilities:  This method is used when player experience is gained directly as spendable ability points.\n
+        Example: Character completes mission, gains one point to spend on skills, and one to spend on traits.
+    \n\n
+
+        Event Based:  Choose this method when ability advancement is triggered by in game events, or at the discretion of the Game Master.
+    \nExample:  Character picks lock 100 times successfully, pick lock skill advances to next level.
+        \nAlternatively, Game Master determines Character has practiced lockpicking sufficiently, and awards an advancement to the skill. \n\n
+
+        Point Cost:  Amount of ability points necessary to gain the initial level of the skill. \n\n
+
+        Non-Preferred Penalty:  Amount of extra points necessary for a non-preferred class or race to gain or advance a skill. Use the Skill
+        editor screen to set preferred classes and races.
+        If 0, all classes and races will spend the same amount to advance a skill.\n\n
+
+        Cost Multiplier:  Cost to advance an ability or attribute after the initial point.  If zero, all advancement is at the same cost,
+        otherwise the new level will cost as many points as the current level times the mulitiplier.
+        \n Example:  Multiplier of one will cost three points to go from level three to level four, and four points to go from level four to level five. \n\n
+
+        Max Level:  Sets the highest level abilities can reach.  If zero, abilities will have no upper limit.  If one, they are either
+        possessed or not possessed.
+    </string>
+
+    <string name="att_creation_info_base">Sets the rules by which Character Attributes will be created.\n\n
+    Straight Dice:  Players roll a number of dice, add the results, and the total is the Attribute score.\n\n
+
+    Dice Minus Lowest Roll:  Players roll the number of dice needed to create the Attribute, plus one extra roll,
+    add all results and subtract the lowest roll.\n\n
+
+    Point Assignment:  Players are given a set number of points, and assign points to the Attributes until no points remain\n\n
+
+    Base Points: All Attributes start at a base number of points.  Advancement points are gained through experience.\n\n
+
+    Dice + Base:  All Attributes start at a base number of points, and dice results are added to the base for each attribute.\n\n
+
+    Dice + Point Assignment:  Players roll dice for each attribute, and get a number of additional points to assign to the results.\n\n
+
+    Base + Point Assignment:  All Attributes start at a base number, and players get a number of points to assign to attributes
+    until no points remain.</string>
+
+    <string name="health_creation_info">Set method for determining how much damage a character can take. \n\n
+
+    Dice Roll:  Player will roll dice to determine character health.  Use the Class editor screens to set Dice sides
+    and number of rolls used to determine health.\n\n
+
+    Attribute:  Health is determined by Attribute scores, either a single Attribute or a sum of Attributes.  Select which Attributes
+    will be added to the total using the Attribute List.\n\n
+    Multiplier:  Sum of Attributes will be multiplied by this number to determine health points.\n\n
+    Additive:  This will be added to health score after multiplier is applied.\n\n
+
+    Accessory:  Health will be determined by equipment/accessories in game.\n
+    Example:  A space opera where play always takes place in a ship would use ship\'s armor and shield ratings to determine how
+    much damage the player could take.\n
+    Use Attribute list if Attributes will modify the health rating in this case.</string>
+
+    <string name="char_edit_info">This is actually going to be a shitload of text strings, one for each control bar and one for each
+    individual editor screen.  Fuck.  I\'m going to grow old writing all of these.  I need a drink.</string>
+
+    <string name="game_edit_info">Name:  Edit Game Name, Description, and Type\n\n
+
+    Characteristics:  Use these screens to edit character specific qualities, such as races, classes, and abilities\n\n
+
+    Attribute Creation:  Attributes make up the core abilities of characters. Use this section to specify the method
+    used to determine a character\'s attribute scores.\n\n
+
+    Health Type Creation:  Use this section to set up rules for determining the damage a character is able to take.\n\n
+
+    Advancement Method:  Set the method of character progression, and the costs for ability advancement.</string>
+
+    <string name="list_selector_info">Select the Characteristic you wish to work on, and add items to the Characteristic
+    list.  Select an item in the list to edit that item. Use the Help (?) button with list loaded to get item specific help.</string>
+
+    <string name="attribute_list_info">Attributes are the core abilities of characters, an inherent set of qualities
+    that all characters share.  They are often used to determine success in actions, give bonuses to outcomes, or set
+    limits to other abilities.  You should create only attributes which will have real effects in your game.\n\n
+    Example:  A game based on physical combat might use Strength and Agility, while a game based on aircraft dogfights
+    would not need to know Character strength, but might need Reflex Speed and Spatial Awareness as attributes.</string>
+
+    <string name="race_list_info">Races each have their own strengths and weaknesses, and can be used to enhance roleplay
+    as well as determining starting skills and backgrounds for characters.\n\n</string>
+
+    <string name="class_list_info">Classes are the professions a character can take on, and the skills and bonuses,
+    as well as weaknesses, reflect the training and experiences the character has recieved for that role.</string>
+
+    <string name="skill_list_info">Skills are the list of abilities which require a process to complete.  Skills are usually
+    learned, either through lessons or through diligent practice, although in some cases natural talent is as good as learning.\n\n
+
+        Skills also include knowledges, such as extra languages spoken, or a background in ancient history.\n\n
+    Skills might modify other game events (such as acrobatic skills modifying falling damage), but they also have
+    success outcomes of their own (such as checking against the acrobatic skill to successfully tumble after a dodge, and come up
+        ready to strike).\n\n
+        The main aspect to keep in mind in determining if an ability fits in the Skill set is whether or not it is a process
+        that takes time to achieve a final result when using the skill for its own sake.\n\n
+        Skill levels will act as either bonuses to success chances, increased quality of produced materials, or additional
+        options available to the character using the skill.\n\n
+    Examples:\n
+        Painting (additional levels could increase quality of painting, or add mediums the artist is
+        capable of working in)\n
+        Auto-Mechanics(additional levels could add to the types of engines/vehicles the character can
+        work on, decrease time for diagnostics, etc.)\n
+        Driving\n
+        Wall-Climbing</string>
+
+    <string name="trait_list_info">Traits are characteristics and abilities which are either always on, or have instant effects when
+    a situation calls on them.  Traits can be developed through training, natural qualities the character possesses,
+    or, in some games, granted by objects the character possesses.\n\n
+        Traits can be detrimental as well as beneficial.  Near-Sightedness would be a Trait,
+        just as Perfect Vision would be. In these cases, a Game Master could include a negative cost to the Trait, and allow
+        players to gain extra Trait points to spend by selecting a few detrimental characteristics.\n\n
+        Included in this group would be any racial characteristics the game includes. If the game includes a race that
+        can see in the dark, then "Night Sight" would be included in the trait list, but might only be usable by that race
+        or by characters who gain it through objects or other game events.\n\n
+    Traits generally act as modifiers to game events or success checks, and have no significant outcome of their own.\n\n
+
+        Examples:\n
+        Quick-Draw might reduce the reaction time penalty for drawing or changing weapons during combat\n
+        Night-Sight would reduce or eliminate penalties for operating in low light conditions.\n
+        Truth-Sense could allow a character a success check to realize they are being lied to.\n
+        Near-Sightedness might give a penalty to success checks to notice concealed items.
+    </string>
+
+    <string name="feature_list_info">Features are abilities or conditions that are granted to the character
+    which are not natural to the game world.  They generally share the qualities of Traits, being either always on
+    or requiring no significant time to use, although they could include Skill-like abilities which require a process to
+        utilize.\n\n
+        Common origins include abilities granted by powerful magical or divine beings,
+    special objects, or traits which are so rare as to be considered supernatural or paranormal.\n\n
+    Features tend to have powerful game effects, and are often limited in some way, such as having a maximum amount of usages per day or week, only
+    being usable under certain conditions, or any number of other limitations which keep them from overbalancing the
+    game.\n\n
+    Like Traits, Features can be detrimental as well as beneficial, or both at the same time (think powerful curses, or
+    clairvoyance that leaves the character weak and disoriented for a period of time after use)\n\n
+
+    Examples:\n
+        Flaming Breath might allow the character to spit fire once a day.\n
+    Lunar Strength might give a player a bonus to physical strength in direct moonlight\n
+    Material Weakness (with selected material) might make a character practically powerless against
+    a particular object or material.</string>
+
+    <string name="race_description_info">Edit name and enter basic description for this race, including appearance, history,
+    and preferred living environment</string>
+
+    <string name="race_movement_info">Enter the distance in base game units that a character of this Race
+        can move in one action round when unencumbered and moving freely, for each movement type.</string>
+
+    <string name="race_allowed_classes_info">Many games limit the Class/Profession choices of certain Races. Use this
+    area to choose which Classes will be allowed to this Race.  Leaving all Classes unselected will allow this Race to choose any
+    Class.</string>
+
+    <string name="race_skills_info">Use this screen to select any Skills which are commonly known to members of this Race.
+        These reflect the conditions under which members of the Race are raised, and cost no ability points for initial levels.\n\n
+    Examples might include Mountaineering for a Race which lives in mountains,
+        or a race of forest people which learn Foraging as a matter of course. </string>
+
+    <string name="race_traits_info">Use this screen to select any Traits which are commonly known to members of this Race.\n\n
+    Examples might include a race of tree dwellers which are inherently Ambidextrous, or a Water Breathing undersea race.</string>
+
+    <string name="race_att_mods_info">Races each have their own strengths and weaknesses.  Use this section to
+    set any bonuses or negatives this Race will have to core Attribute scores.</string>
+
+    <string name="race_att_req_info">Many games set limits to the core Attributes for certain races, such as small
+    tree dwellers having a maximum Strengh rating (due to size), or a monstrous race being limited in Intelligence (reflecting
+    their barbaric nature and distrust of arcane knowledge).\n\n
+
+    Use this screen to set upper and lower limits for Attributes for this race.</string>
+
+    <string name="class_description_info">Edit name and enter a basic description for this Class, including background, role
+    in the game, and standard expectations of the Class within the game world</string>
+
+    <string name="class_start_points_info">Use this screen to set the number of starting spendable ability points a player
+    has when creating a new character, for each ability type.  If using a single point pool for all abilities, set how many total points
+    new characters of this class start with.</string>
+
+    <string name="class_level_points_info">If using the Character Levels advancement method, these will be the points earned by
+    characters of this class upon advancing to new levels.\n\n
+
+        Some abilities may gain points every level, while others may only advance after a certain number of levels have been reached.\n\n
+
+    Points:  Number of points gained at each advancement level.\n\n
+
+    Levels:  How many levels are needed to gain advancement points.</string>
+
+    <string name="class_skills_info">Select the Skills which are common to all members of this Class. These reflect the
+    training and experiences of those in this profession, and cost no ability points for initial levels.</string>
+
+    <string name="class_traits_info">Select the Traits which are common to all members of this Class. These reflect both
+    experience and training, as well as qualities which might be required to be recruited into this profession.\n\n
+
+    Examples:\n\n
+
+    All members of the Sharpshooter Class might have Steady Hands as a Trait, giving a bonus to aiming actions.</string>
+
+    <string name="class_att_req_info">Many Classes have minimum required attributes in order to be successful in that profession.
+    A college professsor won\'t do very well if he\'s of very low intelligence, and an easily distracted person does not make
+    a good bomb-technician.  Use this screen to set the minimum Attribute scores necessary to choose this Class.</string>
+
+    <string name="class_level_names_info">Purely optional, Level Names often have no real effect on game mechanics, but can add an
+    extra layer of depth to roleplay.  Use this section to set the titles by which characters of a particular rank are known.
+    /n/n
+    These ranks can be used to add a game element, if the game includes a heirarchy of command, such as in military scenarios or
+    guild based games.</string>
 
 
 </resources>

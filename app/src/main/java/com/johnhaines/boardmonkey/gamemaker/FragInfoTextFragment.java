@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,13 +34,14 @@ public class FragInfoTextFragment extends Fragment implements View.OnClickListen
         if (savedInstanceState != null) {
             text = savedInstanceState.getString("text");
         } else {
-            text = "try it this way, see what happens";
+            text = getArguments().getString("text");
         }
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_info_text, container, false);
 
         txtInfoText = (TextView) rootView.findViewById(R.id.txtInfoFragmentText);
         txtInfoText.setText(text);
+        txtInfoText.setMovementMethod(new ScrollingMovementMethod());
         btnDone = (Button) rootView.findViewById(R.id.btnCloseInfo);
         btnDone.setOnClickListener(this);
 
@@ -85,8 +87,9 @@ public class FragInfoTextFragment extends Fragment implements View.OnClickListen
 
         if (view == btnDone) {
 
-            getActivity().getFragmentManager().beginTransaction().
-                    remove(getActivity().getFragmentManager().findFragmentById(R.id.frmAdvancementMethodInfo)).commit();
+            if (mListener != null) {
+                mListener.onDoneButtonClicked();
+            }
         }
     }
 

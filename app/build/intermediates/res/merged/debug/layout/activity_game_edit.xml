@@ -1,119 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/vine_background_1000_1667"
+    android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.johnhaines.boardmonkey.gamemaker.ActGameEdit"
-    android:orientation="horizontal"
-    android:background="@drawable/vine_background_1000_1667">
+    tools:context="com.johnhaines.boardmonkey.gamemaker.ActGameEdit">
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:layout_weight=".2" />
+    <FrameLayout
+        android:id="@+id/frmGameEditInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight=".6"
-        android:layout_gravity="center_horizontal">
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblGameNameEditMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/game"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="normal|bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".3" />
+
+            <Button
+                android:id="@+id/btnEditName"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="500dp"
+                android:layout_height="0dp"
+                android:layout_weight=".4"
+                android:onClick="editNameClicked"
+                android:text="@string/edit_name"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2" />
+
+            <Button
+                android:id="@+id/btnEditChar"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="500dp"
+                android:layout_height="0dp"
+                android:layout_weight=".4"
+                android:onClick="editCharacteristicsClicked"
+                android:text="@string/edit_characteristics"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2" />
+
+            <Button
+                android:id="@+id/btnAttributeCreation"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="500dp"
+                android:layout_height="0dp"
+                android:layout_weight=".4"
+                android:onClick="attributeCreationClicked"
+                android:text="@string/attribute_creation"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2" />
+
+            <Button
+                android:id="@+id/btnHealthCreation"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="500dp"
+                android:layout_height="0dp"
+                android:layout_weight=".4"
+                android:onClick="healthCreationClicked"
+                android:text="@string/health_type_creation"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2" />
+
+            <Button
+                android:id="@+id/btnAdvancementMethod"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="500dp"
+                android:layout_height="0dp"
+                android:layout_weight=".4"
+                android:onClick="advancementButtonClicked"
+                android:text="@string/advancement_method"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".3" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnGameEditInfo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/lblGameNameEditMenu"
-            android:text="@string/game"
-            android:textColor="@android:color/black"
-            android:textSize="36sp"
-            android:gravity="center_horizontal"
-            android:textAlignment="center"
-            android:textStyle="normal|bold" />
+            android:layout_gravity="center_vertical|end"
+            android:text="@string/info"
+            android:textSize="28sp"
+            android:onClick="gameEditInfoButtonClicked" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".3" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/edit_name"
-            android:id="@+id/btnEditName"
-            android:onClick="editNameClicked"
-            android:layout_weight=".4"
-            android:textSize="24sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/edit_characteristics"
-            android:id="@+id/btnEditChar"
-            android:onClick="editCharacteristicsClicked"
-            android:layout_weight=".4"
-            android:textSize="24sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/attribute_creation"
-            android:id="@+id/btnAttributeCreation"
-            android:onClick="attributeCreationClicked"
-            android:layout_weight=".4"
-            android:textSize="24sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/health_type_creation"
-            android:id="@+id/btnHealthCreation"
-            android:onClick="healthCreationClicked"
-            android:layout_weight=".4"
-            android:textSize="24sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/advancement_method"
-            android:id="@+id/btnAdvancementMethod"
-            android:onClick="advancementButtonClicked"
-            android:layout_weight=".4"
-            android:textSize="24sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".3" />
     </LinearLayout>
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_weight=".2" />
-</LinearLayout>
+
+</RelativeLayout>

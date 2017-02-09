@@ -30,7 +30,7 @@
                     android:layout_gravity="center"
                     android:text="@string/base_points"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:gravity="center" />
 
                 <Space
@@ -43,7 +43,7 @@
                     android:id="@+id/edtBasePointsBasePlusDice"
                     android:background="#ffffff"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:selectAllOnFocus="true"
                     android:gravity="center"
                     android:inputType="number" />
@@ -62,7 +62,7 @@
                     android:layout_gravity="center"
                     android:text="@string/how_many_sides_per_dice"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:textAlignment="center"
                     android:gravity="center" />
 
@@ -76,7 +76,7 @@
                     android:id="@+id/edtDiceSidesBasePlusDice"
                     android:background="#ffffff"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:selectAllOnFocus="true"
                     android:gravity="center"
                     android:inputType="number" />
@@ -95,7 +95,7 @@
                     android:layout_gravity="center"
                     android:text="@string/how_many_rolls"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:textAlignment="center"
                     android:gravity="center" />
 
@@ -109,32 +109,23 @@
                     android:id="@+id/edtDiceRollsBasePlusDice"
                     android:background="#ffffff"
                     android:textColor="#000000"
-                    android:textSize="36sp"
+                    android:textSize="28sp"
                     android:selectAllOnFocus="true"
                     android:gravity="center"
                     android:inputType="number" />
 
             </LinearLayout>
 
-
         </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="0dp"
-            android:layout_weight=".15">
 
             <Button
                 android:id="@+id/btnSaveBasePlusDice"
                 android:layout_width="500dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/SaveButton"
                 android:textColor="#000000"
-                android:textSize="30sp" />
-        </LinearLayout>
+                android:textSize="24sp" />
 
     </LinearLayout>
 </FrameLayout>

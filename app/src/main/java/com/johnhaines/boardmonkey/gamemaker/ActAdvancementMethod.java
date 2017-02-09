@@ -62,10 +62,15 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
     private EditText edtMaxFeatPoints;
     private Button btnSave;
     private Button btnInfo;
+    private ClassGame game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            game = savedInstanceState.getParcelable("Game");
+            ((GameApplication) getApplication()).setGame(game);
+        }
         setContentView(R.layout.activity_advancement_method);
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmAdvancementMethodInfo);
@@ -116,6 +121,12 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
         spnAdvancementMethod.setAdapter(SAdapter);
 
         spnAdvancementMethod.setSelection(((GameApplication) getApplication()).getGame().getAdvancementMethod().getType() - 1);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable("Game", ((GameApplication) getApplication()).getGame());
     }
 
     @Override
@@ -293,7 +304,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
     private void loadInfoFragment() {
 
-        String infoText = "This is a test";
+        String infoText = getResources().getString(R.string.advancement_method_info);
 
         FragInfoTextFragment fragInfo = new FragInfoTextFragment();
         Bundle bundle = new Bundle();
@@ -306,7 +317,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
     @Override
     public void onDoneButtonClicked() {
-        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmAdvancementMethodInfo));
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmAdvancementMethodInfo)).commit();
     }
 
     private void saveGameToFile() {

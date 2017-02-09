@@ -2,58 +2,76 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_bc53408865561b6a801a5581ff60ddaa96e6ad2a.jar" />
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_cf06048afbc5b78277f90a145543e8c8990166a7\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_eb6d16bfd82949d22672b57efbefcc17c92cb9f5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_c26dda99d3d7c9d3a6a1595fbd9f5fa73aafb792.jar" />
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_fa629f28a85158c3794181178753b9a91e79a34b\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Joseph\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a4e9b67438112502aad4cdb0f8db65c63148efa">
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0f1c54cfb1626379606d2f8fed87a3041565dd99\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="bd057d0f34a62e4397515faa71bfd779dc87e818">
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_26e9b45a69fdfa7d98fbce162bfbc41d27ae8c69\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\John\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_b869f99289764c0f20633b75d3051b80dcb72701.jar" />
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_59ae84c7e71cfb81276ac075e144a212c107f13e\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_d60a4e7dadcd4e95c8d8567c4d4ddd6c6335158a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\Joseph\AndroidStudioProjects\GameMaker\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_59ec50c410c1db27b22e5c34a944e6d479422c09.jar" />
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_c3aab19ef165f95b352e6682ec464cfe53ddcd65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_fa470c83459ba1bef88f0ac83e694781426e8ea0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_6aa7fe18b788330cc0bb5aa71e633a0dc269798a\classes.dex" />
     </item>
 
 </items>

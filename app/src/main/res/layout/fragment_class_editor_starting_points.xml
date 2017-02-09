@@ -20,7 +20,7 @@
             android:text="@string/class_name"
             android:paddingBottom="10dp"
             android:textColor="@android:color/black"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:textColor="#000000"
             android:gravity="center"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/health_dice_sides"
-                android:textSize="25sp"
+                android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />
 
@@ -54,6 +54,7 @@
                 android:id="@+id/edtHealthDice"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
+                android:textSize="24sp"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
@@ -68,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/skills"
-                android:textSize="25sp"
+                android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />
 
@@ -79,6 +80,7 @@
                 android:id="@+id/edtStartingSkills"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
+                android:textSize="24sp"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
@@ -94,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/traits"
                 android:id="@+id/lblStartingTraits"
-                android:textSize="25sp"
+                android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />
 
@@ -105,6 +107,7 @@
                 android:id="@+id/edtStartingTraits"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
+                android:textSize="24sp"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
@@ -120,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/features"
                 android:id="@+id/lblStartingFeatures"
-                android:textSize="25sp"
+                android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:textColor="#000000" />
 
@@ -131,15 +134,16 @@
                 android:id="@+id/edtStartingFeatures"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
+                android:textSize="24sp"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
         <Button
             android:id="@+id/btnSaveStartingPoints"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/SaveButton"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 </FrameLayout>

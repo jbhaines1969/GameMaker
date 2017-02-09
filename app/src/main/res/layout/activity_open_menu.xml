@@ -54,7 +54,7 @@
                     android:text="@string/new_game"
                     android:id="@+id/btnNewGame"
                     android:onClick="newGameClicked"
-                    android:textSize="36sp" />
+                    android:textSize="28sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                     android:text="@string/edit_game"
                     android:id="@+id/btnEditGame"
                     android:onClick="editGameClicked"
-                    android:textSize="36sp" />
+                    android:textSize="28sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                     android:text="@string/delete_game"
                     android:id="@+id/btnDeleteGame"
                     android:onClick="deleteGameClicked"
-                    android:textSize="36sp" />
+                    android:textSize="28sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -99,7 +99,7 @@
                     android:text="@string/share_game"
                     android:id="@+id/btnShareGame"
                     android:onClick="shareGameClicked"
-                    android:textSize="36sp" />
+                    android:textSize="28sp" />
 
             </LinearLayout>
 

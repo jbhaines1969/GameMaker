@@ -8,16 +8,20 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_attribute_description.xml"
     },
     {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_file_picker.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_file_picker.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
@@ -32,292 +36,12 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\list_item_attribute_requirements.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_attribute_description.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_attribute_description.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_game_edit.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\activity_game_edit.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_dice_roll.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_dice_roll.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_dice_roll.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_dice_roll.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_features_possessed.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_features_possessed.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_class_editor_control_bar.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_class_editor_control_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_open_menu.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\activity_open_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_name_type_description.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\activity_name_type_description.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_characteristic_editor_frag_holder.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\activity_characteristic_editor_frag_holder.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_accessory.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_accessory.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_name_type_description.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_name_type_description.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_open_menu.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_open_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_class_editor_starting_points.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_class_editor_starting_points.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_level_names.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\list_item_level_names.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_file_picker.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_file_picker.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_classes_allowed.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_classes_allowed.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_control_bar.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_control_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_class_editor_starting_points.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_class_editor_starting_points.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_dice_only.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_dice_only.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_attribute_requirements.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_attribute_requirements.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_race_traits.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_race_traits.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_game_edit.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_game_edit.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_frag_ability_pref_classes_editor.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_frag_ability_pref_classes_editor.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_info_text.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_info_text.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_accessory.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_accessory.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_base_plus_dice.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_base_plus_dice.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_advancement_method.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_advancement_method.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_features_possessed.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_features_possessed.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_health_creation_fragment_holder.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_health_creation_fragment_holder.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_base_plus_points.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_base_plus_points.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_characteristic_editor_frag_holder.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_characteristic_editor_frag_holder.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_dice_plus_points.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_dice_plus_points.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_point_assignment.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_point_assignment.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_attribute_requirements.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\list_item_attribute_requirements.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_health_creation_fragment_holder.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\activity_health_creation_fragment_holder.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_attribute_creation_fragment_holder.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\activity_attribute_creation_fragment_holder.xml"
-    },
-    {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_info_text.xml",
@@ -336,6 +60,10 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_classes_allowed.xml"
     },
     {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_dialog_delete_list_item.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_dialog_delete_list_item.xml"
     },
@@ -344,32 +72,16 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_level_names.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\list_item_level_names.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ability_editor_control_bar.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_ability_editor_control_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
@@ -380,28 +92,36 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_accessory.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_accessory.xml"
+    },
+    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_name_type_description.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_name_type_description.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_open_menu.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_open_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_base_plus_dice.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_base_plus_dice.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_class_editor_starting_points.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_class_editor_starting_points.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_class_editor_level_up_points.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_class_editor_level_up_points.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_level_names.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\list_item_level_names.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_file_picker.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_file_picker.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_editor_known_skills.xml",
@@ -412,16 +132,20 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_control_bar.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_control_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_editor_level_names.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_list_editor_level_names.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_editor.xml",
@@ -432,28 +156,24 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_class_editor_level_up_points.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_attribute.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_attribute.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_dice_only.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_dice_only.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_attribute_mods.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\list_item_attribute_mods.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_race_traits.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_race_traits.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_attribute_requirements.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_attribute_requirements.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_race_traits.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_race_traits.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_advancement_method.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\activity_advancement_method.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_class_editor_control_bar.xml",
@@ -464,32 +184,12 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_editor.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_list_editor.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_game_edit.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_game_edit.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_health_creation_attribute.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_health_creation_attribute.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_attribute_mods.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_attribute_mods.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_base_points.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_base_points.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_movement.xml",
@@ -500,20 +200,16 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_editor_level_names.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_list_editor_level_names.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_attribute_requirements.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_attribute_requirements.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
@@ -528,24 +224,28 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ability_effect_type_editor.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_ability_effect_type_editor.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_base_plus_dice.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_base_plus_dice.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinner_game_type_view.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\spinner_game_type_view.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_advancement_method.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_advancement_method.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_frag_ability_pref_classes_editor.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_frag_ability_pref_classes_editor.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_editor_known_skills.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_list_editor_known_skills.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_point_assignment.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_point_assignment.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -556,63 +256,51 @@
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_base_plus_points.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_health_creation_fragment_holder.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_health_creation_fragment_holder.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_dice_plus_points.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_dice_plus_points.xml"
-    },
-    {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_attribute_mods.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\list_item_attribute_mods.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_characteristic_editor_frag_holder.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\activity_characteristic_editor_frag_holder.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_dice_plus_points.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_dice_plus_points.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_att_creation_dice_only.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_att_creation_dice_only.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_dialog_delete_list_item.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_dialog_delete_list_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_control_bar.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_control_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_race_editor_movement.xml",
-        "source": "C:\\Users\\Joseph\\AndroidStudioProjects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_race_editor_movement.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ability_editor_control_bar.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_ability_editor_control_bar.xml"
     },
     {
         "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ability_effect_type_editor.xml",
         "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_ability_effect_type_editor.xml"
     },
     {
-        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ability_editor_control_bar.xml",
-        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\layout\\fragment_ability_editor_control_bar.xml"
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     }
 ]

@@ -13,15 +13,13 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight=".5"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
             android:text="@string/skill_name"
-            android:id="@+id/lblAbilityName"
+            android:id="@+id/lblNameAbilityEditorControlBar"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="#000000"
-            android:textSize="36sp" />
+            android:textSize="28sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -35,7 +33,7 @@
             android:text="@string/description"
             android:id="@+id/btnEditAbilityDescription"
             android:layout_gravity="center_horizontal"
-            android:textSize="36sp" />
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -49,7 +47,7 @@
             android:text="@string/preferred_classes"
             android:id="@+id/btnEditAbilityPreferredClasses"
             android:layout_gravity="center_horizontal"
-            android:textSize="36sp" />
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -63,7 +61,7 @@
             android:text="@string/preferred_races"
             android:id="@+id/btnEditAbilityPreferredRaces"
             android:layout_gravity="center_horizontal"
-            android:textSize="36sp" />
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -77,7 +75,7 @@
             android:text="@string/effect_type"
             android:id="@+id/btnEditAbilityEffectType"
             android:layout_gravity="center_horizontal"
-            android:textSize="36sp" />
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"

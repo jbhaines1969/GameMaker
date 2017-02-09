@@ -31,7 +31,7 @@
                 android:text="@string/newGameIntroText"
                 android:id="@+id/lblNewGameIntro"
                 android:gravity="center"
-                android:textSize="24sp"
+                android:textSize="28sp"
                 android:textColor="#000000" />
         </LinearLayout>
 
@@ -124,7 +124,7 @@
                     android:layout_gravity="center"
                     android:id="@+id/lblGameType"
                     android:textColor="@android:color/black"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
 
                 <Spinner
                     android:layout_width="0dp"
@@ -146,13 +146,12 @@
 
                 <Button
                     android:layout_width="500dp"
-                    android:layout_height="0dp"
-                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/newGameSaveButtonText"
                     android:id="@+id/btnSaveGame"
                     android:onClick="saveNewGameClicked"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
 
         </LinearLayout>
     </LinearLayout>

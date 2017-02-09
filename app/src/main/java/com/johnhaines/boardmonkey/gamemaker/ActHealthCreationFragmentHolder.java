@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,20 +18,24 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class ActHealthCreationFragmentHolder extends Activity {
+public class ActHealthCreationFragmentHolder extends Activity implements View.OnClickListener, FragInfoTextFragment.OnFragmentInteractionListener {
 
     private TextView lblGameName;
     private Spinner spnHealthCreationMethod;
     private ArrayAdapter SAdapter;
     private FrameLayout fragFrame;
+    private Button btnInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_creation_fragment_holder);
 
-        fragFrame = (FrameLayout) findViewById(R.id.fragment_container_info_health_creation);
+        fragFrame = (FrameLayout) findViewById(R.id.frmHealthCreationInfo);
         fragFrame.bringToFront();
+
+        btnInfo = (Button) findViewById(R.id.btnHealthCreationInfo);
+        btnInfo.setOnClickListener(this);
 
         lblGameName = (TextView) findViewById(R.id.lblHealthCreationControlBar);
         lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
@@ -83,6 +89,19 @@ public class ActHealthCreationFragmentHolder extends Activity {
         spnHealthCreationMethod.setSelection(getSpinnerPosition());
     }
 
+    @Override
+    public void onClick(View view) {
+        if (view == btnInfo) {
+
+            FragInfoTextFragment fragInfo = new FragInfoTextFragment();
+            String infoText = getResources().getString(R.string.health_creation_info);
+            Bundle bundle = new Bundle();
+            bundle.putString("text", infoText);
+            fragInfo.setArguments(bundle);
+            getFragmentManager().beginTransaction().add(R.id.frmHealthCreationInfo, fragInfo).addToBackStack(null).commit();
+        }
+    }
+
     private int getSpinnerPosition() {
         int position = ((GameApplication) getApplication()).getGame().getHitsType().getType() - 1;
         return position;
@@ -113,5 +132,10 @@ public class ActHealthCreationFragmentHolder extends Activity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void onDoneButtonClicked() {
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmHealthCreationInfo)).commit();
     }
 }

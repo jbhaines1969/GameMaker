@@ -15,18 +15,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="28sp"
             android:text="@string/class_text"
             android:id="@+id/lblClassNameLevelUpScreen"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/instructions"
-            android:id="@+id/btnLevelUpPointsInstructions"
-            android:layout_gravity="center_horizontal" />
 
         <Space
             android:layout_width="match_parent"
@@ -55,6 +48,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/levels"
+                    android:textSize="24sp"
                     android:id="@+id/lblLevelUpLevels"
                     android:textColor="#000000" />
 
@@ -64,6 +58,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/points"
+                    android:textSize="24sp"
                     android:id="@+id/lblLevelUpPoints"
                     android:textColor="#000000" />
             </TableRow>
@@ -78,6 +73,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/attributes"
+                    android:textSize="24sp"
                     android:id="@+id/lblLevelUpAttributes"
                     android:textColor="#000000" />
 
@@ -87,6 +83,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpAttributesLevels"
                     android:selectAllOnFocus="true" />
 
@@ -96,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpAttributesPoints"
                     android:selectAllOnFocus="true" />
             </TableRow>
@@ -110,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/skills"
+                    android:textSize="24sp"
                     android:id="@+id/lblLevelUpSkills"
                     android:textColor="#000000" />
 
@@ -119,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpSkillLevels"
                     android:selectAllOnFocus="true" />
 
@@ -128,6 +128,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpSkillPoints"
                     android:selectAllOnFocus="true" />
             </TableRow>
@@ -143,6 +144,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/traits"
+                    android:textSize="24sp"
                     android:id="@+id/lblLevelUpTraits"
                     android:textColor="#000000" />
 
@@ -152,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpTraitLevels"
                     android:selectAllOnFocus="true" />
 
@@ -161,6 +164,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpTraitPoints"
                     android:selectAllOnFocus="true" />
             </TableRow>
@@ -176,6 +180,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/features"
+                    android:textSize="24sp"
                     android:id="@+id/lblLevelUpFeatures"
                     android:textColor="#000000" />
 
@@ -185,6 +190,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpFeaturesLevels"
                     android:selectAllOnFocus="true" />
 
@@ -194,6 +200,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
                     android:ems="5"
+                    android:textSize="24sp"
                     android:id="@+id/edtLevelUpFeaturesPoints"
                     android:selectAllOnFocus="true" />
             </TableRow>
@@ -202,9 +209,9 @@
         <Button
             android:layout_width="match_parent"
 
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/SaveButton"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:id="@+id/btnSaveLevelUpPoints" />
 
     </LinearLayout>

@@ -6,19 +6,21 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class ActGameEdit extends Activity {
+public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFragmentInteractionListener {
 
     private TextView gameNameLabel;
     private FrameLayout fragFrame;
     private String gameType;
     private Timer sndDelay;
     private int soundID;
+    private FrameLayout infoFrame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,9 @@ public class ActGameEdit extends Activity {
         gameNameLabel.setText(((GameApplication) getApplication()).getGame().getName());
         gameType = ((GameApplication) getApplication()).getGame().getType();
         playThemeMusic(gameType);
+
+        infoFrame = (FrameLayout) findViewById(R.id.frmGameEditInfo);
+
     }
 
     private void playThemeMusic(String gameType) {
@@ -55,10 +60,24 @@ public class ActGameEdit extends Activity {
                 mPlayer.setLooping(false);
                 mPlayer.start();
             }
-        }, 1500);
+        }, 10);
     }
 
     /* Button Actions */
+
+    public void gameEditInfoButtonClicked(View view) {
+
+        infoFrame.bringToFront();
+
+        FragInfoTextFragment fragInfo = new FragInfoTextFragment();
+        String infoText = getResources().getString(R.string.game_edit_info);
+        Bundle bundle = new Bundle();
+        bundle.putString("text", infoText);
+        fragInfo.setArguments(bundle);
+        getFragmentManager().beginTransaction().add(R.id.frmGameEditInfo, fragInfo).addToBackStack(null).commit();
+
+
+    }
 
     public void editNameClicked(View view) {
         Intent intent = new Intent(this, ActGameName.class);
@@ -86,5 +105,10 @@ public class ActGameEdit extends Activity {
     public void advancementButtonClicked(View view) {
         Intent intent = new Intent(this, ActAdvancementMethod.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onDoneButtonClicked() {
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmGameEditInfo)).commit();
     }
 }

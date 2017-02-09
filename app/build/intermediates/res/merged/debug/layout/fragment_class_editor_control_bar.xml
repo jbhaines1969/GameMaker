@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/class_name"
-            android:textSize="24sp"
+            android:textSize="28sp"
             android:id="@+id/lblClassName"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
@@ -33,7 +33,8 @@
             android:layout_weight="1"
             android:text="@string/description"
             android:id="@+id/btnEditClassDescription"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -46,7 +47,8 @@
             android:layout_weight="1"
             android:text="@string/base_points"
             android:id="@+id/btnEditClassStartingPoints"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -59,20 +61,8 @@
             android:layout_weight="1"
             android:text="@string/point_levels"
             android:id="@+id/btnEditLevelUpPoints"
-            android:layout_gravity="center_horizontal" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/features_possessed"
-            android:id="@+id/btnEditClassAutoFeatures"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -85,7 +75,8 @@
             android:layout_weight="1"
             android:text="@string/class_traits"
             android:id="@+id/btnEditClassTraits"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -98,7 +89,8 @@
             android:layout_weight="1"
             android:text="@string/known_skills"
             android:id="@+id/btnEditClassKnownSkills"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -111,7 +103,8 @@
             android:layout_weight="1"
             android:text="@string/minimum_attributes"
             android:id="@+id/btnEditClassAttributeRequirements"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -124,7 +117,8 @@
             android:layout_weight="1"
             android:text="@string/level_names"
             android:id="@+id/btnEditClassLevelNames"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
 
     </LinearLayout>
 

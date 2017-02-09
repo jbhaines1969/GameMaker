@@ -53,13 +53,9 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
 
         if (isExternalStorageWritable) {
 
-            Log.d("Working", "External Storage is Writable");
-
             if (ContextCompat.checkSelfPermission(this,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
-
-                Log.d("Working", "No permission to write to external");
 
                 /* TODO warn users app is not able to write to external storage
             warn that permission is needed, else saved files will be written to app internal storage, and deleted if app is uninstalled
@@ -81,7 +77,6 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
                 // app-defined int constant. The callback method gets the
                 // result of the request.
             } else {
-                Log.d("Working", "Permission to write to external storage exists");
                 saveToExternalStorage();
 
                 Intent intent = new Intent(this, ActGameName.class);
