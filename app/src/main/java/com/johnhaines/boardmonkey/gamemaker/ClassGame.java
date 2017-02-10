@@ -1,7 +1,12 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v4.content.ContextCompat;
+import android.widget.Button;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,13 +15,17 @@ import java.util.Comparator;
 
 public class ClassGame implements Serializable, Parcelable {
 
-    private int maxTraitPoints;
-    private int maxSkillPoints;
-    private int maxFeatPoints;
-
+    private int maxTraitPoints = 0;
+    private int maxSkillPoints = 0;
+    private int maxFeatPoints = 0;
     private String name = "";
-    private String type = "";
+    private String type = "Fantasy";
     private String description = "";
+
+    private ColorStateList buttonTextColors;
+    private Drawable primaryButtonBackgroundImage;
+    private Drawable infoButtonBackgroundImage;
+    private Drawable backgroundImage;
 
     private ClassAdvancementMethod advancementMethod = new ClassAdvancementMethod();
     private ClassAttributeCreation attCreation = new ClassAttributeCreation();
@@ -32,8 +41,28 @@ public class ClassGame implements Serializable, Parcelable {
     public ClassGame(String name, String type) {
         this.name = name;
         this.type = type;
-
     }
+
+    protected ClassGame(Parcel in) {
+        maxTraitPoints = in.readInt();
+        maxSkillPoints = in.readInt();
+        maxFeatPoints = in.readInt();
+        name = in.readString();
+        type = in.readString();
+        description = in.readString();
+    }
+
+    public static final Creator<ClassGame> CREATOR = new Creator<ClassGame>() {
+        @Override
+        public ClassGame createFromParcel(Parcel in) {
+            return new ClassGame(in);
+        }
+
+        @Override
+        public ClassGame[] newArray(int size) {
+            return new ClassGame[size];
+        }
+    };
 
     public String toString() {
         return this.name;
@@ -63,6 +92,38 @@ public class ClassGame implements Serializable, Parcelable {
         this.description = description;
     }
 
+    public void setBackgroundImage(Drawable image) {
+        backgroundImage = image;
+    }
+
+    public void setButtonTextColor(ColorStateList color) {
+        buttonTextColors = color;
+    }
+
+    public void setPrimaryButtonBackgroundImage(Drawable image) {
+        primaryButtonBackgroundImage = image;
+    }
+
+    public void setInfoButtonBackgroundImage(Drawable image) {
+        infoButtonBackgroundImage = image;
+    }
+
+    public void getPrimaryButtonImage(Button... btns) {
+
+        for (Button btn : btns) {
+            btn.setTextColor(buttonTextColors);
+            btn.setBackground(primaryButtonBackgroundImage);
+        }
+    }
+
+    public void getInfoButtonImage(Button btn) {
+        btn.setTextColor(buttonTextColors);
+        btn.setBackground(infoButtonBackgroundImage);
+    }
+
+    public Drawable getBackgroundImage() {
+        return backgroundImage;
+    }
     public int getMaxTraitPoints() {
         return maxTraitPoints;
     }
@@ -273,6 +334,11 @@ public class ClassGame implements Serializable, Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-
+        parcel.writeInt(maxTraitPoints);
+        parcel.writeInt(maxSkillPoints);
+        parcel.writeInt(maxFeatPoints);
+        parcel.writeString(name);
+        parcel.writeString(type);
+        parcel.writeString(description);
     }
 }

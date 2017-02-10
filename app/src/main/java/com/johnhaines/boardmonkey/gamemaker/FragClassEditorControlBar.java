@@ -24,6 +24,8 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
     private String listType;
     private Integer index;
 
+    private ClassGame game;
+
     private OnFragmentInteractionListener mListener;
 
     private TextView lblItemName;
@@ -58,6 +60,9 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        game = ((GameApplication) getActivity().getApplication()).getGame();
+
         if (getArguments() != null) {
             index = getArguments().getInt("index");
             listType = getArguments().getString("listType");
@@ -86,6 +91,9 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
         btnEditClassTraits.setOnClickListener(this);
         btnEditClassLevelNames = (Button) rootView.findViewById(R.id.btnEditClassLevelNames);
         btnEditClassLevelNames.setOnClickListener(this);
+
+        game.getPrimaryButtonImage(btnEditClassDescription, btnEditClassStartingPoints, btnEditLevelUpPoints,
+                btnEditClassKnownSkills, btnEditClassAttributeRequirements, btnEditClassLevelNames, btnEditClassTraits);
 
         return rootView;
     }

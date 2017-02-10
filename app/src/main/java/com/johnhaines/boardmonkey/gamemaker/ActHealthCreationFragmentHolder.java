@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
     private ArrayAdapter SAdapter;
     private FrameLayout fragFrame;
     private Button btnInfo;
+    private RelativeLayout backgroundLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
 
         fragFrame = (FrameLayout) findViewById(R.id.frmHealthCreationInfo);
         fragFrame.bringToFront();
+
+        backgroundLayout = (RelativeLayout) findViewById(R.id.HealthCreationLayout);
+        backgroundLayout.setBackground(((GameApplication) getApplication()).getGame().getBackgroundImage());
 
         btnInfo = (Button) findViewById(R.id.btnHealthCreationInfo);
         btnInfo.setOnClickListener(this);

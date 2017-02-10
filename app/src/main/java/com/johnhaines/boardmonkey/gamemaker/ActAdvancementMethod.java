@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
     private static final String MAX_FEAT_POINTS = "Max Feat Points";
 
     private FrameLayout frmInfoFrame;
+    private RelativeLayout backgroundLayout;
     private Spinner spnAdvancementMethod;
     private SpinnerAdapter SAdapter;
     private TextView lblGameName;
@@ -70,11 +72,15 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
         if (savedInstanceState != null) {
             game = savedInstanceState.getParcelable("Game");
             ((GameApplication) getApplication()).setGame(game);
+        } else {
+            game = ((GameApplication) getApplication()).getGame();
         }
         setContentView(R.layout.activity_advancement_method);
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmAdvancementMethodInfo);
         frmInfoFrame.bringToFront();
+        backgroundLayout = (RelativeLayout) findViewById(R.id.AdvancementMethodLayout);
+        backgroundLayout.setBackground(game.getBackgroundImage());
         lblGameName = (TextView) findViewById(R.id.lblGameNameAdvancementMethod);
         lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
         edtAttPointCost = (EditText) findViewById(R.id.edtAttPointCost);

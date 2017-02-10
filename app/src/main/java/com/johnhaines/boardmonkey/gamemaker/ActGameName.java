@@ -6,11 +6,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -33,6 +32,8 @@ public class ActGameName extends Activity {
     private EditText edtGameName;
     private EditText edtGameDescription;
     private ArrayAdapter SAdapter;
+
+    private ClassGame newSaveGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,7 @@ public class ActGameName extends Activity {
         // initiate and save New game with Name, Description and Type and default values
 
         final String extension = ".gmgt";
-        final ClassGame newSaveGame = ((GameApplication) getApplication()).getGame();
+        newSaveGame = ((GameApplication) getApplication()).getGame();
 
         final String newName = edtGameName.getText().toString();
         final String newDescription = edtGameDescription.getText().toString();
@@ -136,6 +137,7 @@ public class ActGameName extends Activity {
     public void saveGame(String fileName, ClassGame game) {
 
         /* Checks if external storage is available for read and write */
+        setAppearanceComponents(game.getType());
         boolean isExternalStorageWritable = false;
         String writeState = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(writeState)) {
@@ -167,5 +169,34 @@ public class ActGameName extends Activity {
 
         Intent intent = new Intent(this, ActGameEdit.class);
         startActivity(intent);
+    }
+
+    private void setAppearanceComponents(String gameType) {
+        switch (gameType) {
+            case ("Fantasy"):
+                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_fantasy_primary));
+                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_fantasy_primary));
+                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Sci-Fi"):
+                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_scifi_text_primary));
+                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_scifi_primary));
+                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_scifi_primary));
+                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Military"):
+                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_military_text_primary));
+                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_military_primary));
+                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_military_primary));
+                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            default:
+                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_base_text_primary));
+                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_base_primary));
+                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_base_primary));
+                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+        }
     }
 }

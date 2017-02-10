@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -27,7 +28,10 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
     public static final String INDEX_KEY = "index";
 
     private FrameLayout frmInfoFrame;
+    private RelativeLayout backgroundLayout;
     private String infoText;
+
+    private Button btnInfo;
 
 
     @Override
@@ -35,8 +39,11 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_characteristic_editor_frag_holder);
 
+        backgroundLayout = (RelativeLayout) findViewById(R.id.CharEditMenuLayout);
+        backgroundLayout.setBackground(((GameApplication) getApplication()).getGame().getBackgroundImage());
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
         infoText = getInfoText();
+        btnInfo = (Button) findViewById(R.id.btnCharEditInformation);
 
         if (savedInstanceState != null) {
             return;

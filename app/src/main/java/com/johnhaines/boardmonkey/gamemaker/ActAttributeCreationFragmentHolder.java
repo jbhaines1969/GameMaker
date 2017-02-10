@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -24,6 +25,7 @@ public class ActAttributeCreationFragmentHolder extends Activity implements View
     private ArrayAdapter SAdapter;
     private FrameLayout frmInfoFrame;
     private Button btnInfo;
+    private RelativeLayout backgroundLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,9 @@ public class ActAttributeCreationFragmentHolder extends Activity implements View
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmAttCreationInfo);
         frmInfoFrame.bringToFront();
+
+        backgroundLayout = (RelativeLayout) findViewById(R.id.AttCreationLayout);
+        backgroundLayout.setBackground(((GameApplication) getApplication()).getGame().getBackgroundImage());
 
         btnInfo = (Button) findViewById(R.id.btnAttCreationInfo);
         btnInfo.setOnClickListener(this);

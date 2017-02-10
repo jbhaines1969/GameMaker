@@ -1,13 +1,13 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Timer;
@@ -21,19 +21,42 @@ public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFrag
     private Timer sndDelay;
     private int soundID;
     private FrameLayout infoFrame;
+    private RelativeLayout backgroundFrame;
+    private ClassGame game;
+    private Button btnName;
+    private Button btnCharacteristics;
+    private Button btnAttCreation;
+    private Button btnHealthCreation;
+    private Button btnAdvanceCreation;
+    private Button btnInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_edit);
+
+        game = ((GameApplication) getApplication()).getGame();
         gameNameLabel = (TextView) findViewById(R.id.lblGameNameEditMenu);
         gameNameLabel.setText(((GameApplication) getApplication()).getGame().getName());
         gameType = ((GameApplication) getApplication()).getGame().getType();
+
+        btnName = (Button) findViewById(R.id.btnEditName);
+        btnCharacteristics = (Button) findViewById(R.id.btnEditChar);
+        btnAttCreation = (Button) findViewById(R.id.btnAttributeCreation);
+        btnHealthCreation = (Button) findViewById(R.id.btnHealthCreation);
+        btnAdvanceCreation = (Button) findViewById(R.id.btnAdvancementMethod);
+        btnInfo = (Button) findViewById(R.id.btnGameEditInfo);
+
+        game.getPrimaryButtonImage(btnName, btnCharacteristics, btnAttCreation, btnHealthCreation,
+                btnAdvanceCreation);
+        game.getInfoButtonImage(btnInfo);
+
         playThemeMusic(gameType);
 
         infoFrame = (FrameLayout) findViewById(R.id.frmGameEditInfo);
-
+        backgroundFrame = (RelativeLayout) findViewById(R.id.GameEditMenuLayout);
+        backgroundFrame.setBackground(game.getBackgroundImage());
     }
 
     private void playThemeMusic(String gameType) {

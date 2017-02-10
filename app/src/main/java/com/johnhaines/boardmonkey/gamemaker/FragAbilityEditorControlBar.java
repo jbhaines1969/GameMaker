@@ -22,6 +22,7 @@ public class FragAbilityEditorControlBar extends Fragment implements View.OnClic
     private Button btnEffectType;
     private int index;
     private String listType;
+    private ClassGame game;
 
 
     public FragAbilityEditorControlBar() {
@@ -31,6 +32,8 @@ public class FragAbilityEditorControlBar extends Fragment implements View.OnClic
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        game = ((GameApplication) getActivity().getApplication()).getGame();
 
         if (savedInstanceState != null) {
             index = savedInstanceState.getInt("index");
