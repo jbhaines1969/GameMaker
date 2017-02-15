@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -11,9 +12,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Timer;
-import java.util.TimerTask;
 
-public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFragmentInteractionListener {
+public class ActGameEdit extends Activity implements View.OnClickListener, FragInfoTextFragment.OnFragmentInteractionListener,
+        MediaPlayer.OnCompletionListener {
 
     private TextView gameNameLabel;
     private FrameLayout fragFrame;
@@ -23,12 +24,13 @@ public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFrag
     private FrameLayout infoFrame;
     private RelativeLayout backgroundFrame;
     private ClassGame game;
-    private Button btnName;
-    private Button btnCharacteristics;
-    private Button btnAttCreation;
-    private Button btnHealthCreation;
-    private Button btnAdvanceCreation;
-    private Button btnInfo;
+    private ButtonNoClick btnName;
+    private ButtonNoClick btnCharacteristics;
+    private ButtonNoClick btnAttCreation;
+    private ButtonNoClick btnHealthCreation;
+    private ButtonNoClick btnAdvanceCreation;
+    private ButtonNoClick btnInfo;
+    private MediaPlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,22 +43,46 @@ public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFrag
         gameNameLabel.setText(((GameApplication) getApplication()).getGame().getName());
         gameType = ((GameApplication) getApplication()).getGame().getType();
 
-        btnName = (Button) findViewById(R.id.btnEditName);
-        btnCharacteristics = (Button) findViewById(R.id.btnEditChar);
-        btnAttCreation = (Button) findViewById(R.id.btnAttributeCreation);
-        btnHealthCreation = (Button) findViewById(R.id.btnHealthCreation);
-        btnAdvanceCreation = (Button) findViewById(R.id.btnAdvancementMethod);
-        btnInfo = (Button) findViewById(R.id.btnGameEditInfo);
-
-        game.getPrimaryButtonImage(btnName, btnCharacteristics, btnAttCreation, btnHealthCreation,
-                btnAdvanceCreation);
-        game.getInfoButtonImage(btnInfo);
+        btnName = (ButtonNoClick) findViewById(R.id.btnEditName);
+        getPrimaryButtonImage(btnName);
+        btnCharacteristics = (ButtonNoClick) findViewById(R.id.btnEditChar);
+        getPrimaryButtonImage(btnCharacteristics);
+        btnAttCreation = (ButtonNoClick) findViewById(R.id.btnAttributeCreation);
+        getPrimaryButtonImage(btnAttCreation);
+        btnHealthCreation = (ButtonNoClick) findViewById(R.id.btnHealthCreation);
+        getPrimaryButtonImage(btnHealthCreation);
+        btnAdvanceCreation = (ButtonNoClick) findViewById(R.id.btnAdvancementMethod);
+        getPrimaryButtonImage(btnAdvanceCreation);
+        btnInfo = (ButtonNoClick) findViewById(R.id.btnGameEditInfo);
+        getInfoButtonImage(btnInfo);
 
         playThemeMusic(gameType);
 
         infoFrame = (FrameLayout) findViewById(R.id.frmGameEditInfo);
         backgroundFrame = (RelativeLayout) findViewById(R.id.GameEditMenuLayout);
-        backgroundFrame.setBackground(game.getBackgroundImage());
+        setBackgroundImage();
+    }
+
+    private void setBackgroundImage() {
+
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Sci-Fi"):
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Military"):
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Mixed"):
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            default:
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+        }
+
     }
 
     private void playThemeMusic(String gameType) {
@@ -71,24 +97,88 @@ public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFrag
                 break;
             case ("Military"):
                 soundID = R.raw.mil_cue;
+                break;
+            case ("Mixed"):
+                soundID = R.raw.fan_cue;
+                break;
         }
 
-        new Timer().schedule(new TimerTask() {
 
-            final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), soundID);
+        playSound(soundID);
 
-            @Override
-            public void run() {
-                mPlayer.setVolume(1, 1);
-                mPlayer.setLooping(false);
-                mPlayer.start();
-            }
-        }, 10);
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(this, currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
+
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (game.getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+
+        }
+    }
+
+    public void getInfoButtonImage(ButtonNoClick infoBtn) {
+
+        switch (game.getType()) {
+            case ("Fantasy"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            case ("Sci-Fi"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+
+        }
+    }
+
+    public void onClick(View view) {
+        if (view instanceof ButtonNoClick) {
+            playSound(game.getButtonSoundID());
+        }
     }
 
     /* Button Actions */
 
     public void gameEditInfoButtonClicked(View view) {
+
+        onClick(view);
+
 
         infoFrame.bringToFront();
 
@@ -103,17 +193,25 @@ public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFrag
     }
 
     public void editNameClicked(View view) {
+
+        onClick(view);
+
         Intent intent = new Intent(this, ActGameName.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
 
     public void editCharacteristicsClicked(View view) {
+
+        onClick(view);
+
         Intent intent = new Intent(this, ActCharacteristicEditorFragHolder.class);
         startActivity(intent);
     }
 
     public void attributeCreationClicked(View view) {
+
+        onClick(view);
         Intent intent = new Intent(this, ActAttributeCreationFragmentHolder.class);
         startActivity(intent);
     }
@@ -121,17 +219,22 @@ public class ActGameEdit extends Activity implements FragInfoTextFragment.OnFrag
 
     public void healthCreationClicked(View view) {
 
+        onClick(view);
+
         Intent intent = new Intent(this, ActHealthCreationFragmentHolder.class);
         startActivity(intent);
     }
 
     public void advancementButtonClicked(View view) {
+
+        onClick(view);
         Intent intent = new Intent(this, ActAdvancementMethod.class);
         startActivity(intent);
     }
 
     @Override
     public void onDoneButtonClicked() {
+        onClick(btnInfo);
         getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frmGameEditInfo)).commit();
     }
 }

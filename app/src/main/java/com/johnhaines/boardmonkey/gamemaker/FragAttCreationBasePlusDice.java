@@ -3,6 +3,7 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,12 @@ import android.widget.EditText;
  */
 public class FragAttCreationBasePlusDice extends Fragment implements View.OnClickListener {
 
-    Button btnSaveBasePlusDice;
-    EditText edtBasePointsBasePlusDice;
-    EditText edtDiceSidesBasePlusDice;
-    EditText edtDiceRollsBasePlusDice;
+    private ButtonNoClick btnSaveBasePlusDice;
+    private EditText edtBasePointsBasePlusDice;
+    private EditText edtDiceSidesBasePlusDice;
+    private EditText edtDiceRollsBasePlusDice;
 
+    private String gameType;
 
     public FragAttCreationBasePlusDice() {
         // Required empty public constructor
@@ -29,11 +31,16 @@ public class FragAttCreationBasePlusDice extends Fragment implements View.OnClic
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_att_creation_base_plus_dice, container, false);
 
-        btnSaveBasePlusDice = (Button) rootView.findViewById(R.id.btnSaveBasePlusDice);
+        btnSaveBasePlusDice = (ButtonNoClick) rootView.findViewById(R.id.btnSaveBasePlusDice);
         btnSaveBasePlusDice.setOnClickListener(this);
+        getPrimaryButtonImage(btnSaveBasePlusDice);
+
         edtBasePointsBasePlusDice = (EditText) rootView.findViewById(R.id.edtBasePointsBasePlusDice);
         edtBasePointsBasePlusDice.setText(String.valueOf(((GameApplication) getActivity().getApplication()).getGame().getAttCreation().getBaseScore()));
         edtDiceSidesBasePlusDice = (EditText) rootView.findViewById(R.id.edtDiceSidesBasePlusDice);
@@ -42,6 +49,29 @@ public class FragAttCreationBasePlusDice extends Fragment implements View.OnClic
         edtDiceRollsBasePlusDice.setText(String.valueOf(((GameApplication) getActivity().getApplication()).getGame().getAttCreation().getDiceRolls()));
 
         return rootView;
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (gameType) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+
+        }
     }
 
     @Override

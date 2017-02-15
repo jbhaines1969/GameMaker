@@ -49,7 +49,7 @@
                     android:layout_weight=".1"
                     android:layout_gravity="center_horizontal" />
 
-                <Button
+                <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btnTextAttributes"
@@ -57,7 +57,7 @@
                     android:layout_weight=".1"
                     android:textSize="24sp" />
 
-                <Button
+                <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btnTextRaces"
@@ -65,7 +65,7 @@
                     android:layout_weight=".1"
                     android:textSize="24sp" />
 
-                <Button
+                <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btnTextClasses"
@@ -73,7 +73,7 @@
                     android:layout_weight=".1"
                     android:textSize="24sp" />
 
-                <Button
+                <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btnTextSkills"
@@ -81,7 +81,7 @@
                     android:layout_weight=".1"
                     android:textSize="24sp" />
 
-                <Button
+                <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btnTextTraits"
@@ -89,7 +89,7 @@
                     android:layout_weight=".1"
                     android:textSize="24sp" />
 
-                <Button
+                <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btnTextFeatures"

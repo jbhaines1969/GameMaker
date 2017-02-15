@@ -138,7 +138,7 @@
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
-        <Button
+        <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
             android:id="@+id/btnSaveStartingPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,10 +1,10 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
 import android.app.Activity;
-import android.app.Fragment;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -18,9 +18,8 @@ import java.io.ObjectOutputStream;
 
 import static android.os.Environment.DIRECTORY_DCIM;
 import static android.os.Environment.getExternalStoragePublicDirectory;
-import static android.os.Environment.getRootDirectory;
 
-public class ActCharacteristicEditorFragHolder extends Activity implements FragListSelector.OnFragmentInteractionListener,
+public class ActCharacteristicEditorFragHolder extends Activity implements OnClickListener, FragListSelector.OnFragmentInteractionListener,
         FragListEdit.OnFragmentInteractionListener, FragRaceEditorControlBar.OnFragmentInteractionListener,
         FragClassEditorControlBar.OnFragmentInteractionListener, FragInfoTextFragment.OnFragmentInteractionListener {
 
@@ -31,7 +30,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
     private RelativeLayout backgroundLayout;
     private String infoText;
 
-    private Button btnInfo;
+    private ButtonNoClick btnInfo;
 
 
     @Override
@@ -40,10 +39,12 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         setContentView(R.layout.activity_characteristic_editor_frag_holder);
 
         backgroundLayout = (RelativeLayout) findViewById(R.id.CharEditMenuLayout);
-        backgroundLayout.setBackground(((GameApplication) getApplication()).getGame().getBackgroundImage());
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
         infoText = getInfoText();
-        btnInfo = (Button) findViewById(R.id.btnCharEditInformation);
+        btnInfo = (ButtonNoClick) findViewById(R.id.btnCharEditInformation);
+        getInfoButtonImage(btnInfo);
+        setBackgroundImage();
+
 
         if (savedInstanceState != null) {
             return;
@@ -55,14 +56,64 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
     }
 
     @Override
+    public void onClick(View view) {
+        if (view instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), soundID);
+
+            mPlayer.setVolume(1, 1);
+            mPlayer.setLooping(false);
+            mPlayer.start();
+
+        }
+    }
+
+    private void setBackgroundImage() {
+
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Sci-Fi"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Military"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Mixed"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            default:
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+        }
+
+    }
+
+    @Override
     public void onBackPressed() {
 
         // Clear all fragments before popping backstack, as some fragments in right hand container
-        // will change after transaction is added to stack
-
+        // will change after transaction is added to
         if (getFragmentManager().findFragmentById(R.id.frmCharEditorInfo) != null) {
-            getFragmentManager().beginTransaction().remove(getFragmentManager().
-                    findFragmentById(R.id.frmCharEditorInfo)).commit();
+            getFragmentManager().beginTransaction().
+                    remove(getFragmentManager().findFragmentById(R.id.frmCharEditorInfo)).commit();
         } else if (getFragmentManager().findFragmentById(R.id.fragment_container_right) != null) {
 
             getFragmentManager().beginTransaction().remove(getFragmentManager().
@@ -74,6 +125,48 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         }
     }
 
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+
+        }
+    }
+
+
+    private void getInfoButtonImage(ButtonNoClick infoBtn) {
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            case ("Sci-Fi"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            case ("Military"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            default:
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+        }
+    }
+
+
     public void charEditInfoButtonClicked(View view) {
 
         infoText = getInfoText();
@@ -84,7 +177,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
         Bundle bundle = new Bundle();
         bundle.putString("text", infoText);
         fragInfo.setArguments(bundle);
-        getFragmentManager().beginTransaction().add(R.id.frmCharEditorInfo, fragInfo).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().add(R.id.frmCharEditorInfo, fragInfo).commit();
 
     }
 
@@ -129,7 +222,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements FragL
     public String getInfoText() {
         String text = "";
 
-        return text;
+        return infoText;
     }
 
     @Override

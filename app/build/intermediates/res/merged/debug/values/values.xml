@@ -1501,15 +1501,15 @@
         <item name="android:scaleType">center</item>
     </style>
     <style name="BaseButtonTheme">
-        <item name="android:background">@drawable/decal2</item>
+        <item name="android:background">@drawable/fan_button_primary</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="FantasyButtonTheme">
-        <item name="android:background">@drawable/decal2</item>
+        <item name="android:background">@drawable/fan_button_primary</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="MilitaryButtonTheme">
-        <item name="android:background">@drawable/decal2</item>
+        <item name="android:background">@drawable/fan_button_primary</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
@@ -1657,7 +1657,7 @@
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
     <style name="SciFiButtonTheme">
-        <item name="android:background">@drawable/decal2</item>
+        <item name="android:background">@drawable/fan_button_primary</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>

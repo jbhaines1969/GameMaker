@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -24,7 +26,7 @@ import java.io.ObjectOutputStream;
 import static android.os.Environment.DIRECTORY_DCIM;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
-public class ActGameName extends Activity {
+public class ActGameName extends Activity implements MediaPlayer.OnCompletionListener {
 
     private FrameLayout fragFrame;
 
@@ -33,12 +35,25 @@ public class ActGameName extends Activity {
     private EditText edtGameDescription;
     private ArrayAdapter SAdapter;
 
+    private ButtonNoClick btnSave;
+
     private ClassGame newSaveGame;
+
+    private MediaPlayer mPlayer;
+
+    private Boolean spinnerItemSelected; //set to true after first selection, to avoid playing on load
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_type_description);
+
+        btnSave = (ButtonNoClick) findViewById(R.id.btnSaveGame);
+        btnSave.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_base_primary));
+        btnSave.setTextColor(ContextCompat.getColorStateList(this, R.color.button_base_text_primary));
+
+        spinnerItemSelected = false;
 
         edtGameName = (EditText) findViewById(R.id.edtGameName);
         edtGameName.setText(((GameApplication) this.getApplication()).getGame().getName());
@@ -53,8 +68,23 @@ public class ActGameName extends Activity {
         spnGameType = (Spinner) findViewById(R.id.spnGameType);
         spnGameType.setAdapter(SAdapter);
         spnGameType.setSelection(setSpinnerSelection());
+        spnGameType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                playSpinnerSound();
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+    }
+
+    @Override
+    public void onPause() {
+        spinnerItemSelected = false;
+        super.onPause();
     }
 
     public int setSpinnerSelection() {
@@ -69,8 +99,62 @@ public class ActGameName extends Activity {
         return position;
     }
 
+    private void playSpinnerSound() {
+
+        int soundID = 0;
+        if (spinnerItemSelected == true) {
+            String selection = spnGameType.getSelectedItem().toString();
+
+            switch (selection) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_shr;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_shr;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_shr;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_shr;
+                    break;
+            }
+
+            playSound(soundID);
+
+
+        } else {
+            spinnerItemSelected = true;
+        }
+
+
+    }
+
+    public void playSound(int soundID) {
+        try {
+            mPlayer = MediaPlayer.create(getApplicationContext(), soundID);
+
+            mPlayer.setVolume(1, 1);
+            mPlayer.setLooping(false);
+            mPlayer.setOnCompletionListener(this);
+
+            mPlayer.start();
+        } catch (Exception e) {
+            Log.d("Working", e.toString());
+        }
+    }
+
+
+    public void onCompletion(MediaPlayer mPlayer) {
+
+        mPlayer.reset();
+        mPlayer.release();
+
+    }
+
     public void saveNewGameClicked(View view) {
         // initiate and save New game with Name, Description and Type and default values
+
 
         final String extension = ".gmgt";
         newSaveGame = ((GameApplication) getApplication()).getGame();
@@ -94,50 +178,48 @@ public class ActGameName extends Activity {
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
 
+
         } else if (nameNotChanged) {
             newSaveGame.setDescription(newDescription);
             newSaveGame.setType(newType);
             saveGame(newName + extension, newSaveGame);
+        } else if (newFile.exists()) {
+
+            AlertDialog.Builder alert = new AlertDialog.Builder(ActGameName.this);
+            alert.setMessage(R.string.game_already_exists)
+                    .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            newSaveGame.setName(newName);
+                            newSaveGame.setDescription(newDescription);
+                            newSaveGame.setType(newType);
+                            currentFile.delete();
+                            saveGame(newName + extension, newSaveGame);
+                        }
+                    })
+                    .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+            alert.create();
+            alert.show();
+
         } else {
 
-            if (newFile.exists()) {
-                AlertDialog.Builder alert = new AlertDialog.Builder(ActGameName.this);
-                alert.setMessage(R.string.game_already_exists)
-                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                newSaveGame.setName(newName);
-                                newSaveGame.setDescription(newDescription);
-                                newSaveGame.setType(newType);
-                                currentFile.delete();
-                                saveGame(newName + extension, newSaveGame);
-                            }
-                        })
-                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        });
-                alert.create();
-                alert.show();
-
-            } else {
-
-                newSaveGame.setName(newName);
-                newSaveGame.setDescription(newDescription);
-                newSaveGame.setType(newType);
-                currentFile.delete();
-                saveGame(newName + extension, newSaveGame);
-
-            }
-        }
+            newSaveGame.setName(newName);
+            newSaveGame.setDescription(newDescription);
+            newSaveGame.setType(newType);
+            currentFile.delete();
+            saveGame(newName + extension, newSaveGame);
+    }
     }
 
     public void saveGame(String fileName, ClassGame game) {
 
         /* Checks if external storage is available for read and write */
-        setAppearanceComponents(game.getType());
+        setButtonSound(game.getType());
         boolean isExternalStorageWritable = false;
         String writeState = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(writeState)) {
@@ -167,35 +249,25 @@ public class ActGameName extends Activity {
             }
         }
 
+        spinnerItemSelected = false;
+
         Intent intent = new Intent(this, ActGameEdit.class);
         startActivity(intent);
     }
 
-    private void setAppearanceComponents(String gameType) {
+    private void setButtonSound(String gameType) {
         switch (gameType) {
             case ("Fantasy"):
-                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
-                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_fantasy_primary));
-                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_fantasy_primary));
-                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                newSaveGame.setButtonSoundID(R.raw.fan_hit);
                 break;
             case ("Sci-Fi"):
-                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_scifi_text_primary));
-                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_scifi_primary));
-                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_scifi_primary));
-                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                newSaveGame.setButtonSoundID(R.raw.syfi_hit);
                 break;
             case ("Military"):
-                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_military_text_primary));
-                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_military_primary));
-                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_military_primary));
-                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                newSaveGame.setButtonSoundID(R.raw.mil_hit);
                 break;
             default:
-                newSaveGame.setButtonTextColor(ContextCompat.getColorStateList(this, R.color.button_base_text_primary));
-                newSaveGame.setPrimaryButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_base_primary));
-                newSaveGame.setInfoButtonBackgroundImage(ContextCompat.getDrawable(this, R.drawable.button_base_primary));
-                newSaveGame.setBackgroundImage(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                newSaveGame.setButtonSoundID(R.raw.fan_hit);
                 break;
         }
     }

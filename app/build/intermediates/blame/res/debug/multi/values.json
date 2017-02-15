@@ -9157,7 +9157,7 @@
                     "startOffset": 113165,
                     "endLine": 1505,
                     "endColumn": 12,
-                    "endOffset": 113339
+                    "endOffset": 113351
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\values\\styles.xml",
@@ -9167,7 +9167,7 @@
                         "startOffset": 374,
                         "endLine": 13,
                         "endColumn": 12,
-                        "endOffset": 548
+                        "endOffset": 560
                     }
                 }
             },
@@ -9175,20 +9175,20 @@
                 "to": {
                     "startLine": 1506,
                     "startColumn": 4,
-                    "startOffset": 113344,
+                    "startOffset": 113356,
                     "endLine": 1509,
                     "endColumn": 12,
-                    "endOffset": 113521
+                    "endOffset": 113545
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 554,
+                        "startOffset": 566,
                         "endLine": 18,
                         "endColumn": 12,
-                        "endOffset": 731
+                        "endOffset": 755
                     }
                 }
             },
@@ -9196,20 +9196,20 @@
                 "to": {
                     "startLine": 1510,
                     "startColumn": 4,
-                    "startOffset": 113526,
+                    "startOffset": 113550,
                     "endLine": 1513,
                     "endColumn": 12,
-                    "endOffset": 113704
+                    "endOffset": 113740
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
-                        "startOffset": 918,
+                        "startOffset": 954,
                         "endLine": 28,
                         "endColumn": 12,
-                        "endOffset": 1096
+                        "endOffset": 1144
                     }
                 }
             },
@@ -9217,10 +9217,10 @@
                 "to": {
                     "startLine": 1514,
                     "startColumn": 4,
-                    "startOffset": 113709,
+                    "startOffset": 113745,
                     "endLine": 1551,
                     "endColumn": 12,
-                    "endOffset": 116566
+                    "endOffset": 116602
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9238,10 +9238,10 @@
                 "to": {
                     "startLine": 1552,
                     "startColumn": 4,
-                    "startOffset": 116571,
+                    "startOffset": 116607,
                     "endLine": 1590,
                     "endColumn": 12,
-                    "endOffset": 119568
+                    "endOffset": 119604
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9259,9 +9259,9 @@
                 "to": {
                     "startLine": 1591,
                     "startColumn": 4,
-                    "startOffset": 119573,
+                    "startOffset": 119609,
                     "endColumn": 61,
-                    "endOffset": 119630
+                    "endOffset": 119666
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9278,10 +9278,10 @@
                 "to": {
                     "startLine": 1592,
                     "startColumn": 4,
-                    "startOffset": 119635,
+                    "startOffset": 119671,
                     "endLine": 1601,
                     "endColumn": 12,
-                    "endOffset": 120260
+                    "endOffset": 120296
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9299,10 +9299,10 @@
                 "to": {
                     "startLine": 1602,
                     "startColumn": 4,
-                    "startOffset": 120265,
+                    "startOffset": 120301,
                     "endLine": 1610,
                     "endColumn": 12,
-                    "endOffset": 120874
+                    "endOffset": 120910
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9320,9 +9320,9 @@
                 "to": {
                     "startLine": 1611,
                     "startColumn": 4,
-                    "startOffset": 120879,
+                    "startOffset": 120915,
                     "endColumn": 85,
-                    "endOffset": 120960
+                    "endOffset": 120996
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9339,10 +9339,10 @@
                 "to": {
                     "startLine": 1612,
                     "startColumn": 4,
-                    "startOffset": 120965,
+                    "startOffset": 121001,
                     "endLine": 1613,
                     "endColumn": 12,
-                    "endOffset": 121073
+                    "endOffset": 121109
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9360,10 +9360,10 @@
                 "to": {
                     "startLine": 1614,
                     "startColumn": 4,
-                    "startOffset": 121078,
+                    "startOffset": 121114,
                     "endLine": 1617,
                     "endColumn": 12,
-                    "endOffset": 121302
+                    "endOffset": 121338
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9381,10 +9381,10 @@
                 "to": {
                     "startLine": 1618,
                     "startColumn": 4,
-                    "startOffset": 121307,
+                    "startOffset": 121343,
                     "endLine": 1620,
                     "endColumn": 12,
-                    "endOffset": 121462
+                    "endOffset": 121498
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9402,10 +9402,10 @@
                 "to": {
                     "startLine": 1621,
                     "startColumn": 4,
-                    "startOffset": 121467,
+                    "startOffset": 121503,
                     "endLine": 1623,
                     "endColumn": 12,
-                    "endOffset": 121614
+                    "endOffset": 121650
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9423,10 +9423,10 @@
                 "to": {
                     "startLine": 1624,
                     "startColumn": 4,
-                    "startOffset": 121619,
+                    "startOffset": 121655,
                     "endLine": 1626,
                     "endColumn": 12,
-                    "endOffset": 121785
+                    "endOffset": 121821
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9444,10 +9444,10 @@
                 "to": {
                     "startLine": 1627,
                     "startColumn": 4,
-                    "startOffset": 121790,
+                    "startOffset": 121826,
                     "endLine": 1629,
                     "endColumn": 12,
-                    "endOffset": 121952
+                    "endOffset": 121988
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9465,10 +9465,10 @@
                 "to": {
                     "startLine": 1630,
                     "startColumn": 4,
-                    "startOffset": 121957,
+                    "startOffset": 121993,
                     "endLine": 1633,
                     "endColumn": 12,
-                    "endOffset": 122195
+                    "endOffset": 122231
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9486,10 +9486,10 @@
                 "to": {
                     "startLine": 1634,
                     "startColumn": 4,
-                    "startOffset": 122200,
+                    "startOffset": 122236,
                     "endLine": 1636,
                     "endColumn": 12,
-                    "endOffset": 122365
+                    "endOffset": 122401
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9507,10 +9507,10 @@
                 "to": {
                     "startLine": 1637,
                     "startColumn": 4,
-                    "startOffset": 122370,
+                    "startOffset": 122406,
                     "endLine": 1639,
                     "endColumn": 12,
-                    "endOffset": 122538
+                    "endOffset": 122574
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9528,10 +9528,10 @@
                 "to": {
                     "startLine": 1640,
                     "startColumn": 4,
-                    "startOffset": 122543,
+                    "startOffset": 122579,
                     "endLine": 1642,
                     "endColumn": 12,
-                    "endOffset": 122709
+                    "endOffset": 122745
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9549,10 +9549,10 @@
                 "to": {
                     "startLine": 1643,
                     "startColumn": 4,
-                    "startOffset": 122714,
+                    "startOffset": 122750,
                     "endLine": 1646,
                     "endColumn": 12,
-                    "endOffset": 122983
+                    "endOffset": 123019
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9570,10 +9570,10 @@
                 "to": {
                     "startLine": 1647,
                     "startColumn": 4,
-                    "startOffset": 122988,
+                    "startOffset": 123024,
                     "endLine": 1649,
                     "endColumn": 12,
-                    "endOffset": 123182
+                    "endOffset": 123218
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9591,10 +9591,10 @@
                 "to": {
                     "startLine": 1650,
                     "startColumn": 4,
-                    "startOffset": 123187,
+                    "startOffset": 123223,
                     "endLine": 1653,
                     "endColumn": 12,
-                    "endOffset": 123387
+                    "endOffset": 123423
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9612,10 +9612,10 @@
                 "to": {
                     "startLine": 1654,
                     "startColumn": 4,
-                    "startOffset": 123392,
+                    "startOffset": 123428,
                     "endLine": 1657,
                     "endColumn": 12,
-                    "endOffset": 123717
+                    "endOffset": 123753
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9633,20 +9633,20 @@
                 "to": {
                     "startLine": 1658,
                     "startColumn": 4,
-                    "startOffset": 123722,
+                    "startOffset": 123758,
                     "endLine": 1661,
                     "endColumn": 12,
-                    "endOffset": 123897
+                    "endOffset": 123945
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 737,
+                        "startOffset": 761,
                         "endLine": 23,
                         "endColumn": 12,
-                        "endOffset": 912
+                        "endOffset": 948
                     }
                 }
             },
@@ -9654,9 +9654,9 @@
                 "to": {
                     "startLine": 1662,
                     "startColumn": 4,
-                    "startOffset": 123902,
+                    "startOffset": 123950,
                     "endColumn": 83,
-                    "endOffset": 123981
+                    "endOffset": 124029
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9673,9 +9673,9 @@
                 "to": {
                     "startLine": 1663,
                     "startColumn": 4,
-                    "startOffset": 123986,
+                    "startOffset": 124034,
                     "endColumn": 95,
-                    "endOffset": 124077
+                    "endOffset": 124125
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9692,9 +9692,9 @@
                 "to": {
                     "startLine": 1664,
                     "startColumn": 4,
-                    "startOffset": 124082,
+                    "startOffset": 124130,
                     "endColumn": 95,
-                    "endOffset": 124173
+                    "endOffset": 124221
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9711,9 +9711,9 @@
                 "to": {
                     "startLine": 1665,
                     "startColumn": 4,
-                    "startOffset": 124178,
+                    "startOffset": 124226,
                     "endColumn": 97,
-                    "endOffset": 124271
+                    "endOffset": 124319
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9730,9 +9730,9 @@
                 "to": {
                     "startLine": 1666,
                     "startColumn": 4,
-                    "startOffset": 124276,
+                    "startOffset": 124324,
                     "endColumn": 99,
-                    "endOffset": 124371
+                    "endOffset": 124419
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9749,9 +9749,9 @@
                 "to": {
                     "startLine": 1667,
                     "startColumn": 4,
-                    "startOffset": 124376,
+                    "startOffset": 124424,
                     "endColumn": 101,
-                    "endOffset": 124473
+                    "endOffset": 124521
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9768,9 +9768,9 @@
                 "to": {
                     "startLine": 1668,
                     "startColumn": 4,
-                    "startOffset": 124478,
+                    "startOffset": 124526,
                     "endColumn": 101,
-                    "endOffset": 124575
+                    "endOffset": 124623
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9787,9 +9787,9 @@
                 "to": {
                     "startLine": 1669,
                     "startColumn": 4,
-                    "startOffset": 124580,
+                    "startOffset": 124628,
                     "endColumn": 101,
-                    "endOffset": 124677
+                    "endOffset": 124725
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9806,9 +9806,9 @@
                 "to": {
                     "startLine": 1670,
                     "startColumn": 4,
-                    "startOffset": 124682,
+                    "startOffset": 124730,
                     "endColumn": 101,
-                    "endOffset": 124779
+                    "endOffset": 124827
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9825,9 +9825,9 @@
                 "to": {
                     "startLine": 1671,
                     "startColumn": 4,
-                    "startOffset": 124784,
+                    "startOffset": 124832,
                     "endColumn": 101,
-                    "endOffset": 124881
+                    "endOffset": 124929
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9844,9 +9844,9 @@
                 "to": {
                     "startLine": 1672,
                     "startColumn": 4,
-                    "startOffset": 124886,
+                    "startOffset": 124934,
                     "endColumn": 99,
-                    "endOffset": 124981
+                    "endOffset": 125029
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9863,9 +9863,9 @@
                 "to": {
                     "startLine": 1673,
                     "startColumn": 4,
-                    "startOffset": 124986,
+                    "startOffset": 125034,
                     "endColumn": 95,
-                    "endOffset": 125077
+                    "endOffset": 125125
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9882,9 +9882,9 @@
                 "to": {
                     "startLine": 1674,
                     "startColumn": 4,
-                    "startOffset": 125082,
+                    "startOffset": 125130,
                     "endColumn": 111,
-                    "endOffset": 125189
+                    "endOffset": 125237
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9901,9 +9901,9 @@
                 "to": {
                     "startLine": 1675,
                     "startColumn": 4,
-                    "startOffset": 125194,
+                    "startOffset": 125242,
                     "endColumn": 128,
-                    "endOffset": 125318
+                    "endOffset": 125366
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9920,9 +9920,9 @@
                 "to": {
                     "startLine": 1676,
                     "startColumn": 4,
-                    "startOffset": 125323,
+                    "startOffset": 125371,
                     "endColumn": 122,
-                    "endOffset": 125441
+                    "endOffset": 125489
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9939,10 +9939,10 @@
                 "to": {
                     "startLine": 1677,
                     "startColumn": 4,
-                    "startOffset": 125446,
+                    "startOffset": 125494,
                     "endLine": 1678,
                     "endColumn": 12,
-                    "endOffset": 125595
+                    "endOffset": 125643
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9960,10 +9960,10 @@
                 "to": {
                     "startLine": 1679,
                     "startColumn": 4,
-                    "startOffset": 125600,
+                    "startOffset": 125648,
                     "endLine": 1680,
                     "endColumn": 12,
-                    "endOffset": 125749
+                    "endOffset": 125797
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -9981,9 +9981,9 @@
                 "to": {
                     "startLine": 1681,
                     "startColumn": 4,
-                    "startOffset": 125754,
+                    "startOffset": 125802,
                     "endColumn": 97,
-                    "endOffset": 125847
+                    "endOffset": 125895
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10000,9 +10000,9 @@
                 "to": {
                     "startLine": 1682,
                     "startColumn": 4,
-                    "startOffset": 125852,
+                    "startOffset": 125900,
                     "endColumn": 113,
-                    "endOffset": 125961
+                    "endOffset": 126009
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10019,9 +10019,9 @@
                 "to": {
                     "startLine": 1683,
                     "startColumn": 4,
-                    "startOffset": 125966,
+                    "startOffset": 126014,
                     "endColumn": 93,
-                    "endOffset": 126055
+                    "endOffset": 126103
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10038,10 +10038,10 @@
                 "to": {
                     "startLine": 1684,
                     "startColumn": 4,
-                    "startOffset": 126060,
+                    "startOffset": 126108,
                     "endLine": 1685,
                     "endColumn": 12,
-                    "endOffset": 126195
+                    "endOffset": 126243
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10059,10 +10059,10 @@
                 "to": {
                     "startLine": 1686,
                     "startColumn": 4,
-                    "startOffset": 126200,
+                    "startOffset": 126248,
                     "endLine": 1687,
                     "endColumn": 12,
-                    "endOffset": 126329
+                    "endOffset": 126377
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10080,9 +10080,9 @@
                 "to": {
                     "startLine": 1688,
                     "startColumn": 4,
-                    "startOffset": 126334,
+                    "startOffset": 126382,
                     "endColumn": 95,
-                    "endOffset": 126425
+                    "endOffset": 126473
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10099,9 +10099,9 @@
                 "to": {
                     "startLine": 1689,
                     "startColumn": 4,
-                    "startOffset": 126430,
+                    "startOffset": 126478,
                     "endColumn": 111,
-                    "endOffset": 126537
+                    "endOffset": 126585
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10118,9 +10118,9 @@
                 "to": {
                     "startLine": 1690,
                     "startColumn": 4,
-                    "startOffset": 126542,
+                    "startOffset": 126590,
                     "endColumn": 99,
-                    "endOffset": 126637
+                    "endOffset": 126685
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10137,9 +10137,9 @@
                 "to": {
                     "startLine": 1691,
                     "startColumn": 4,
-                    "startOffset": 126642,
+                    "startOffset": 126690,
                     "endColumn": 115,
-                    "endOffset": 126753
+                    "endOffset": 126801
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10156,9 +10156,9 @@
                 "to": {
                     "startLine": 1692,
                     "startColumn": 4,
-                    "startOffset": 126758,
+                    "startOffset": 126806,
                     "endColumn": 95,
-                    "endOffset": 126849
+                    "endOffset": 126897
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10175,9 +10175,9 @@
                 "to": {
                     "startLine": 1693,
                     "startColumn": 4,
-                    "startOffset": 126854,
+                    "startOffset": 126902,
                     "endColumn": 111,
-                    "endOffset": 126961
+                    "endOffset": 127009
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10194,10 +10194,10 @@
                 "to": {
                     "startLine": 1694,
                     "startColumn": 4,
-                    "startOffset": 126966,
+                    "startOffset": 127014,
                     "endLine": 1695,
                     "endColumn": 12,
-                    "endOffset": 127101
+                    "endOffset": 127149
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10215,9 +10215,9 @@
                 "to": {
                     "startLine": 1696,
                     "startColumn": 4,
-                    "startOffset": 127106,
+                    "startOffset": 127154,
                     "endColumn": 135,
-                    "endOffset": 127237
+                    "endOffset": 127285
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10234,10 +10234,10 @@
                 "to": {
                     "startLine": 1697,
                     "startColumn": 4,
-                    "startOffset": 127242,
+                    "startOffset": 127290,
                     "endLine": 1698,
                     "endColumn": 12,
-                    "endOffset": 127401
+                    "endOffset": 127449
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10255,9 +10255,9 @@
                 "to": {
                     "startLine": 1699,
                     "startColumn": 4,
-                    "startOffset": 127406,
+                    "startOffset": 127454,
                     "endColumn": 129,
-                    "endOffset": 127531
+                    "endOffset": 127579
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10274,10 +10274,10 @@
                 "to": {
                     "startLine": 1700,
                     "startColumn": 4,
-                    "startOffset": 127536,
+                    "startOffset": 127584,
                     "endLine": 1701,
                     "endColumn": 12,
-                    "endOffset": 127689
+                    "endOffset": 127737
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10295,10 +10295,10 @@
                 "to": {
                     "startLine": 1702,
                     "startColumn": 4,
-                    "startOffset": 127694,
+                    "startOffset": 127742,
                     "endLine": 1703,
                     "endColumn": 12,
-                    "endOffset": 127839
+                    "endOffset": 127887
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10316,9 +10316,9 @@
                 "to": {
                     "startLine": 1704,
                     "startColumn": 4,
-                    "startOffset": 127844,
+                    "startOffset": 127892,
                     "endColumn": 140,
-                    "endOffset": 127980
+                    "endOffset": 128028
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10335,10 +10335,10 @@
                 "to": {
                     "startLine": 1705,
                     "startColumn": 4,
-                    "startOffset": 127985,
+                    "startOffset": 128033,
                     "endLine": 1706,
                     "endColumn": 12,
-                    "endOffset": 128124
+                    "endOffset": 128172
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10356,9 +10356,9 @@
                 "to": {
                     "startLine": 1707,
                     "startColumn": 4,
-                    "startOffset": 128129,
+                    "startOffset": 128177,
                     "endColumn": 134,
-                    "endOffset": 128259
+                    "endOffset": 128307
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10375,9 +10375,9 @@
                 "to": {
                     "startLine": 1708,
                     "startColumn": 4,
-                    "startOffset": 128264,
+                    "startOffset": 128312,
                     "endColumn": 111,
-                    "endOffset": 128371
+                    "endOffset": 128419
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10394,9 +10394,9 @@
                 "to": {
                     "startLine": 1709,
                     "startColumn": 4,
-                    "startOffset": 128376,
+                    "startOffset": 128424,
                     "endColumn": 127,
-                    "endOffset": 128499
+                    "endOffset": 128547
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10413,10 +10413,10 @@
                 "to": {
                     "startLine": 1710,
                     "startColumn": 4,
-                    "startOffset": 128504,
+                    "startOffset": 128552,
                     "endLine": 1711,
                     "endColumn": 12,
-                    "endOffset": 128635
+                    "endOffset": 128683
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10434,10 +10434,10 @@
                 "to": {
                     "startLine": 1712,
                     "startColumn": 4,
-                    "startOffset": 128640,
+                    "startOffset": 128688,
                     "endLine": 1713,
                     "endColumn": 12,
-                    "endOffset": 128777
+                    "endOffset": 128825
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10455,10 +10455,10 @@
                 "to": {
                     "startLine": 1714,
                     "startColumn": 4,
-                    "startOffset": 128782,
+                    "startOffset": 128830,
                     "endLine": 1715,
                     "endColumn": 12,
-                    "endOffset": 128919
+                    "endOffset": 128967
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10476,9 +10476,9 @@
                 "to": {
                     "startLine": 1716,
                     "startColumn": 4,
-                    "startOffset": 128924,
+                    "startOffset": 128972,
                     "endColumn": 111,
-                    "endOffset": 129031
+                    "endOffset": 129079
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10495,9 +10495,9 @@
                 "to": {
                     "startLine": 1717,
                     "startColumn": 4,
-                    "startOffset": 129036,
+                    "startOffset": 129084,
                     "endColumn": 139,
-                    "endOffset": 129171
+                    "endOffset": 129219
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10514,9 +10514,9 @@
                 "to": {
                     "startLine": 1718,
                     "startColumn": 4,
-                    "startOffset": 129176,
+                    "startOffset": 129224,
                     "endColumn": 67,
-                    "endOffset": 129239
+                    "endOffset": 129287
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10533,9 +10533,9 @@
                 "to": {
                     "startLine": 1719,
                     "startColumn": 4,
-                    "startOffset": 129244,
+                    "startOffset": 129292,
                     "endColumn": 72,
-                    "endOffset": 129312
+                    "endOffset": 129360
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10552,9 +10552,9 @@
                 "to": {
                     "startLine": 1720,
                     "startColumn": 4,
-                    "startOffset": 129317,
+                    "startOffset": 129365,
                     "endColumn": 73,
-                    "endOffset": 129386
+                    "endOffset": 129434
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10571,9 +10571,9 @@
                 "to": {
                     "startLine": 1721,
                     "startColumn": 4,
-                    "startOffset": 129391,
+                    "startOffset": 129439,
                     "endColumn": 72,
-                    "endOffset": 129459
+                    "endOffset": 129507
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10590,9 +10590,9 @@
                 "to": {
                     "startLine": 1722,
                     "startColumn": 4,
-                    "startOffset": 129464,
+                    "startOffset": 129512,
                     "endColumn": 73,
-                    "endOffset": 129533
+                    "endOffset": 129581
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10609,10 +10609,10 @@
                 "to": {
                     "startLine": 1723,
                     "startColumn": 4,
-                    "startOffset": 129538,
+                    "startOffset": 129586,
                     "endLine": 1724,
                     "endColumn": 12,
-                    "endOffset": 129679
+                    "endOffset": 129727
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10630,10 +10630,10 @@
                 "to": {
                     "startLine": 1725,
                     "startColumn": 4,
-                    "startOffset": 129684,
+                    "startOffset": 129732,
                     "endLine": 1726,
                     "endColumn": 12,
-                    "endOffset": 129823
+                    "endOffset": 129871
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10651,10 +10651,10 @@
                 "to": {
                     "startLine": 1727,
                     "startColumn": 4,
-                    "startOffset": 129828,
+                    "startOffset": 129876,
                     "endLine": 1728,
                     "endColumn": 12,
-                    "endOffset": 129961
+                    "endOffset": 130009
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10672,9 +10672,9 @@
                 "to": {
                     "startLine": 1729,
                     "startColumn": 4,
-                    "startOffset": 129966,
+                    "startOffset": 130014,
                     "endColumn": 65,
-                    "endOffset": 130027
+                    "endOffset": 130075
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10691,9 +10691,9 @@
                 "to": {
                     "startLine": 1730,
                     "startColumn": 4,
-                    "startOffset": 130032,
+                    "startOffset": 130080,
                     "endColumn": 89,
-                    "endOffset": 130117
+                    "endOffset": 130165
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10710,9 +10710,9 @@
                 "to": {
                     "startLine": 1731,
                     "startColumn": 4,
-                    "startOffset": 130122,
+                    "startOffset": 130170,
                     "endColumn": 75,
-                    "endOffset": 130193
+                    "endOffset": 130241
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10729,9 +10729,9 @@
                 "to": {
                     "startLine": 1732,
                     "startColumn": 4,
-                    "startOffset": 130198,
+                    "startOffset": 130246,
                     "endColumn": 103,
-                    "endOffset": 130297
+                    "endOffset": 130345
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10748,9 +10748,9 @@
                 "to": {
                     "startLine": 1733,
                     "startColumn": 4,
-                    "startOffset": 130302,
+                    "startOffset": 130350,
                     "endColumn": 89,
-                    "endOffset": 130387
+                    "endOffset": 130435
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10767,9 +10767,9 @@
                 "to": {
                     "startLine": 1734,
                     "startColumn": 4,
-                    "startOffset": 130392,
+                    "startOffset": 130440,
                     "endColumn": 101,
-                    "endOffset": 130489
+                    "endOffset": 130537
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10786,9 +10786,9 @@
                 "to": {
                     "startLine": 1735,
                     "startColumn": 4,
-                    "startOffset": 130494,
+                    "startOffset": 130542,
                     "endColumn": 107,
-                    "endOffset": 130597
+                    "endOffset": 130645
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10805,9 +10805,9 @@
                 "to": {
                     "startLine": 1736,
                     "startColumn": 4,
-                    "startOffset": 130602,
+                    "startOffset": 130650,
                     "endColumn": 107,
-                    "endOffset": 130705
+                    "endOffset": 130753
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10824,9 +10824,9 @@
                 "to": {
                     "startLine": 1737,
                     "startColumn": 4,
-                    "startOffset": 130710,
+                    "startOffset": 130758,
                     "endColumn": 99,
-                    "endOffset": 130805
+                    "endOffset": 130853
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10843,9 +10843,9 @@
                 "to": {
                     "startLine": 1738,
                     "startColumn": 4,
-                    "startOffset": 130810,
+                    "startOffset": 130858,
                     "endColumn": 79,
-                    "endOffset": 130885
+                    "endOffset": 130933
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10862,9 +10862,9 @@
                 "to": {
                     "startLine": 1739,
                     "startColumn": 4,
-                    "startOffset": 130890,
+                    "startOffset": 130938,
                     "endColumn": 91,
-                    "endOffset": 130977
+                    "endOffset": 131025
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10881,9 +10881,9 @@
                 "to": {
                     "startLine": 1740,
                     "startColumn": 4,
-                    "startOffset": 130982,
+                    "startOffset": 131030,
                     "endColumn": 97,
-                    "endOffset": 131075
+                    "endOffset": 131123
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10900,10 +10900,10 @@
                 "to": {
                     "startLine": 1741,
                     "startColumn": 4,
-                    "startOffset": 131080,
+                    "startOffset": 131128,
                     "endLine": 1742,
                     "endColumn": 12,
-                    "endOffset": 131185
+                    "endOffset": 131233
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10921,9 +10921,9 @@
                 "to": {
                     "startLine": 1743,
                     "startColumn": 4,
-                    "startOffset": 131190,
+                    "startOffset": 131238,
                     "endColumn": 77,
-                    "endOffset": 131263
+                    "endOffset": 131311
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10940,9 +10940,9 @@
                 "to": {
                     "startLine": 1744,
                     "startColumn": 4,
-                    "startOffset": 131268,
+                    "startOffset": 131316,
                     "endColumn": 105,
-                    "endOffset": 131369
+                    "endOffset": 131417
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10959,9 +10959,9 @@
                 "to": {
                     "startLine": 1745,
                     "startColumn": 4,
-                    "startOffset": 131374,
+                    "startOffset": 131422,
                     "endColumn": 91,
-                    "endOffset": 131461
+                    "endOffset": 131509
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10978,9 +10978,9 @@
                 "to": {
                     "startLine": 1746,
                     "startColumn": 4,
-                    "startOffset": 131466,
+                    "startOffset": 131514,
                     "endColumn": 103,
-                    "endOffset": 131565
+                    "endOffset": 131613
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -10997,9 +10997,9 @@
                 "to": {
                     "startLine": 1747,
                     "startColumn": 4,
-                    "startOffset": 131570,
+                    "startOffset": 131618,
                     "endColumn": 109,
-                    "endOffset": 131675
+                    "endOffset": 131723
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11016,10 +11016,10 @@
                 "to": {
                     "startLine": 1748,
                     "startColumn": 4,
-                    "startOffset": 131680,
+                    "startOffset": 131728,
                     "endLine": 1749,
                     "endColumn": 12,
-                    "endOffset": 131797
+                    "endOffset": 131845
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11037,10 +11037,10 @@
                 "to": {
                     "startLine": 1750,
                     "startColumn": 4,
-                    "startOffset": 131802,
+                    "startOffset": 131850,
                     "endLine": 1753,
                     "endColumn": 12,
-                    "endOffset": 131960
+                    "endOffset": 132008
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11058,10 +11058,10 @@
                 "to": {
                     "startLine": 1754,
                     "startColumn": 4,
-                    "startOffset": 131965,
+                    "startOffset": 132013,
                     "endLine": 1757,
                     "endColumn": 12,
-                    "endOffset": 132117
+                    "endOffset": 132165
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11079,9 +11079,9 @@
                 "to": {
                     "startLine": 1758,
                     "startColumn": 4,
-                    "startOffset": 132122,
+                    "startOffset": 132170,
                     "endColumn": 79,
-                    "endOffset": 132197
+                    "endOffset": 132245
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11098,9 +11098,9 @@
                 "to": {
                     "startLine": 1759,
                     "startColumn": 4,
-                    "startOffset": 132202,
+                    "startOffset": 132250,
                     "endColumn": 99,
-                    "endOffset": 132297
+                    "endOffset": 132345
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11117,9 +11117,9 @@
                 "to": {
                     "startLine": 1760,
                     "startColumn": 4,
-                    "startOffset": 132302,
+                    "startOffset": 132350,
                     "endColumn": 89,
-                    "endOffset": 132387
+                    "endOffset": 132435
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11136,9 +11136,9 @@
                 "to": {
                     "startLine": 1761,
                     "startColumn": 4,
-                    "startOffset": 132392,
+                    "startOffset": 132440,
                     "endColumn": 109,
-                    "endOffset": 132497
+                    "endOffset": 132545
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11155,9 +11155,9 @@
                 "to": {
                     "startLine": 1762,
                     "startColumn": 4,
-                    "startOffset": 132502,
+                    "startOffset": 132550,
                     "endColumn": 91,
-                    "endOffset": 132589
+                    "endOffset": 132637
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11174,10 +11174,10 @@
                 "to": {
                     "startLine": 1763,
                     "startColumn": 4,
-                    "startOffset": 132594,
+                    "startOffset": 132642,
                     "endLine": 1764,
                     "endColumn": 12,
-                    "endOffset": 132689
+                    "endOffset": 132737
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11195,10 +11195,10 @@
                 "to": {
                     "startLine": 1765,
                     "startColumn": 4,
-                    "startOffset": 132694,
+                    "startOffset": 132742,
                     "endLine": 1766,
                     "endColumn": 12,
-                    "endOffset": 132801
+                    "endOffset": 132849
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11216,10 +11216,10 @@
                 "to": {
                     "startLine": 1767,
                     "startColumn": 4,
-                    "startOffset": 132806,
+                    "startOffset": 132854,
                     "endLine": 1768,
                     "endColumn": 12,
-                    "endOffset": 132915
+                    "endOffset": 132963
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11237,10 +11237,10 @@
                 "to": {
                     "startLine": 1769,
                     "startColumn": 4,
-                    "startOffset": 132920,
+                    "startOffset": 132968,
                     "endLine": 1770,
                     "endColumn": 12,
-                    "endOffset": 133031
+                    "endOffset": 133079
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11258,10 +11258,10 @@
                 "to": {
                     "startLine": 1771,
                     "startColumn": 4,
-                    "startOffset": 133036,
+                    "startOffset": 133084,
                     "endLine": 1772,
                     "endColumn": 12,
-                    "endOffset": 133147
+                    "endOffset": 133195
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11279,9 +11279,9 @@
                 "to": {
                     "startLine": 1773,
                     "startColumn": 4,
-                    "startOffset": 133152,
+                    "startOffset": 133200,
                     "endColumn": 93,
-                    "endOffset": 133241
+                    "endOffset": 133289
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11298,9 +11298,9 @@
                 "to": {
                     "startLine": 1774,
                     "startColumn": 4,
-                    "startOffset": 133246,
+                    "startOffset": 133294,
                     "endColumn": 113,
-                    "endOffset": 133355
+                    "endOffset": 133403
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11317,9 +11317,9 @@
                 "to": {
                     "startLine": 1775,
                     "startColumn": 4,
-                    "startOffset": 133360,
+                    "startOffset": 133408,
                     "endColumn": 111,
-                    "endOffset": 133467
+                    "endOffset": 133515
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11336,10 +11336,10 @@
                 "to": {
                     "startLine": 1776,
                     "startColumn": 4,
-                    "startOffset": 133472,
+                    "startOffset": 133520,
                     "endLine": 1777,
                     "endColumn": 12,
-                    "endOffset": 133569
+                    "endOffset": 133617
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11357,10 +11357,10 @@
                 "to": {
                     "startLine": 1778,
                     "startColumn": 4,
-                    "startOffset": 133574,
+                    "startOffset": 133622,
                     "endLine": 1779,
                     "endColumn": 12,
-                    "endOffset": 133689
+                    "endOffset": 133737
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11378,10 +11378,10 @@
                 "to": {
                     "startLine": 1780,
                     "startColumn": 4,
-                    "startOffset": 133694,
+                    "startOffset": 133742,
                     "endLine": 1781,
                     "endColumn": 12,
-                    "endOffset": 133811
+                    "endOffset": 133859
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11399,9 +11399,9 @@
                 "to": {
                     "startLine": 1782,
                     "startColumn": 4,
-                    "startOffset": 133816,
+                    "startOffset": 133864,
                     "endColumn": 81,
-                    "endOffset": 133893
+                    "endOffset": 133941
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11418,9 +11418,9 @@
                 "to": {
                     "startLine": 1783,
                     "startColumn": 4,
-                    "startOffset": 133898,
+                    "startOffset": 133946,
                     "endColumn": 103,
-                    "endOffset": 133997
+                    "endOffset": 134045
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11437,9 +11437,9 @@
                 "to": {
                     "startLine": 1784,
                     "startColumn": 4,
-                    "startOffset": 134002,
+                    "startOffset": 134050,
                     "endColumn": 119,
-                    "endOffset": 134117
+                    "endOffset": 134165
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11456,9 +11456,9 @@
                 "to": {
                     "startLine": 1785,
                     "startColumn": 4,
-                    "startOffset": 134122,
+                    "startOffset": 134170,
                     "endColumn": 125,
-                    "endOffset": 134243
+                    "endOffset": 134291
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11475,9 +11475,9 @@
                 "to": {
                     "startLine": 1786,
                     "startColumn": 4,
-                    "startOffset": 134248,
+                    "startOffset": 134296,
                     "endColumn": 97,
-                    "endOffset": 134341
+                    "endOffset": 134389
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11494,9 +11494,9 @@
                 "to": {
                     "startLine": 1787,
                     "startColumn": 4,
-                    "startOffset": 134346,
+                    "startOffset": 134394,
                     "endColumn": 93,
-                    "endOffset": 134435
+                    "endOffset": 134483
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11513,9 +11513,9 @@
                 "to": {
                     "startLine": 1788,
                     "startColumn": 4,
-                    "startOffset": 134440,
+                    "startOffset": 134488,
                     "endColumn": 87,
-                    "endOffset": 134523
+                    "endOffset": 134571
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11532,9 +11532,9 @@
                 "to": {
                     "startLine": 1789,
                     "startColumn": 4,
-                    "startOffset": 134528,
+                    "startOffset": 134576,
                     "endColumn": 111,
-                    "endOffset": 134635
+                    "endOffset": 134683
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11551,9 +11551,9 @@
                 "to": {
                     "startLine": 1790,
                     "startColumn": 4,
-                    "startOffset": 134640,
+                    "startOffset": 134688,
                     "endColumn": 115,
-                    "endOffset": 134751
+                    "endOffset": 134799
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11570,9 +11570,9 @@
                 "to": {
                     "startLine": 1791,
                     "startColumn": 4,
-                    "startOffset": 134756,
+                    "startOffset": 134804,
                     "endColumn": 121,
-                    "endOffset": 134873
+                    "endOffset": 134921
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11589,9 +11589,9 @@
                 "to": {
                     "startLine": 1792,
                     "startColumn": 4,
-                    "startOffset": 134878,
+                    "startOffset": 134926,
                     "endColumn": 111,
-                    "endOffset": 134985
+                    "endOffset": 135033
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11608,10 +11608,10 @@
                 "to": {
                     "startLine": 1793,
                     "startColumn": 4,
-                    "startOffset": 134990,
+                    "startOffset": 135038,
                     "endLine": 1795,
                     "endColumn": 12,
-                    "endOffset": 135160
+                    "endOffset": 135208
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11629,9 +11629,9 @@
                 "to": {
                     "startLine": 1796,
                     "startColumn": 4,
-                    "startOffset": 135165,
+                    "startOffset": 135213,
                     "endColumn": 115,
-                    "endOffset": 135276
+                    "endOffset": 135324
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11648,9 +11648,9 @@
                 "to": {
                     "startLine": 1797,
                     "startColumn": 4,
-                    "startOffset": 135281,
+                    "startOffset": 135329,
                     "endColumn": 85,
-                    "endOffset": 135362
+                    "endOffset": 135410
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11667,9 +11667,9 @@
                 "to": {
                     "startLine": 1798,
                     "startColumn": 4,
-                    "startOffset": 135367,
+                    "startOffset": 135415,
                     "endColumn": 91,
-                    "endOffset": 135454
+                    "endOffset": 135502
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11686,10 +11686,10 @@
                 "to": {
                     "startLine": 1799,
                     "startColumn": 4,
-                    "startOffset": 135459,
+                    "startOffset": 135507,
                     "endLine": 1800,
                     "endColumn": 12,
-                    "endOffset": 135566
+                    "endOffset": 135614
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11707,10 +11707,10 @@
                 "to": {
                     "startLine": 1801,
                     "startColumn": 4,
-                    "startOffset": 135571,
+                    "startOffset": 135619,
                     "endLine": 1802,
                     "endColumn": 12,
-                    "endOffset": 135690
+                    "endOffset": 135738
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11728,9 +11728,9 @@
                 "to": {
                     "startLine": 1803,
                     "startColumn": 4,
-                    "startOffset": 135695,
+                    "startOffset": 135743,
                     "endColumn": 66,
-                    "endOffset": 135757
+                    "endOffset": 135805
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11747,10 +11747,10 @@
                 "to": {
                     "startLine": 1804,
                     "startColumn": 4,
-                    "startOffset": 135762,
+                    "startOffset": 135810,
                     "endLine": 1805,
                     "endColumn": 12,
-                    "endOffset": 135883
+                    "endOffset": 135931
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11768,9 +11768,9 @@
                 "to": {
                     "startLine": 1806,
                     "startColumn": 4,
-                    "startOffset": 135888,
+                    "startOffset": 135936,
                     "endColumn": 67,
-                    "endOffset": 135951
+                    "endOffset": 135999
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11787,10 +11787,10 @@
                 "to": {
                     "startLine": 1807,
                     "startColumn": 4,
-                    "startOffset": 135956,
+                    "startOffset": 136004,
                     "endLine": 1808,
                     "endColumn": 12,
-                    "endOffset": 136079
+                    "endOffset": 136127
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11808,10 +11808,10 @@
                 "to": {
                     "startLine": 1809,
                     "startColumn": 4,
-                    "startOffset": 136084,
+                    "startOffset": 136132,
                     "endLine": 1810,
                     "endColumn": 12,
-                    "endOffset": 136223
+                    "endOffset": 136271
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11829,10 +11829,10 @@
                 "to": {
                     "startLine": 1811,
                     "startColumn": 4,
-                    "startOffset": 136228,
+                    "startOffset": 136276,
                     "endLine": 1812,
                     "endColumn": 12,
-                    "endOffset": 136351
+                    "endOffset": 136399
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11850,9 +11850,9 @@
                 "to": {
                     "startLine": 1813,
                     "startColumn": 4,
-                    "startOffset": 136356,
+                    "startOffset": 136404,
                     "endColumn": 68,
-                    "endOffset": 136420
+                    "endOffset": 136468
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11869,9 +11869,9 @@
                 "to": {
                     "startLine": 1814,
                     "startColumn": 4,
-                    "startOffset": 136425,
+                    "startOffset": 136473,
                     "endColumn": 94,
-                    "endOffset": 136515
+                    "endOffset": 136563
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11888,9 +11888,9 @@
                 "to": {
                     "startLine": 1815,
                     "startColumn": 4,
-                    "startOffset": 136520,
+                    "startOffset": 136568,
                     "endColumn": 114,
-                    "endOffset": 136630
+                    "endOffset": 136678
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11907,9 +11907,9 @@
                 "to": {
                     "startLine": 1816,
                     "startColumn": 4,
-                    "startOffset": 136635,
+                    "startOffset": 136683,
                     "endColumn": 112,
-                    "endOffset": 136743
+                    "endOffset": 136791
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11926,9 +11926,9 @@
                 "to": {
                     "startLine": 1817,
                     "startColumn": 4,
-                    "startOffset": 136748,
+                    "startOffset": 136796,
                     "endColumn": 98,
-                    "endOffset": 136842
+                    "endOffset": 136890
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11945,9 +11945,9 @@
                 "to": {
                     "startLine": 1818,
                     "startColumn": 4,
-                    "startOffset": 136847,
+                    "startOffset": 136895,
                     "endColumn": 108,
-                    "endOffset": 136951
+                    "endOffset": 136999
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11964,9 +11964,9 @@
                 "to": {
                     "startLine": 1819,
                     "startColumn": 4,
-                    "startOffset": 136956,
+                    "startOffset": 137004,
                     "endColumn": 110,
-                    "endOffset": 137062
+                    "endOffset": 137110
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -11983,9 +11983,9 @@
                 "to": {
                     "startLine": 1820,
                     "startColumn": 4,
-                    "startOffset": 137067,
+                    "startOffset": 137115,
                     "endColumn": 110,
-                    "endOffset": 137173
+                    "endOffset": 137221
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12002,9 +12002,9 @@
                 "to": {
                     "startLine": 1821,
                     "startColumn": 4,
-                    "startOffset": 137178,
+                    "startOffset": 137226,
                     "endColumn": 100,
-                    "endOffset": 137274
+                    "endOffset": 137322
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12021,9 +12021,9 @@
                 "to": {
                     "startLine": 1822,
                     "startColumn": 4,
-                    "startOffset": 137279,
+                    "startOffset": 137327,
                     "endColumn": 104,
-                    "endOffset": 137379
+                    "endOffset": 137427
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12040,10 +12040,10 @@
                 "to": {
                     "startLine": 1823,
                     "startColumn": 4,
-                    "startOffset": 137384,
+                    "startOffset": 137432,
                     "endLine": 1824,
                     "endColumn": 12,
-                    "endOffset": 137491
+                    "endOffset": 137539
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12061,10 +12061,10 @@
                 "to": {
                     "startLine": 1825,
                     "startColumn": 4,
-                    "startOffset": 137496,
+                    "startOffset": 137544,
                     "endLine": 1826,
                     "endColumn": 12,
-                    "endOffset": 137621
+                    "endOffset": 137669
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12082,9 +12082,9 @@
                 "to": {
                     "startLine": 1827,
                     "startColumn": 4,
-                    "startOffset": 137626,
+                    "startOffset": 137674,
                     "endColumn": 90,
-                    "endOffset": 137712
+                    "endOffset": 137760
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12101,9 +12101,9 @@
                 "to": {
                     "startLine": 1828,
                     "startColumn": 4,
-                    "startOffset": 137717,
+                    "startOffset": 137765,
                     "endColumn": 122,
-                    "endOffset": 137835
+                    "endOffset": 137883
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12120,10 +12120,10 @@
                 "to": {
                     "startLine": 1829,
                     "startColumn": 4,
-                    "startOffset": 137840,
+                    "startOffset": 137888,
                     "endLine": 1830,
                     "endColumn": 12,
-                    "endOffset": 137947
+                    "endOffset": 137995
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12141,9 +12141,9 @@
                 "to": {
                     "startLine": 1831,
                     "startColumn": 4,
-                    "startOffset": 137952,
+                    "startOffset": 138000,
                     "endColumn": 85,
-                    "endOffset": 138033
+                    "endOffset": 138081
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12160,9 +12160,9 @@
                 "to": {
                     "startLine": 1832,
                     "startColumn": 4,
-                    "startOffset": 138038,
+                    "startOffset": 138086,
                     "endColumn": 103,
-                    "endOffset": 138137
+                    "endOffset": 138185
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12179,10 +12179,10 @@
                 "to": {
                     "startLine": 1833,
                     "startColumn": 4,
-                    "startOffset": 138142,
+                    "startOffset": 138190,
                     "endLine": 1834,
                     "endColumn": 12,
-                    "endOffset": 138245
+                    "endOffset": 138293
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12200,10 +12200,10 @@
                 "to": {
                     "startLine": 1835,
                     "startColumn": 4,
-                    "startOffset": 138250,
+                    "startOffset": 138298,
                     "endLine": 1836,
                     "endColumn": 12,
-                    "endOffset": 138345
+                    "endOffset": 138393
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12221,10 +12221,10 @@
                 "to": {
                     "startLine": 1837,
                     "startColumn": 4,
-                    "startOffset": 138350,
+                    "startOffset": 138398,
                     "endLine": 1838,
                     "endColumn": 12,
-                    "endOffset": 138463
+                    "endOffset": 138511
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12242,10 +12242,10 @@
                 "to": {
                     "startLine": 1839,
                     "startColumn": 4,
-                    "startOffset": 138468,
+                    "startOffset": 138516,
                     "endLine": 1840,
                     "endColumn": 12,
-                    "endOffset": 138567
+                    "endOffset": 138615
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12263,10 +12263,10 @@
                 "to": {
                     "startLine": 1841,
                     "startColumn": 4,
-                    "startOffset": 138572,
+                    "startOffset": 138620,
                     "endLine": 1842,
                     "endColumn": 12,
-                    "endOffset": 138671
+                    "endOffset": 138719
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12284,10 +12284,10 @@
                 "to": {
                     "startLine": 1843,
                     "startColumn": 4,
-                    "startOffset": 138676,
+                    "startOffset": 138724,
                     "endLine": 1844,
                     "endColumn": 12,
-                    "endOffset": 138797
+                    "endOffset": 138845
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12305,9 +12305,9 @@
                 "to": {
                     "startLine": 1845,
                     "startColumn": 4,
-                    "startOffset": 138802,
+                    "startOffset": 138850,
                     "endColumn": 87,
-                    "endOffset": 138885
+                    "endOffset": 138933
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12324,9 +12324,9 @@
                 "to": {
                     "startLine": 1846,
                     "startColumn": 4,
-                    "startOffset": 138890,
+                    "startOffset": 138938,
                     "endColumn": 107,
-                    "endOffset": 138993
+                    "endOffset": 139041
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12343,9 +12343,9 @@
                 "to": {
                     "startLine": 1847,
                     "startColumn": 4,
-                    "startOffset": 138998,
+                    "startOffset": 139046,
                     "endColumn": 99,
-                    "endOffset": 139093
+                    "endOffset": 139141
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12362,9 +12362,9 @@
                 "to": {
                     "startLine": 1848,
                     "startColumn": 4,
-                    "startOffset": 139098,
+                    "startOffset": 139146,
                     "endColumn": 89,
-                    "endOffset": 139183
+                    "endOffset": 139231
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12381,9 +12381,9 @@
                 "to": {
                     "startLine": 1849,
                     "startColumn": 4,
-                    "startOffset": 139188,
+                    "startOffset": 139236,
                     "endColumn": 109,
-                    "endOffset": 139293
+                    "endOffset": 139341
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12400,9 +12400,9 @@
                 "to": {
                     "startLine": 1850,
                     "startColumn": 4,
-                    "startOffset": 139298,
+                    "startOffset": 139346,
                     "endColumn": 83,
-                    "endOffset": 139377
+                    "endOffset": 139425
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12419,9 +12419,9 @@
                 "to": {
                     "startLine": 1851,
                     "startColumn": 4,
-                    "startOffset": 139382,
+                    "startOffset": 139430,
                     "endColumn": 83,
-                    "endOffset": 139461
+                    "endOffset": 139509
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12438,9 +12438,9 @@
                 "to": {
                     "startLine": 1852,
                     "startColumn": 4,
-                    "startOffset": 139466,
+                    "startOffset": 139514,
                     "endColumn": 53,
-                    "endOffset": 139515
+                    "endOffset": 139563
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12457,9 +12457,9 @@
                 "to": {
                     "startLine": 1853,
                     "startColumn": 4,
-                    "startOffset": 139520,
+                    "startOffset": 139568,
                     "endColumn": 63,
-                    "endOffset": 139579
+                    "endOffset": 139627
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12476,9 +12476,9 @@
                 "to": {
                     "startLine": 1854,
                     "startColumn": 4,
-                    "startOffset": 139584,
+                    "startOffset": 139632,
                     "endColumn": 105,
-                    "endOffset": 139685
+                    "endOffset": 139733
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12495,9 +12495,9 @@
                 "to": {
                     "startLine": 1855,
                     "startColumn": 4,
-                    "startOffset": 139690,
+                    "startOffset": 139738,
                     "endColumn": 109,
-                    "endOffset": 139795
+                    "endOffset": 139843
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12514,9 +12514,9 @@
                 "to": {
                     "startLine": 1856,
                     "startColumn": 4,
-                    "startOffset": 139800,
+                    "startOffset": 139848,
                     "endColumn": 83,
-                    "endOffset": 139879
+                    "endOffset": 139927
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",
@@ -12533,9 +12533,9 @@
                 "to": {
                     "startLine": 1857,
                     "startColumn": 4,
-                    "startOffset": 139884,
+                    "startOffset": 139932,
                     "endColumn": 119,
-                    "endOffset": 139999
+                    "endOffset": 140047
                 },
                 "from": {
                     "file": "C:\\Users\\John\\Android Projects\\GameMaker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values\\values.xml",

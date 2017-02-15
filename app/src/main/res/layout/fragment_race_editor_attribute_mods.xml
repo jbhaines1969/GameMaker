@@ -32,7 +32,7 @@
             android:layout_gravity="top|left|center_horizontal"
             android:layout_weight=".9" />
 
-        <Button
+        <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
             android:id="@+id/btnSaveAttributeMods"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

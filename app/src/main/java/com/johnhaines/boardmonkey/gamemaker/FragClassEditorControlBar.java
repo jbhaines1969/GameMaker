@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,13 +30,13 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
     private OnFragmentInteractionListener mListener;
 
     private TextView lblItemName;
-    private Button btnEditClassDescription;
-    private Button btnEditClassStartingPoints;
-    private Button btnEditLevelUpPoints;
-    private Button btnEditClassKnownSkills;
-    private Button btnEditClassAttributeRequirements;
-    private Button btnEditClassTraits;
-    private Button btnEditClassLevelNames;
+    private ButtonNoClick btnEditClassDescription;
+    private ButtonNoClick btnEditClassStartingPoints;
+    private ButtonNoClick btnEditLevelUpPoints;
+    private ButtonNoClick btnEditClassKnownSkills;
+    private ButtonNoClick btnEditClassAttributeRequirements;
+    private ButtonNoClick btnEditClassTraits;
+    private ButtonNoClick btnEditClassLevelNames;
 
     public FragClassEditorControlBar() {
         // Required empty public constructor
@@ -77,23 +78,28 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
 
         lblItemName = (TextView) rootView.findViewById(R.id.lblClassName);
         lblItemName.setText(((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getName());
-        btnEditClassDescription = (Button) rootView.findViewById(R.id.btnEditClassDescription);
+        btnEditClassDescription = (ButtonNoClick) rootView.findViewById(R.id.btnEditClassDescription);
         btnEditClassDescription.setOnClickListener(this);
-        btnEditClassStartingPoints = (Button) rootView.findViewById(R.id.btnEditClassStartingPoints);
+        getPrimaryButtonImage(btnEditClassDescription);
+        btnEditClassStartingPoints = (ButtonNoClick) rootView.findViewById(R.id.btnEditClassStartingPoints);
         btnEditClassStartingPoints.setOnClickListener(this);
-        btnEditLevelUpPoints = (Button) rootView.findViewById(R.id.btnEditLevelUpPoints);
+        getPrimaryButtonImage(btnEditClassStartingPoints);
+        btnEditLevelUpPoints = (ButtonNoClick) rootView.findViewById(R.id.btnEditLevelUpPoints);
         btnEditLevelUpPoints.setOnClickListener(this);
-        btnEditClassKnownSkills = (Button) rootView.findViewById(R.id.btnEditClassKnownSkills);
+        getPrimaryButtonImage(btnEditLevelUpPoints);
+        btnEditClassKnownSkills = (ButtonNoClick) rootView.findViewById(R.id.btnEditClassKnownSkills);
         btnEditClassKnownSkills.setOnClickListener(this);
-        btnEditClassAttributeRequirements = (Button) rootView.findViewById(R.id.btnEditClassAttributeRequirements);
+        getPrimaryButtonImage(btnEditClassKnownSkills);
+        btnEditClassAttributeRequirements = (ButtonNoClick) rootView.findViewById(R.id.btnEditClassAttributeRequirements);
         btnEditClassAttributeRequirements.setOnClickListener(this);
-        btnEditClassTraits = (Button) rootView.findViewById(R.id.btnEditClassTraits);
+        getPrimaryButtonImage(btnEditClassAttributeRequirements);
+        btnEditClassTraits = (ButtonNoClick) rootView.findViewById(R.id.btnEditClassTraits);
         btnEditClassTraits.setOnClickListener(this);
-        btnEditClassLevelNames = (Button) rootView.findViewById(R.id.btnEditClassLevelNames);
+        getPrimaryButtonImage(btnEditClassTraits);
+        btnEditClassLevelNames = (ButtonNoClick) rootView.findViewById(R.id.btnEditClassLevelNames);
         btnEditClassLevelNames.setOnClickListener(this);
+        getPrimaryButtonImage(btnEditClassLevelNames);
 
-        game.getPrimaryButtonImage(btnEditClassDescription, btnEditClassStartingPoints, btnEditLevelUpPoints,
-                btnEditClassKnownSkills, btnEditClassAttributeRequirements, btnEditClassLevelNames, btnEditClassTraits);
 
         return rootView;
     }
@@ -124,6 +130,28 @@ public class FragClassEditorControlBar extends Fragment implements View.OnClickL
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (game.getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
     }
 
     @Override

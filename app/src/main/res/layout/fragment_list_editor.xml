@@ -33,7 +33,7 @@
             android:inputType="textCapWords"
             android:selectAllOnFocus="true" />
 
-        <Button
+        <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
             android:id="@+id/btnAddItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

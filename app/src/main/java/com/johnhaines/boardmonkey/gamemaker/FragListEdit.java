@@ -158,6 +158,14 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
     }
 
     @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(LIST_TYPE_KEY, listType);
+        outState.putInt(INDEX_KEY, index);
+
+    }
+
+    @Override
     public void onClick(View v) {
 
         if (v == btnAddItem) {

@@ -3,6 +3,7 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ public class FragClassEditorLevelUpPoints extends Fragment implements View.OnCli
     private int index = 0;
 
     private TextView lblClassNameLevelUpScreen;
-    private Button btnSaveLevelUpPoints;
+    private ButtonNoClick btnSaveLevelUpPoints;
     private EditText edtLevelUpAttributesLevels;
     private EditText edtLevelUpAttributesPoints;
     private EditText edtLevelUpSkillLevels;
@@ -28,6 +29,8 @@ public class FragClassEditorLevelUpPoints extends Fragment implements View.OnCli
     private EditText edtLevelUpTraitPoints;
     private EditText edtLevelUpFeaturesLevels;
     private EditText edtLevelUpFeaturesPoints;
+
+    private String gameType;
 
     public FragClassEditorLevelUpPoints() {
         // Required empty public constructor
@@ -45,13 +48,16 @@ public class FragClassEditorLevelUpPoints extends Fragment implements View.OnCli
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         index = getArguments().getInt("index");
+
+        gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_class_editor_level_up_points, container, false);
 
         lblClassNameLevelUpScreen = (TextView) rootView.findViewById(R.id.lblClassNameLevelUpScreen);
         lblClassNameLevelUpScreen.setText("Point Gains per Level");
-        btnSaveLevelUpPoints = (Button) rootView.findViewById(R.id.btnSaveLevelUpPoints);
+        btnSaveLevelUpPoints = (ButtonNoClick) rootView.findViewById(R.id.btnSaveLevelUpPoints);
         btnSaveLevelUpPoints.setOnClickListener(this);
+        getPrimaryButtonImage(btnSaveLevelUpPoints);
         edtLevelUpAttributesLevels = (EditText) rootView.findViewById(R.id.edtLevelUpAttributesLevels);
         edtLevelUpAttributesLevels.setText(getEntry("AttributeLevels"));
         edtLevelUpAttributesPoints = (EditText) rootView.findViewById(R.id.edtLevelUpAttributesPoints);
@@ -103,6 +109,28 @@ public class FragClassEditorLevelUpPoints extends Fragment implements View.OnCli
         }
 
         return Integer.toString(value);
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (gameType) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
     }
 
     @Override

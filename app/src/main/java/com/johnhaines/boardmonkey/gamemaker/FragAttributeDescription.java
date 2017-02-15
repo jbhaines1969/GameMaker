@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,9 @@ public class FragAttributeDescription extends Fragment implements View.OnClickLi
 
     private EditText txtCharacteristicName;
     private EditText txtCharacteristicDescription;
-    private Button btnSaveDescription;
+    private ButtonNoClick btnSaveDescription;
+
+    private String gameType;
 
     public FragAttributeDescription() {
         // Required empty public constructor
@@ -49,6 +52,7 @@ public class FragAttributeDescription extends Fragment implements View.OnClickLi
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
 
             listType = getArguments().getString("listType");
@@ -63,6 +67,8 @@ public class FragAttributeDescription extends Fragment implements View.OnClickLi
         listType = getArguments().getString("listType");
         index = getArguments().getInt("index");
 
+        gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_attribute_description, container, false);
 
@@ -70,8 +76,9 @@ public class FragAttributeDescription extends Fragment implements View.OnClickLi
         txtCharacteristicName.setText(getName());
         txtCharacteristicDescription = (EditText) rootView.findViewById(R.id.txtCharacteristicDescription);
         txtCharacteristicDescription.setText(getDescription());
-        btnSaveDescription = (Button) rootView.findViewById(R.id.btnSaveDescription);
+        btnSaveDescription = (ButtonNoClick) rootView.findViewById(R.id.btnSaveDescription);
         btnSaveDescription.setOnClickListener(this);
+        getPrimaryButtonImage(btnSaveDescription);
 
         return rootView;
     }
@@ -90,6 +97,28 @@ public class FragAttributeDescription extends Fragment implements View.OnClickLi
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (gameType) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
     }
 
     @Override

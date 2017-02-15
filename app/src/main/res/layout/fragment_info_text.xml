@@ -17,7 +17,7 @@
         android:padding="40dp"
         android:id="@+id/txtInfoFragmentText" />
 
-    <Button
+    <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnCloseInfo"

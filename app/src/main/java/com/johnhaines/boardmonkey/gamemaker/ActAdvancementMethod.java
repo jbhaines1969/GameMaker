@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -62,25 +63,20 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
     private EditText edtFeatNonPrefPenalty;
     private EditText edtFeatCostMultiplier;
     private EditText edtMaxFeatPoints;
-    private Button btnSave;
-    private Button btnInfo;
+    private ButtonNoClick btnSave;
+    private ButtonNoClick btnInfo;
     private ClassGame game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            game = savedInstanceState.getParcelable("Game");
-            ((GameApplication) getApplication()).setGame(game);
-        } else {
-            game = ((GameApplication) getApplication()).getGame();
-        }
+        game = ((GameApplication) getApplication()).getGame();
+
         setContentView(R.layout.activity_advancement_method);
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmAdvancementMethodInfo);
         frmInfoFrame.bringToFront();
         backgroundLayout = (RelativeLayout) findViewById(R.id.AdvancementMethodLayout);
-        backgroundLayout.setBackground(game.getBackgroundImage());
         lblGameName = (TextView) findViewById(R.id.lblGameNameAdvancementMethod);
         lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
         edtAttPointCost = (EditText) findViewById(R.id.edtAttPointCost);
@@ -116,10 +112,14 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
         edtMaxFeatPoints = (EditText) findViewById(R.id.edtMaxFeatPoints);
         edtMaxFeatPoints.setText(setCurrentValues(MAX_FEAT_POINTS));
 
-        btnSave = (Button) findViewById(R.id.btnSaveAdvancementMethod);
+        btnSave = (ButtonNoClick) findViewById(R.id.btnSaveAdvancementMethod);
         btnSave.setOnClickListener(this);
-        btnInfo = (Button) findViewById(R.id.btnAdvancementMethodInfo);
+        getPrimaryButtonImage(btnSave);
+        btnInfo = (ButtonNoClick) findViewById(R.id.btnAdvancementMethodInfo);
         btnInfo.setOnClickListener(this);
+        getInfoButtonImage(btnInfo);
+
+        setBackgroundImage();
 
         SAdapter = ArrayAdapter.createFromResource(this, R.array.AdvancementMethods, R.layout.spinner_game_type_view);
 
@@ -132,7 +132,6 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putParcelable("Game", ((GameApplication) getApplication()).getGame());
     }
 
     @Override
@@ -146,6 +145,70 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
             loadInfoFragment();
         }
 
+    }
+
+    private void setBackgroundImage() {
+
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Sci-Fi"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Military"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Mixed"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            default:
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+        }
+
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (game.getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+
+        }
+    }
+
+    public void getInfoButtonImage(ButtonNoClick infoBtn) {
+
+        switch (game.getType()) {
+            case ("Fantasy"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            case ("Sci-Fi"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+
+        }
     }
 
     private String setCurrentValues(String s) {

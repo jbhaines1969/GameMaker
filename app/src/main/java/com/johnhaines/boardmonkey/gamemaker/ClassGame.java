@@ -22,10 +22,7 @@ public class ClassGame implements Serializable, Parcelable {
     private String type = "Fantasy";
     private String description = "";
 
-    private ColorStateList buttonTextColors;
-    private Drawable primaryButtonBackgroundImage;
-    private Drawable infoButtonBackgroundImage;
-    private Drawable backgroundImage;
+    private int buttonSoundID = R.raw.fan_hit;
 
     private ClassAdvancementMethod advancementMethod = new ClassAdvancementMethod();
     private ClassAttributeCreation attCreation = new ClassAttributeCreation();
@@ -92,38 +89,14 @@ public class ClassGame implements Serializable, Parcelable {
         this.description = description;
     }
 
-    public void setBackgroundImage(Drawable image) {
-        backgroundImage = image;
+    public void setButtonSoundID(int sound) {
+        this.buttonSoundID = sound;
     }
 
-    public void setButtonTextColor(ColorStateList color) {
-        buttonTextColors = color;
+    public int getButtonSoundID() {
+        return buttonSoundID;
     }
 
-    public void setPrimaryButtonBackgroundImage(Drawable image) {
-        primaryButtonBackgroundImage = image;
-    }
-
-    public void setInfoButtonBackgroundImage(Drawable image) {
-        infoButtonBackgroundImage = image;
-    }
-
-    public void getPrimaryButtonImage(Button... btns) {
-
-        for (Button btn : btns) {
-            btn.setTextColor(buttonTextColors);
-            btn.setBackground(primaryButtonBackgroundImage);
-        }
-    }
-
-    public void getInfoButtonImage(Button btn) {
-        btn.setTextColor(buttonTextColors);
-        btn.setBackground(infoButtonBackgroundImage);
-    }
-
-    public Drawable getBackgroundImage() {
-        return backgroundImage;
-    }
     public int getMaxTraitPoints() {
         return maxTraitPoints;
     }

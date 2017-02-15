@@ -115,7 +115,7 @@
 
         </LinearLayout>
 
-            <Button
+        <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                 android:id="@+id/btnSaveDicePlusPoints"
                 android:layout_width="500dp"
                 android:layout_height="wrap_content"

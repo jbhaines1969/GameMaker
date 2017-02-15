@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,7 +26,7 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
     private Spinner spnHealthCreationMethod;
     private ArrayAdapter SAdapter;
     private FrameLayout fragFrame;
-    private Button btnInfo;
+    private ButtonNoClick btnInfo;
     private RelativeLayout backgroundLayout;
 
     @Override
@@ -37,10 +38,11 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
         fragFrame.bringToFront();
 
         backgroundLayout = (RelativeLayout) findViewById(R.id.HealthCreationLayout);
-        backgroundLayout.setBackground(((GameApplication) getApplication()).getGame().getBackgroundImage());
+        setBackgroundImage();
 
-        btnInfo = (Button) findViewById(R.id.btnHealthCreationInfo);
+        btnInfo = (ButtonNoClick) findViewById(R.id.btnHealthCreationInfo);
         btnInfo.setOnClickListener(this);
+        setInfoButtonResources(btnInfo);
 
         lblGameName = (TextView) findViewById(R.id.lblHealthCreationControlBar);
         lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
@@ -92,6 +94,45 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
         });
 
         spnHealthCreationMethod.setSelection(getSpinnerPosition());
+    }
+
+    private void setBackgroundImage() {
+
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Sci-Fi"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Military"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Mixed"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            default:
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+        }
+
+    }
+
+    public void setInfoButtonResources(ButtonNoClick infoBtn) {
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            case ("Sci-Fi"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
+                break;
+        }
     }
 
     @Override

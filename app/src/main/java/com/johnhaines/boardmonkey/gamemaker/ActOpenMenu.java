@@ -27,7 +27,12 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
 
     private static final int REQUEST_WRITE_EXTERNAL_CODE = 1;
 
-    FrameLayout fragFrame;
+    private FrameLayout fragFrame;
+
+    private ButtonNoClick btnNew;
+    private ButtonNoClick btnEdit;
+    private ButtonNoClick btnDelete;
+    private ButtonNoClick btnShare;
 
 
     @Override
@@ -37,6 +42,23 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
 
         fragFrame = (FrameLayout) findViewById(R.id.fragment_container_middle);
         fragFrame.bringToFront();
+
+        btnNew = (ButtonNoClick) findViewById(R.id.btnNewGame);
+        getPrimaryButtonImage(btnNew);
+        btnEdit = (ButtonNoClick) findViewById(R.id.btnEditGame);
+        getPrimaryButtonImage(btnEdit);
+        btnDelete = (ButtonNoClick) findViewById(R.id.btnDeleteGame);
+        getPrimaryButtonImage(btnDelete);
+        btnShare = (ButtonNoClick) findViewById(R.id.btnShareGame);
+        getPrimaryButtonImage(btnShare);
+
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_base_primary));
+        btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_base_text_primary));
+
     }
 
     public void newGameClicked(View view) {

@@ -16,10 +16,10 @@ import android.widget.TextView;
 public class FragAbilityEditorControlBar extends Fragment implements View.OnClickListener {
 
     private TextView lblAbilityName;
-    private Button btnDescription;
-    private Button btnPrefClasses;
-    private Button btnPrefRaces;
-    private Button btnEffectType;
+    private ButtonNoClick btnDescription;
+    private ButtonNoClick btnPrefClasses;
+    private ButtonNoClick btnPrefRaces;
+    private ButtonNoClick btnEffectType;
     private int index;
     private String listType;
     private ClassGame game;
@@ -56,13 +56,13 @@ public class FragAbilityEditorControlBar extends Fragment implements View.OnClic
 
         lblAbilityName = (TextView) rootView.findViewById(R.id.lblNameAbilityEditorControlBar);
         lblAbilityName.setText(getAbilityName());
-        btnDescription = (Button) rootView.findViewById(R.id.btnEditAbilityDescription);
+        btnDescription = (ButtonNoClick) rootView.findViewById(R.id.btnEditAbilityDescription);
         btnDescription.setOnClickListener(this);
-        btnPrefClasses = (Button) rootView.findViewById(R.id.btnEditAbilityPreferredClasses);
+        btnPrefClasses = (ButtonNoClick) rootView.findViewById(R.id.btnEditAbilityPreferredClasses);
         btnPrefClasses.setOnClickListener(this);
-        btnPrefRaces = (Button) rootView.findViewById(R.id.btnEditAbilityPreferredRaces);
+        btnPrefRaces = (ButtonNoClick) rootView.findViewById(R.id.btnEditAbilityPreferredRaces);
         btnPrefRaces.setOnClickListener(this);
-        btnEffectType = (Button) rootView.findViewById(R.id.btnEditAbilityEffectType);
+        btnEffectType = (ButtonNoClick) rootView.findViewById(R.id.btnEditAbilityEffectType);
         btnEffectType.setOnClickListener(this);
 
         return rootView;

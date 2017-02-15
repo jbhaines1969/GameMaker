@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,7 +25,7 @@ public class ActAttributeCreationFragmentHolder extends Activity implements View
     private Spinner spnAttCreationMethod;
     private ArrayAdapter SAdapter;
     private FrameLayout frmInfoFrame;
-    private Button btnInfo;
+    private ButtonNoClick btnInfo;
     private RelativeLayout backgroundLayout;
 
     @Override
@@ -36,13 +37,16 @@ public class ActAttributeCreationFragmentHolder extends Activity implements View
         frmInfoFrame.bringToFront();
 
         backgroundLayout = (RelativeLayout) findViewById(R.id.AttCreationLayout);
-        backgroundLayout.setBackground(((GameApplication) getApplication()).getGame().getBackgroundImage());
 
-        btnInfo = (Button) findViewById(R.id.btnAttCreationInfo);
+        btnInfo = (ButtonNoClick) findViewById(R.id.btnAttCreationInfo);
         btnInfo.setOnClickListener(this);
+        getInfoButtonImage(btnInfo);
+
 
         lblGameName = (TextView) findViewById(R.id.lblAttCreationControlBar);
         lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
+
+        setBackgroundImage();
 
         SAdapter = ArrayAdapter.createFromResource(this, R.array.AttCreationMethods, R.layout.spinner_game_type_view);
 
@@ -127,6 +131,45 @@ public class ActAttributeCreationFragmentHolder extends Activity implements View
     private int getSpinnerPosition() {
         int position = ((GameApplication) getApplication()).getGame().getAttCreation().getCreationType() - 1;
         return position;
+    }
+
+    private void setBackgroundImage() {
+
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Sci-Fi"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Military"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            case ("Mixed"):
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+            default:
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                break;
+        }
+
+    }
+
+    private void getInfoButtonImage(ButtonNoClick infoBtn) {
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            case ("Sci-Fi"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            case ("Military"):
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+            default:
+                infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
+                break;
+        }
     }
 
     @Override
