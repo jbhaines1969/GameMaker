@@ -66,7 +66,9 @@ public class ActGameName extends Activity implements MediaPlayer.OnCompletionLis
         SAdapter = ArrayAdapter.createFromResource(this, R.array.GameTypes, R.layout.spinner_game_type_view);
 
         spnGameType = (Spinner) findViewById(R.id.spnGameType);
+
         spnGameType.setAdapter(SAdapter);
+
         spnGameType.setSelection(setSpinnerSelection());
         spnGameType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -172,7 +174,7 @@ public class ActGameName extends Activity implements MediaPlayer.OnCompletionLis
         boolean nameNotChanged = (newName.equals(oldName));
 
         //  is so, save new information into saveGame
-        if (newName.equals(R.string.new_game) || (!(newName.length() > 0))) {
+        if (newName.equals(getResources().getString(R.string.new_game)) || (!(newName.length() > 0))) {
 
             Toast toast = Toast.makeText(ActGameName.this, R.string.choose_name_for_game, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
@@ -213,7 +215,7 @@ public class ActGameName extends Activity implements MediaPlayer.OnCompletionLis
             newSaveGame.setType(newType);
             currentFile.delete();
             saveGame(newName + extension, newSaveGame);
-    }
+        }
     }
 
     public void saveGame(String fileName, ClassGame game) {

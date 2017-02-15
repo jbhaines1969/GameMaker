@@ -369,7 +369,7 @@
     <string name="edit_characteristics">Edit Characteristics</string>
     <string name="edit_description">Edit Description</string>
     <string name="edit_game">Edit Game</string>
-    <string name="edit_name">Edit Name</string>
+    <string name="edit_name">Edit Name and Type</string>
     <string name="effect_type">Effect Type</string>
     <string name="feature_list_info">Features are abilities or conditions that are granted to the character
     which are not natural to the game world.  They generally share the qualities of Traits, being either always on
@@ -1501,15 +1501,15 @@
         <item name="android:scaleType">center</item>
     </style>
     <style name="BaseButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="FantasyButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="MilitaryButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
@@ -1657,7 +1657,7 @@
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
     <style name="SciFiButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>

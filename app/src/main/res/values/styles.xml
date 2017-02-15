@@ -9,22 +9,22 @@
     </style>
 
     <style name="BaseButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="FantasyButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="SciFiButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="MilitaryButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary</item>
+        <item name="android:background">@drawable/fan_button_primary_pressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 

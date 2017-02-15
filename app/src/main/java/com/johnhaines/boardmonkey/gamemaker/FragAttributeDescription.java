@@ -209,7 +209,6 @@ public class FragAttributeDescription extends Fragment implements View.OnClickLi
         }
 
         return description;
-
     }
 
     public void updateIndex(Integer newIndex) {

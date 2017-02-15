@@ -145,7 +145,7 @@
 
     <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
         android:id="@+id/btnSaveHealthAttribute"
-        android:layout_width="500dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/SaveButton"

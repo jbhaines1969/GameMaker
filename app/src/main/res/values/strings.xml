@@ -110,7 +110,7 @@
     <string name="characteristic">Characteristic</string>
     <string name="levels">Levels</string>
     <string name="points">Points</string>
-    <string name="edit_name">Edit Name</string>
+    <string name="edit_name">Edit Name and Type</string>
     <string name="edit_description">Edit Description</string>
     <string name="edit_characteristics">Edit Characteristics</string>
     <string name="attribute_creation">Attribute Creation</string>

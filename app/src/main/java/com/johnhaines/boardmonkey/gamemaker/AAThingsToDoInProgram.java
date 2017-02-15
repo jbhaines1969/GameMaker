@@ -6,8 +6,7 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 public class AAThingsToDoInProgram {
 
-    // TODO characteristic description boxes not loading keyboard
-
+    // TODO spinners to correct image, work on changing popup list in spinners
 
     // TODO Edit Game, Share Game, Delete Game access pre-existing GameMaker folder on reinstall
 
