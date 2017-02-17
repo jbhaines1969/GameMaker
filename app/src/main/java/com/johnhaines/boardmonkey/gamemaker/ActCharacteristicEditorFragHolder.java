@@ -1,13 +1,13 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
@@ -19,9 +19,13 @@ import java.io.ObjectOutputStream;
 import static android.os.Environment.DIRECTORY_DCIM;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
-public class ActCharacteristicEditorFragHolder extends Activity implements OnClickListener, FragListSelector.OnFragmentInteractionListener,
-        FragListEdit.OnFragmentInteractionListener, FragRaceEditorControlBar.OnFragmentInteractionListener,
-        FragClassEditorControlBar.OnFragmentInteractionListener, FragInfoTextFragment.OnFragmentInteractionListener {
+public class ActCharacteristicEditorFragHolder extends Activity implements
+        OnClickListener, FragListSelector.OnFragmentInteractionListener,
+        FragListEdit.OnFragmentInteractionListener,
+        FragRaceEditorControlBar.OnFragmentInteractionListener,
+        FragClassEditorControlBar.OnFragmentInteractionListener,
+        FragInfoTextFragment.OnFragmentInteractionListener,
+        MediaPlayer.OnCompletionListener {
 
     public static final String LIST_TYPE_KEY = "listType";
     public static final String INDEX_KEY = "index";
@@ -29,9 +33,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
     private FrameLayout frmInfoFrame;
     private RelativeLayout backgroundLayout;
     private String infoText;
-
     private ButtonNoClick btnInfo;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +44,9 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmCharEditorInfo);
         infoText = getInfoText();
         btnInfo = (ButtonNoClick) findViewById(R.id.btnCharEditInformation);
+        btnInfo.setOnClickListener(this);
         getInfoButtonImage(btnInfo);
         setBackgroundImage();
-
 
         if (savedInstanceState != null) {
             return;
@@ -52,7 +54,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
             FragListSelector fragLS = new FragListSelector();
             getFragmentManager().beginTransaction().add(R.id.fragment_container_left, fragLS).commit();
         }
-
     }
 
     @Override
@@ -75,35 +76,60 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
                     soundID = R.raw.fan_hit;
                     break;
             }
-            final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), soundID);
+            playSound(soundID);
 
-            mPlayer.setVolume(1, 1);
-            mPlayer.setLooping(false);
-            mPlayer.start();
+            if (view == btnInfo) {
 
+                //infoText = getInfoText();
+                infoText = getInfoText();
+
+                frmInfoFrame.bringToFront();
+
+                FragInfoTextFragment fragInfo = new FragInfoTextFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("text", infoText);
+                fragInfo.setArguments(bundle);
+                getFragmentManager().beginTransaction().
+                        add(R.id.frmCharEditorInfo, fragInfo).commit();
+            }
         }
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(this, currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
     }
 
     private void setBackgroundImage() {
 
         switch (((GameApplication) getApplication()).getGame().getType()) {
             case ("Fantasy"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Sci-Fi"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Military"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Mixed"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             default:
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
         }
-
     }
 
     @Override
@@ -118,7 +144,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
             getFragmentManager().beginTransaction().remove(getFragmentManager().
                     findFragmentById(R.id.fragment_container_right)).commit();
-
             super.onBackPressed();
         } else {
             super.onBackPressed();
@@ -144,10 +169,8 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
                 btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_fantasy_text_primary));
                 btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
                 break;
-
         }
     }
-
 
     private void getInfoButtonImage(ButtonNoClick infoBtn) {
         switch (((GameApplication) getApplication()).getGame().getType()) {
@@ -164,21 +187,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
                 infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fan_info));
                 break;
         }
-    }
-
-
-    public void charEditInfoButtonClicked(View view) {
-
-        infoText = getInfoText();
-
-        frmInfoFrame.bringToFront();
-
-        FragInfoTextFragment fragInfo = new FragInfoTextFragment();
-        Bundle bundle = new Bundle();
-        bundle.putString("text", infoText);
-        fragInfo.setArguments(bundle);
-        getFragmentManager().beginTransaction().add(R.id.frmCharEditorInfo, fragInfo).commit();
-
     }
 
     @Override
@@ -214,20 +222,128 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         bundle.putInt(INDEX_KEY, index);
         FragListEdit fragLE = new FragListEdit();
         fragLE.setArguments(bundle);
-        getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragLE).commit();
-
-
+        getFragmentManager().beginTransaction().
+                replace(R.id.fragment_container_right, fragLE).commit();
     }
 
     public String getInfoText() {
-        String text = "";
+        String infoString = "";
+        if (getFragmentManager().
+                findFragmentById(R.id.fragment_container_left) instanceof
+                FragListSelector) {
 
-        return infoText;
+            if (getFragmentManager().
+                    findFragmentById(R.id.fragment_container_right) != null) {
+                FragListEdit listFrag = (FragListEdit) getFragmentManager().
+                        findFragmentById(R.id.fragment_container_right);
+                switch (listFrag.getListType()) {
+                    case ("Attributes"):
+                        infoString = getResources().getString(R.string.attribute_list_info);
+                        break;
+                    case ("Races"):
+                        infoString = getResources().getString(R.string.race_list_info);
+                        break;
+                    case ("Classes"):
+                        infoString = getResources().getString(R.string.class_list_info);
+                        break;
+                    case ("Skills"):
+                        infoString = getResources().getString(R.string.skill_list_info);
+                        break;
+                    case ("Traits"):
+                        infoString = getResources().getString(R.string.trait_list_info);
+                        break;
+                    case ("Features"):
+                        infoString = getResources().getString(R.string.feature_list_info);
+                        break;
+                    default:
+                        infoString = "I don't think this list exists";
+                }
+            } else {
+                infoString = getResources().getString(R.string.list_selector_info);
+            }
+        } else if (getFragmentManager().
+                findFragmentById(R.id.fragment_container_right) instanceof
+                FragAttributeDescription) {
+            FragAttributeDescription fragAD = (FragAttributeDescription) getFragmentManager().
+                    findFragmentById(R.id.fragment_container_right);
+            switch (fragAD.getListType()) {
+                case ("Attributes"):
+                    infoString = getResources().getString(R.string.attribute_description_info);
+                    break;
+                case ("Races"):
+                    infoString = getResources().getString(R.string.race_description_info);
+                    break;
+                case ("Classes"):
+                    infoString = getResources().getString(R.string.class_description_info);
+                    break;
+                case ("Skills"):
+                    infoString = getResources().getString(R.string.skill_description_info);
+                    break;
+                case ("Traits"):
+                    infoString = getResources().getString(R.string.trait_description_info);
+                    break;
+                case ("Features"):
+                    infoString = getResources().getString(R.string.feature_description_info);
+                    break;
+                default:
+                    infoString = "I don't know what else you could describe here";
+            }
+        } else {
+
+            Fragment rightFrag = getFragmentManager().findFragmentById(R.id.fragment_container_right);
+            Fragment leftFrag = getFragmentManager().findFragmentById(R.id.fragment_container_left);
+            if (rightFrag instanceof FragClassEditorControlBar) {
+                infoString = getResources().getString(R.string.class_list_info);
+
+            } else if (rightFrag instanceof FragRaceEditorControlBar) {
+                infoString = getResources().getString(R.string.race_list_info);
+
+            } else if (rightFrag instanceof FragRaceEditorAttributeMods) {
+                infoString = getResources().getString(R.string.race_att_mods_info);
+
+            } else if (rightFrag instanceof FragRaceEditorAttributeRequirements) {
+                infoString = getResources().getString(R.string.race_att_req_info);
+
+            } else if (rightFrag instanceof FragRaceEditorMovement) {
+                infoString = getResources().getString(R.string.race_movement_info);
+
+            } else if (rightFrag instanceof FragClassEditorLevelUpPoints) {
+                infoString = getResources().getString(R.string.class_level_points_info);
+
+            } else if (rightFrag instanceof FragClassEditorStartingPoints) {
+                infoString = getResources().getString(R.string.class_start_points_info);
+
+            } else if (rightFrag instanceof FragClassEditorMinimumAttributes) {
+                infoString = getResources().getString(R.string.class_att_req_info);
+
+            } else if (rightFrag instanceof FragRaceEditorClassesAllowed) {
+                infoString = getResources().getString(R.string.race_allowed_classes_info);
+
+            } else if (rightFrag instanceof FragListEditorKnownSkills) {
+
+                if (leftFrag instanceof FragClassEditorControlBar) {
+                    infoString = getResources().getString(R.string.class_skills_info);
+
+                } else if (leftFrag instanceof FragRaceEditorControlBar) {
+                    infoString = getResources().getString(R.string.race_skills_info);
+                }
+
+            } else if (rightFrag instanceof FragListEditorTraitsPossessed) {
+
+                if (leftFrag instanceof FragClassEditorControlBar) {
+                    infoString = getResources().getString(R.string.class_traits_info);
+
+                } else if (leftFrag instanceof FragRaceEditorControlBar) {
+                    infoString = getResources().getString(R.string.race_traits_info);
+                }
+            }
+        }
+
+        return infoString;
     }
 
     @Override
     public void onListEditSelectInList(String listType, Integer index) {
-
 
         // Interface from FragListEdit, command when an item is selected in a list
         // listType determined by ArrayList populating ListView, index is position of
@@ -240,7 +356,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         fragLE.setArguments(bundle);
 
         if (listType.equals("Races")) {
-
 
             FragRaceEditorControlBar fragEditor = new FragRaceEditorControlBar();
             fragEditor.setArguments(bundle);
@@ -287,7 +402,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
                 FragAttributeDescription fragment = (FragAttributeDescription) getFragmentManager().findFragmentById(R.id.fragment_container_right);
                 fragment.updateIndex(index);
             }
-
         }
 
         if (listType.equals("Features")) {
@@ -336,7 +450,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
                 FragRaceEditorControlBar fragment = (FragRaceEditorControlBar) getFragmentManager().findFragmentById(R.id.fragment_container_right);
                 fragment.updateIndex(index);
             }
-
         }
     }
 
@@ -356,7 +469,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("Description")) {
 
-
             FragAttributeDescription fragAD = new FragAttributeDescription();
             fragAD.setArguments(bundle);
 
@@ -371,7 +483,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         }
 
         if (message.equals("Movement")) {
-
 
             FragRaceEditorMovement fragRM = new FragRaceEditorMovement();
             fragRM.setArguments(bundle);
@@ -388,7 +499,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("Classes")) {
 
-
             FragRaceEditorClassesAllowed fragRCA = new FragRaceEditorClassesAllowed();
             fragRCA.setArguments(bundle);
 
@@ -403,7 +513,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         }
 
         if (message.equals("Skills")) {
-
 
             FragListEditorKnownSkills fragKS = new FragListEditorKnownSkills();
             fragKS.setArguments(bundle);
@@ -420,7 +529,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("Traits")) {
 
-
             FragListEditorTraitsPossessed fragTP = new FragListEditorTraitsPossessed();
             fragTP.setArguments(bundle);
 
@@ -436,7 +544,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("AttributeMods")) {
 
-
             FragRaceEditorAttributeMods fragREAM = new FragRaceEditorAttributeMods();
             fragREAM.setArguments(bundle);
 
@@ -451,7 +558,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         }
 
         if (message.equals("Attribute Requirements")) {
-
 
             FragRaceEditorAttributeRequirements fragREAR = new FragRaceEditorAttributeRequirements();
             fragREAR.setArguments(bundle);
@@ -483,7 +589,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("Description")) {
 
-
             FragAttributeDescription fragAD = new FragAttributeDescription();
             fragAD.setArguments(bundle);
 
@@ -498,7 +603,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         }
 
         if (message.equals("Starting Points")) {
-
 
             FragClassEditorStartingPoints fragSP = new FragClassEditorStartingPoints();
             fragSP.setArguments(bundle);
@@ -515,7 +619,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("Level Points")) {
 
-
             FragClassEditorLevelUpPoints fragLP = new FragClassEditorLevelUpPoints();
             fragLP.setArguments(bundle);
 
@@ -530,7 +633,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         }
 
         if (message.equals("Skills")) {
-
 
             FragListEditorKnownSkills fragKS = new FragListEditorKnownSkills();
             fragKS.setArguments(bundle);
@@ -547,7 +649,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("Traits")) {
 
-
             FragListEditorTraitsPossessed fragTP = new FragListEditorTraitsPossessed();
             fragTP.setArguments(bundle);
 
@@ -562,7 +663,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
         }
 
         if (message.equals("Attribute Requirements")) {
-
 
             FragClassEditorMinimumAttributes fragMA = new FragClassEditorMinimumAttributes();
             fragMA.setArguments(bundle);
@@ -579,7 +679,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
 
         if (message.equals("Level Names")) {
 
-
             FragListEdit fragLE = new FragListEdit();
             Bundle newBundle = new Bundle();
             newBundle.putString(LIST_TYPE_KEY, "Level Names");
@@ -594,7 +693,6 @@ public class ActCharacteristicEditorFragHolder extends Activity implements OnCli
                 getFragmentManager().beginTransaction().
                         replace(R.id.fragment_container_right, fragLE).commit();
             }
-
         }
     }
 

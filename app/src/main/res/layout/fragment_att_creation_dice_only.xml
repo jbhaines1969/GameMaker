@@ -85,7 +85,7 @@
 
         <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
                 android:id="@+id/btnSaveDiceOnly"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/SaveButton"

@@ -6,7 +6,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -67,19 +66,19 @@ public class ActGameEdit extends Activity implements View.OnClickListener, FragI
 
         switch (((GameApplication) getApplication()).getGame().getType()) {
             case ("Fantasy"):
-                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Sci-Fi"):
-                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Military"):
-                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Mixed"):
-                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             default:
-                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundFrame.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
         }
 
@@ -103,7 +102,6 @@ public class ActGameEdit extends Activity implements View.OnClickListener, FragI
                 break;
         }
 
-
         playSound(soundID);
 
     }
@@ -119,6 +117,7 @@ public class ActGameEdit extends Activity implements View.OnClickListener, FragI
 
     }
 
+    @Override
     public void onCompletion(MediaPlayer mPlayer) {
         mPlayer.reset();
         mPlayer.release();
@@ -163,13 +162,29 @@ public class ActGameEdit extends Activity implements View.OnClickListener, FragI
             default:
                 infoBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_fantasy_primary));
                 break;
-
         }
     }
 
     public void onClick(View view) {
         if (view instanceof ButtonNoClick) {
-            playSound(game.getButtonSoundID());
+            String gameType = ((GameApplication) getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
         }
     }
 

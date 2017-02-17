@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="32dp"
-    android:background="@drawable/vine_background_1000_1667"
+    android:background="@drawable/fan_activity_background_1000_1667"
     tools:context=".ActAttributeCreationFragmentHolder">
 
     <FrameLayout

@@ -1,6 +1,7 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -14,18 +15,17 @@ import android.widget.EditText;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragAttCreationBasePoints extends Fragment implements View.OnClickListener {
+public class FragAttCreationBasePoints extends Fragment implements
+        View.OnClickListener,
+        MediaPlayer.OnCompletionListener {
 
     private ButtonNoClick btnSaveBasePoints;
     private EditText edtBasePointsOnly;
     private String gameType;
 
-
-
     public FragAttCreationBasePoints() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,10 +67,48 @@ public class FragAttCreationBasePoints extends Fragment implements View.OnClickL
         }
     }
 
-    @Override
-    public void onClick(View v) {
+    public void playSound(int currenSoundID) {
 
-        if (v == btnSaveBasePoints) {
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if (view instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
+
+        if (view == btnSaveBasePoints) {
 
             int points = Integer.parseInt(edtBasePointsOnly.getText().toString());
             ((GameApplication) getActivity().getApplication()).getGame().getAttCreation().setBaseScore(points);

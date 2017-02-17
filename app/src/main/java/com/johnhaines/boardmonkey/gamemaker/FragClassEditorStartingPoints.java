@@ -2,7 +2,9 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 
 import android.app.Fragment;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,16 +18,17 @@ import android.widget.TextView;
  * Use the {@link FragClassEditorStartingPoints#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragClassEditorStartingPoints extends Fragment implements View.OnClickListener {
+public class FragClassEditorStartingPoints extends Fragment implements
+        View.OnClickListener,
+        MediaPlayer.OnCompletionListener {
 
     private Integer index;
-
 
     private EditText edtStartingSkills;
     private EditText edtStartingTraits;
     private EditText edtStartingFeatures;
     private EditText edtHealthDice;
-    private Button btnSave;
+    private ButtonNoClick btnSave;
 
     public FragClassEditorStartingPoints() {
         // Required empty public constructor
@@ -72,14 +75,75 @@ public class FragClassEditorStartingPoints extends Fragment implements View.OnCl
         edtStartingTraits.setText(getTraitPoints());
         edtStartingFeatures = (EditText) rootView.findViewById(R.id.edtStartingFeatures);
         edtStartingFeatures.setText(getFeaturePoints());
-        btnSave = (Button) rootView.findViewById(R.id.btnSaveStartingPoints);
+        btnSave = (ButtonNoClick) rootView.findViewById(R.id.btnSaveStartingPoints);
         btnSave.setOnClickListener(this);
+        getPrimaryButtonImage(btnSave);
 
         return rootView;
     }
 
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (((GameApplication) getActivity().getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
+
     @Override
     public void onClick(View v) {
+
+        if (v instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
 
         if (v == btnSave) {
 

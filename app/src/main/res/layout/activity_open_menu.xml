@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="32dp"
-    android:background="@drawable/vine_background_1000_1667"
+    android:background="@drawable/fan_activity_background_1000_1667"
     tools:context=".ActOpenMenu">
 
     <FrameLayout
@@ -47,7 +47,7 @@
                 android:layout_gravity="center_horizontal">
 
                 <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
-                    android:background="@drawable/fan_button_primary_pressed"
+                    android:background="@drawable/fan_button_primary_unpressed"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"

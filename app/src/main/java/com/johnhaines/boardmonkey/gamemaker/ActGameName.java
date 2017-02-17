@@ -66,6 +66,7 @@ public class ActGameName extends Activity implements MediaPlayer.OnCompletionLis
         SAdapter = ArrayAdapter.createFromResource(this, R.array.GameTypes, R.layout.spinner_game_type_view);
 
         spnGameType = (Spinner) findViewById(R.id.spnGameType);
+        SAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item_game_type);
 
         spnGameType.setAdapter(SAdapter);
 

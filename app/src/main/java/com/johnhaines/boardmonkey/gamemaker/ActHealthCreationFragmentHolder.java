@@ -2,14 +2,13 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -20,7 +19,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class ActHealthCreationFragmentHolder extends Activity implements View.OnClickListener, FragInfoTextFragment.OnFragmentInteractionListener {
+public class ActHealthCreationFragmentHolder extends Activity implements
+        View.OnClickListener,
+        FragInfoTextFragment.OnFragmentInteractionListener,
+        MediaPlayer.OnCompletionListener {
 
     private TextView lblGameName;
     private Spinner spnHealthCreationMethod;
@@ -100,19 +102,19 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
 
         switch (((GameApplication) getApplication()).getGame().getType()) {
             case ("Fantasy"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Sci-Fi"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Military"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Mixed"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             default:
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.vine_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
         }
 
@@ -135,8 +137,47 @@ public class ActHealthCreationFragmentHolder extends Activity implements View.On
         }
     }
 
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(this, currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
+
     @Override
     public void onClick(View view) {
+
+        if (view instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
+
         if (view == btnInfo) {
 
             FragInfoTextFragment fragInfo = new FragInfoTextFragment();

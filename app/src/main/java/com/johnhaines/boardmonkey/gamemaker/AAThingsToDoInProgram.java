@@ -6,6 +6,8 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 public class AAThingsToDoInProgram {
 
+    // TODO add a "total points" for Class Starting Points category
+
     // TODO spinners to correct image, work on changing popup list in spinners
 
     // TODO Edit Game, Share Game, Delete Game access pre-existing GameMaker folder on reinstall
@@ -15,8 +17,6 @@ public class AAThingsToDoInProgram {
     // TODO ability editor activity layout
 
     // TODO Code ability editor activity to handle fragments
-
-    // TODO Add Button for info screen to all screens
 
     // TODO change all fragment interactions using string messages to use hardcoded strings
 

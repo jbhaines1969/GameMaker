@@ -3,7 +3,9 @@ package com.johnhaines.boardmonkey.gamemaker;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,9 @@ import android.widget.TextView;
  * Use the {@link FragRaceEditorControlBar#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragRaceEditorControlBar extends Fragment implements View.OnClickListener {
+public class FragRaceEditorControlBar extends Fragment implements
+        View.OnClickListener,
+        MediaPlayer.OnCompletionListener {
 
     private String listType;
     private Integer index;
@@ -27,13 +31,13 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
     private OnFragmentInteractionListener mListener;
 
     private TextView lblItemName;
-    private Button btnEditRaceDescription;
-    private Button btnEditRaceMovement;
-    private Button btnEditAllowedClasses;
-    private Button btnEditRaceKnownSkills;
-    private Button btnEditRaceAttributeMods;
-    private Button btnEditRaceTraits;
-    private Button btnEditRaceAttributeRequirements;
+    private ButtonNoClick btnEditRaceDescription;
+    private ButtonNoClick btnEditRaceMovement;
+    private ButtonNoClick btnEditAllowedClasses;
+    private ButtonNoClick btnEditRaceKnownSkills;
+    private ButtonNoClick btnEditRaceAttributeMods;
+    private ButtonNoClick btnEditRaceTraits;
+    private ButtonNoClick btnEditRaceAttributeRequirements;
 
     public FragRaceEditorControlBar() {
         // Required empty public constructor
@@ -72,21 +76,27 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
 
         lblItemName = (TextView) rootView.findViewById(R.id.lblRaceName);
         lblItemName.setText(((GameApplication) getActivity().getApplication()).getGame().getRaces().get(index).getName());
-        btnEditRaceDescription = (Button) rootView.findViewById(R.id.btnEditRaceDescription);
+        btnEditRaceDescription = (ButtonNoClick) rootView.findViewById(R.id.btnEditRaceDescription);
         btnEditRaceDescription.setOnClickListener(this);
-        btnEditRaceMovement = (Button) rootView.findViewById(R.id.btnEditRaceMovement);
+        getPrimaryButtonImage(btnEditRaceDescription);
+        btnEditRaceMovement = (ButtonNoClick) rootView.findViewById(R.id.btnEditRaceMovement);
         btnEditRaceMovement.setOnClickListener(this);
-        btnEditAllowedClasses = (Button) rootView.findViewById(R.id.btnEditAllowedClasses);
+        getPrimaryButtonImage(btnEditRaceMovement);
+        btnEditAllowedClasses = (ButtonNoClick) rootView.findViewById(R.id.btnEditAllowedClasses);
         btnEditAllowedClasses.setOnClickListener(this);
-        btnEditRaceKnownSkills = (Button) rootView.findViewById(R.id.btnEditRaceKnownSkills);
+        getPrimaryButtonImage(btnEditAllowedClasses);
+        btnEditRaceKnownSkills = (ButtonNoClick) rootView.findViewById(R.id.btnEditRaceKnownSkills);
         btnEditRaceKnownSkills.setOnClickListener(this);
-        btnEditRaceAttributeMods = (Button) rootView.findViewById(R.id.btnEditRaceAttributeMods);
+        getPrimaryButtonImage(btnEditRaceKnownSkills);
+        btnEditRaceAttributeMods = (ButtonNoClick) rootView.findViewById(R.id.btnEditRaceAttributeMods);
         btnEditRaceAttributeMods.setOnClickListener(this);
-        btnEditRaceTraits = (Button) rootView.findViewById(R.id.btnEditRaceTraits);
+        getPrimaryButtonImage(btnEditRaceAttributeMods);
+        btnEditRaceTraits = (ButtonNoClick) rootView.findViewById(R.id.btnEditRaceTraits);
         btnEditRaceTraits.setOnClickListener(this);
-        btnEditRaceAttributeRequirements = (Button) rootView.findViewById(R.id.btnEditRaceAttributeRequirements);
+        getPrimaryButtonImage(btnEditRaceTraits);
+        btnEditRaceAttributeRequirements = (ButtonNoClick) rootView.findViewById(R.id.btnEditRaceAttributeRequirements);
         btnEditRaceAttributeRequirements.setOnClickListener(this);
-
+        getPrimaryButtonImage(btnEditRaceAttributeRequirements);
 
         return rootView;
     }
@@ -119,8 +129,73 @@ public class FragRaceEditorControlBar extends Fragment implements View.OnClickLi
         mListener = null;
     }
 
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (((GameApplication) getActivity().getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Mixed"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
+
     @Override
     public void onClick(View v) {
+
+        if (v instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
+
         String message = "";
 
         if (v == btnEditRaceDescription) {

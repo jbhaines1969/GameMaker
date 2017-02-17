@@ -1,6 +1,7 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -14,7 +15,9 @@ import android.widget.EditText;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragAttCreationBasePlusDice extends Fragment implements View.OnClickListener {
+public class FragAttCreationBasePlusDice extends Fragment implements
+        View.OnClickListener,
+        MediaPlayer.OnCompletionListener {
 
     private ButtonNoClick btnSaveBasePlusDice;
     private EditText edtBasePointsBasePlusDice;
@@ -72,6 +75,23 @@ public class FragAttCreationBasePlusDice extends Fragment implements View.OnClic
                 break;
 
         }
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
     }
 
     @Override

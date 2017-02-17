@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
@@ -23,7 +24,9 @@ import java.io.ObjectOutputStream;
 import static android.os.Environment.DIRECTORY_DCIM;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
-public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentInteractionListener {
+public class ActOpenMenu extends Activity implements
+        FragFilePicker.OnFragmentInteractionListener,
+        MediaPlayer.OnCompletionListener {
 
     private static final int REQUEST_WRITE_EXTERNAL_CODE = 1;
 
@@ -59,6 +62,23 @@ public class ActOpenMenu extends Activity implements FragFilePicker.OnFragmentIn
         btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_base_primary));
         btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_base_text_primary));
 
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(this, currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
     }
 
     public void newGameClicked(View view) {

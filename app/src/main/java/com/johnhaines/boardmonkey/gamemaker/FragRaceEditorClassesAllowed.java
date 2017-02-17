@@ -3,7 +3,9 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 import android.app.Fragment;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +18,15 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragRaceEditorClassesAllowed extends Fragment implements View.OnClickListener {
+public class FragRaceEditorClassesAllowed extends Fragment implements
+        View.OnClickListener,
+        MediaPlayer.OnCompletionListener {
 
     private Integer index = 0;
 
     private TextView lblRClassesRaceName;
     private ListView lstClassesAllowed;
-    private Button btnSaveClassesAllowed;
+    private ButtonNoClick btnSaveClassesAllowed;
     private ArrayAdapter listAdapter;
 
 
@@ -48,8 +52,9 @@ public class FragRaceEditorClassesAllowed extends Fragment implements View.OnCli
         lblRClassesRaceName = (TextView) rootView.findViewById(R.id.lblPossessedTraitsItemName);
         lblRClassesRaceName.setText("Allowed Classes");
         lstClassesAllowed = (ListView) rootView.findViewById(R.id.lstClassesAllowed);
-        btnSaveClassesAllowed = (Button) rootView.findViewById(R.id.btnSaveClassesAllowed);
+        btnSaveClassesAllowed = (ButtonNoClick) rootView.findViewById(R.id.btnSaveClassesAllowed);
         btnSaveClassesAllowed.setOnClickListener(this);
+        getPrimaryButtonImage(btnSaveClassesAllowed);
         listAdapter = makeListAdapter();
         lstClassesAllowed.setAdapter(listAdapter);
 
@@ -57,6 +62,32 @@ public class FragRaceEditorClassesAllowed extends Fragment implements View.OnCli
 
         return rootView;
 
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (((GameApplication) getActivity().getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Mixed"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
     }
 
     private void selectItems() {
@@ -98,9 +129,46 @@ public class FragRaceEditorClassesAllowed extends Fragment implements View.OnCli
 
     }
 
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
 
     @Override
     public void onClick(View v) {
+
+        if (v instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
+
         if (v == btnSaveClassesAllowed) {
 
             ((GameApplication) getActivity().

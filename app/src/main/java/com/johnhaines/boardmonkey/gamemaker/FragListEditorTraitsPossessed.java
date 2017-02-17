@@ -3,7 +3,9 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 import android.app.Fragment;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,14 +18,16 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragListEditorTraitsPossessed extends Fragment implements View.OnClickListener {
+public class FragListEditorTraitsPossessed extends Fragment implements
+        View.OnClickListener,
+        MediaPlayer.OnCompletionListener {
 
     private Integer index = 0;
     private String listType = "";
 
     private TextView lblPossessedTraitsItemName;
     private ListView lstPossessedTraits;
-    private Button btnSavePossessedTraits;
+    private ButtonNoClick btnSavePossessedTraits;
     private ArrayAdapter listAdapter;
 
     public FragListEditorTraitsPossessed() {
@@ -50,8 +54,9 @@ public class FragListEditorTraitsPossessed extends Fragment implements View.OnCl
         lblPossessedTraitsItemName = (TextView) rootView.findViewById(R.id.lblPossessedTraitsItemName);
         lblPossessedTraitsItemName.setText("Traits Possessed");
         lstPossessedTraits = (ListView) rootView.findViewById(R.id.lstRaceTraits);
-        btnSavePossessedTraits = (Button) rootView.findViewById(R.id.btnSaveRaceTraits);
+        btnSavePossessedTraits = (ButtonNoClick) rootView.findViewById(R.id.btnSaveRaceTraits);
         btnSavePossessedTraits.setOnClickListener(this);
+        getPrimaryButtonImage(btnSavePossessedTraits);
         listAdapter = makeListAdapter();
         lstPossessedTraits.setAdapter(listAdapter);
 
@@ -59,6 +64,28 @@ public class FragListEditorTraitsPossessed extends Fragment implements View.OnCl
 
         return rootView;
 
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (((GameApplication) getActivity().getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
     }
 
     private void selectItems() {
@@ -122,8 +149,47 @@ public class FragListEditorTraitsPossessed extends Fragment implements View.OnCl
         return name;
     }
 
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
+
     @Override
     public void onClick(View v) {
+
+        if (v instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
+
         if (v == btnSavePossessedTraits) {
 
             if (listType.equals("Races")) {

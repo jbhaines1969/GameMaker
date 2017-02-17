@@ -292,6 +292,9 @@
     until no points remain.</string>
     <string name="attribute_additive">Attribute Additive</string>
     <string name="attribute_creation">Attribute Creation</string>
+    <string name="attribute_description_info">Edit the name and description for this Attribute.
+    Include any information necessary for a player to understand the role of this Attribute
+    in gameplay, and any modifications to game mechanics it affects.</string>
     <string name="attribute_list_info">Attributes are the core abilities of characters, an inherent set of qualities
     that all characters share.  They are often used to determine success in actions, give bonuses to outcomes, or set
     limits to other abilities.  You should create only attributes which will have real effects in your game.\n\n
@@ -315,8 +318,6 @@
     <string name="btnTextSkills">Skills</string>
     <string name="btnTextTraits">Traits</string>
     <string name="cancel">Cancel</string>
-    <string name="char_edit_info">This is actually going to be a shitload of text strings, one for each control bar and one for each
-    individual editor screen.  Fuck.  I\'m going to grow old writing all of these.  I need a drink.</string>
     <string name="characteristic">Characteristic</string>
     <string name="choose_advancement_method">Choose Advancement Method</string>
     <string name="choose_file">Choose Game to Edit</string>
@@ -333,7 +334,10 @@
     These ranks can be used to add a game element, if the game includes a heirarchy of command, such as in military scenarios or
     guild based games.</string>
     <string name="class_level_points_info">If using the Character Levels advancement method, these will be the points earned by
-    characters of this class upon advancing to new levels.\n\n
+    characters of this class upon advancing to new levels. If left at zero, the character will
+        not gain points for that Characteristic upon leveling.\n\n
+
+        Use the \"General\" box if the Character gains points which may be spent in any Characteristic.
 
         Some abilities may gain points every level, while others may only advance after a certain number of levels have been reached.\n\n
 
@@ -371,6 +375,10 @@
     <string name="edit_game">Edit Game</string>
     <string name="edit_name">Edit Name and Type</string>
     <string name="effect_type">Effect Type</string>
+    <string name="feature_description_info">Edit the name and description for this Feature.
+    Include the effects and modifications of this Feature, and the requirements for successful use
+    if it is not \"always on"\.  Also include any limitations to this Feature or its use,
+    and the effects of higher levels of the Feature if your game uses them.</string>
     <string name="feature_list_info">Features are abilities or conditions that are granted to the character
     which are not natural to the game world.  They generally share the qualities of Traits, being either always on
     or requiring no significant time to use, although they could include Skill-like abilities which require a process to
@@ -444,7 +452,7 @@
     <string name="levels">Levels</string>
     <string name="levels_for_skills">Levels for Skills</string>
     <string name="list_selector_info">Select the Characteristic you wish to work on, and add items to the Characteristic
-    list.  Select an item in the list to edit that item. Use the Help (?) button with list loaded to get item specific help.</string>
+    list.  Select an item in the list to edit that item. Use the Help (?) button to get item specific help.\n\n</string>
     <string name="max_level">Max Level</string>
     <string name="maximum_points">Maximum Points</string>
     <string name="minimum_attributes">Minimum Attributes</string>
@@ -475,8 +483,11 @@
     their barbaric nature and distrust of arcane knowledge).\n\n
 
     Use this screen to set upper and lower limits for Attributes for this race.</string>
-    <string name="race_description_info">Edit name and enter basic description for this race, including appearance, history,
-    and preferred living environment</string>
+    <string name="race_description_info">Edit the name and description for this Race. Include
+    information such as preferred habitat, general racial philosophies and behaviors, and any
+    other information a player would need to successfully roleplay a member of this race.
+    Also include any special characteristics not covered by racial traits or skills, such as
+    \"immune to fear effects\", or \"can breed hybrids with other races\" (include races)</string>
     <string name="race_list_info">Races each have their own strengths and weaknesses, and can be used to enhance roleplay
     as well as determining starting skills and backgrounds for characters.\n\n</string>
     <string name="race_movement_info">Enter the distance in base game units that a character of this Race
@@ -493,6 +504,10 @@
     <string name="select_attribute_creation_method">Select Attribute Creation Method</string>
     <string name="select_health_creation_method">Select Health Type Method</string>
     <string name="share_game">Share Game</string>
+    <string name="skill_description_info">Edit the name and description for this Skill.
+    Include requirements for successfully using the Skill, time required to use the Skill, and
+    the effects of success.  Also include any modifications to those effects at different Skill
+    levels, if your game uses them.</string>
     <string name="skill_list_info">Skills are the list of abilities which require a process to complete.  Skills are usually
     learned, either through lessons or through diligent practice, although in some cases natural talent is as good as learning.\n\n
 
@@ -516,6 +531,11 @@
     <string name="skills">Skills</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="straight_dice">Straight Dice</string>
+    <string name="trait_description_info">Edit the name and description for this Trait.
+        Include the gameplay effects and modifications of the Trait, and the requirements
+        for successful use of the Trait if it is not \"always on"\, and the modifications or
+    effects on gameplay of success (and failure, if necessary).  Also include any modifications
+    to the effects at different Trait levels, if your game uses them.</string>
     <string name="trait_list_info">Traits are characteristics and abilities which are either always on, or have instant effects when
     a situation calls on them.  Traits can be developed through training, natural qualities the character possesses,
     or, in some games, granted by objects the character possesses.\n\n
@@ -1501,15 +1521,15 @@
         <item name="android:scaleType">center</item>
     </style>
     <style name="BaseButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary_pressed</item>
+        <item name="android:background">@drawable/fan_button_primary_unpressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="FantasyButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary_pressed</item>
+        <item name="android:background">@drawable/fan_button_primary_unpressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="MilitaryButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary_pressed</item>
+        <item name="android:background">@drawable/fan_button_primary_unpressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
@@ -1657,7 +1677,7 @@
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
     <style name="SciFiButtonTheme">
-        <item name="android:background">@drawable/fan_button_primary_pressed</item>
+        <item name="android:background">@drawable/fan_button_primary_unpressed</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>

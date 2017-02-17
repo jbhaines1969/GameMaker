@@ -1,9 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/infoBoxBackground"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/vine_background_1000_1667"
+    android:paddingTop="30dp"
+    android:background="@drawable/fan_activity_background_1000_1667"
     tools:context="com.johnhaines.boardmonkey.gamemaker.FragInfoTextFragment">
 
     <TextView
@@ -14,7 +16,7 @@
         android:textColor="@android:color/black"
         android:gravity="center"
         android:clickable="true"
-        android:padding="40dp"
+        android:padding="70dp"
         android:id="@+id/txtInfoFragmentText" />
 
     <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick

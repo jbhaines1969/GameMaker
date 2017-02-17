@@ -172,7 +172,7 @@
     <string name="health_creation_dice_message_text">Use the Class Editor section to set health point dice</string>
 
 
-    // info screen strings
+    <!-- info screen strings -->
 
     <string name="advancement_method_info">Character Levels: Select this method when characters will gain ability points
     or abilities at specific levels of experience gain.\n
@@ -232,9 +232,6 @@
     much damage the player could take.\n
     Use Attribute list if Attributes will modify the health rating in this case.</string>
 
-    <string name="char_edit_info">This is actually going to be a shitload of text strings, one for each control bar and one for each
-    individual editor screen.  Fuck.  I\'m going to grow old writing all of these.  I need a drink.</string>
-
     <string name="game_edit_info">Name:  Edit Game Name, Description, and Type\n\n
 
     Characteristics:  Use these screens to edit character specific qualities, such as races, classes, and abilities\n\n
@@ -247,7 +244,7 @@
     Advancement Method:  Set the method of character progression, and the costs for ability advancement.</string>
 
     <string name="list_selector_info">Select the Characteristic you wish to work on, and add items to the Characteristic
-    list.  Select an item in the list to edit that item. Use the Help (?) button with list loaded to get item specific help.</string>
+    list.  Select an item in the list to edit that item. Use the Help (?) button to get item specific help.\n\n</string>
 
     <string name="attribute_list_info">Attributes are the core abilities of characters, an inherent set of qualities
     that all characters share.  They are often used to determine success in actions, give bonuses to outcomes, or set
@@ -316,8 +313,31 @@
     Material Weakness (with selected material) might make a character practically powerless against
     a particular object or material.</string>
 
-    <string name="race_description_info">Edit name and enter basic description for this race, including appearance, history,
-    and preferred living environment</string>
+    <string name="attribute_description_info">Edit the name and description for this Attribute.
+    Include any information necessary for a player to understand the role of this Attribute
+    in gameplay, and any modifications to game mechanics it affects.</string>
+
+    <string name="skill_description_info">Edit the name and description for this Skill.
+    Include requirements for successfully using the Skill, time required to use the Skill, and
+    the effects of success.  Also include any modifications to those effects at different Skill
+    levels, if your game uses them.</string>
+
+    <string name="race_description_info">Edit the name and description for this Race. Include
+    information such as preferred habitat, general racial philosophies and behaviors, and any
+    other information a player would need to successfully roleplay a member of this race.
+    Also include any special characteristics not covered by racial traits or skills, such as
+    \"immune to fear effects\", or \"can breed hybrids with other races\" (include races)</string>
+
+    <string name="trait_description_info">Edit the name and description for this Trait.
+        Include the gameplay effects and modifications of the Trait, and the requirements
+        for successful use of the Trait if it is not \"always on"\, and the modifications or
+    effects on gameplay of success (and failure, if necessary).  Also include any modifications
+    to the effects at different Trait levels, if your game uses them.</string>
+
+    <string name="feature_description_info">Edit the name and description for this Feature.
+    Include the effects and modifications of this Feature, and the requirements for successful use
+    if it is not \"always on"\.  Also include any limitations to this Feature or its use,
+    and the effects of higher levels of the Feature if your game uses them.</string>
 
     <string name="race_movement_info">Enter the distance in base game units that a character of this Race
         can move in one action round when unencumbered and moving freely, for each movement type.</string>
@@ -351,7 +371,10 @@
     new characters of this class start with.</string>
 
     <string name="class_level_points_info">If using the Character Levels advancement method, these will be the points earned by
-    characters of this class upon advancing to new levels.\n\n
+    characters of this class upon advancing to new levels. If left at zero, the character will
+        not gain points for that Characteristic upon leveling.\n\n
+
+        Use the \"General\" box if the Character gains points which may be spent in any Characteristic.
 
         Some abilities may gain points every level, while others may only advance after a certain number of levels have been reached.\n\n
 

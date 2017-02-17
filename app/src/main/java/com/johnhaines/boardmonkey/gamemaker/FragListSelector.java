@@ -3,6 +3,7 @@ package com.johnhaines.boardmonkey.gamemaker;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
@@ -19,7 +20,9 @@ import android.widget.Button;
  * Use the {@link FragListSelector#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragListSelector extends Fragment implements View.OnClickListener {
+public class FragListSelector extends Fragment implements
+        View.OnClickListener,
+        MediaPlayer.OnCompletionListener {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -81,22 +84,22 @@ public class FragListSelector extends Fragment implements View.OnClickListener {
 
         btnAttributes = (ButtonNoClick) rootView.findViewById(R.id.btnAttributes);
         btnAttributes.setOnClickListener(this);
+        getPrimaryButtonImage(btnAttributes);
         btnRaces = (ButtonNoClick) rootView.findViewById(R.id.btnRaces);
         btnRaces.setOnClickListener(this);
+        getPrimaryButtonImage(btnRaces);
         btnClasses = (ButtonNoClick) rootView.findViewById(R.id.btnClasses);
         btnClasses.setOnClickListener(this);
+        getPrimaryButtonImage(btnClasses);
         btnSkills = (ButtonNoClick) rootView.findViewById(R.id.btnSkills);
         btnSkills.setOnClickListener(this);
+        getPrimaryButtonImage(btnSkills);
         btnTraits = (ButtonNoClick) rootView.findViewById(R.id.btnTraits);
         btnTraits.setOnClickListener(this);
+        getPrimaryButtonImage(btnTraits);
         btnFeatures = (ButtonNoClick) rootView.findViewById(R.id.btnFeatures);
         btnFeatures.setOnClickListener(this);
-        ((ActCharacteristicEditorFragHolder) getActivity()).getPrimaryButtonImage(btnAttributes);
-        ((ActCharacteristicEditorFragHolder) getActivity()).getPrimaryButtonImage(btnRaces);
-        ((ActCharacteristicEditorFragHolder) getActivity()).getPrimaryButtonImage(btnClasses);
-        ((ActCharacteristicEditorFragHolder) getActivity()).getPrimaryButtonImage(btnSkills);
-        ((ActCharacteristicEditorFragHolder) getActivity()).getPrimaryButtonImage(btnTraits);
-        ((ActCharacteristicEditorFragHolder) getActivity()).getPrimaryButtonImage(btnFeatures);
+        getPrimaryButtonImage(btnFeatures);
 
         return rootView;
     }
@@ -145,16 +148,58 @@ public class FragListSelector extends Fragment implements View.OnClickListener {
                 btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
                 btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
                 break;
+            case ("Mixed"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
             default:
                 btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
                 btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
                 break;
-
         }
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
     }
 
     @Override
     public void onClick(View v) {
+
+        if (v instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
+
         String message = "";
         switch (v.getId()) {
             case (R.id.btnAttributes):

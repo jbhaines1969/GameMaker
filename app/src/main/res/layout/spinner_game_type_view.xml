@@ -4,8 +4,6 @@
     android:layout_height="wrap_content"
     android:id="@+id/viewGameTypeSpinner"
     android:textSize="24sp"
-    android:background="@android:color/black"
-    android:textColor="@android:color/white"
     android:gravity="start|center_vertical"
     android:padding="20dp">
 

@@ -5,7 +5,9 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,8 +33,11 @@ import java.util.Objects;
  * Use the {@link FragListEdit#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragListEdit extends Fragment implements AdapterView.OnItemLongClickListener,
-        View.OnClickListener, AdapterView.OnItemClickListener {
+public class FragListEdit extends Fragment implements
+        AdapterView.OnItemLongClickListener,
+        View.OnClickListener,
+        AdapterView.OnItemClickListener,
+        MediaPlayer.OnCompletionListener {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String LIST_TYPE_KEY = "listType";
     private static final String INDEX_KEY = "index";
@@ -46,7 +51,7 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
     private int index;
     private int levelNumber;
     private TextView lblGroupName;
-    private Button btnAddItem;
+    private ButtonNoClick btnAddItem;
     private ListView lstItemList;
     private EditText txtAddItem;
     private BaseAdapter listAdapter;
@@ -105,8 +110,9 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
 
         lblGroupName = (TextView) rootView.findViewById(R.id.lblGroupName);
         lblGroupName.setText(listType);
-        btnAddItem = (Button) rootView.findViewById(R.id.btnAddItem);
+        btnAddItem = (ButtonNoClick) rootView.findViewById(R.id.btnAddItem);
         btnAddItem.setOnClickListener(this);
+        getPrimaryButtonImage(btnAddItem);
         lstItemList = (ListView) rootView.findViewById(R.id.lstItemList);
         lstItemList.setOnItemClickListener(this);
         lstItemList.setOnItemLongClickListener(this);
@@ -165,8 +171,72 @@ public class FragListEdit extends Fragment implements AdapterView.OnItemLongClic
 
     }
 
+    public String getListType() {
+        return listType;
+    }
+
+    public void getPrimaryButtonImage(ButtonNoClick btn) {
+
+        switch (((GameApplication) getActivity().getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Sci-Fi"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            case ("Military"):
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+            default:
+                btn.setTextColor(ContextCompat.getColorStateList(getActivity(), R.color.button_fantasy_text_primary));
+                btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_button_fantasy_primary));
+                break;
+        }
+    }
+
+    public void playSound(int currenSoundID) {
+
+        MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
+
+        mPlayer.setVolume(1, 1);
+        mPlayer.setLooping(false);
+        mPlayer.setOnCompletionListener(this);
+        mPlayer.start();
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mPlayer) {
+        mPlayer.reset();
+        mPlayer.release();
+    }
+
     @Override
     public void onClick(View v) {
+
+        if (v instanceof ButtonNoClick) {
+            String gameType = ((GameApplication) getActivity().getApplication()).getGame().getType();
+
+            int soundID = 0;
+            switch (gameType) {
+                case ("Sci-Fi"):
+                    soundID = R.raw.syfi_hit;
+                    break;
+                case ("Fantasy"):
+                    soundID = R.raw.fan_hit;
+                    break;
+                case ("Military"):
+                    soundID = R.raw.mil_hit;
+                    break;
+                case ("Mixed"):
+                    soundID = R.raw.fan_hit;
+                    break;
+            }
+            playSound(soundID);
+        }
 
         if (v == btnAddItem) {
 
