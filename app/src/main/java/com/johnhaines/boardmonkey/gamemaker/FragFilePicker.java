@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.app.Fragment;
@@ -21,6 +23,8 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 
+import static java.net.Proxy.Type.HTTP;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +33,9 @@ import java.util.ArrayList;
  * to handle interaction events.
  */
 public class FragFilePicker extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener {
+
+    private static final String KEY_FILE_PICKER_TYPE = "selectType";
+    private static final String KEY_FILE_EXTENSION = "fileType";
 
     private String externalDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath();
     private String currentDirectory = externalDirectory;
@@ -51,22 +58,27 @@ public class FragFilePicker extends Fragment implements View.OnClickListener, Ad
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         if (savedInstanceState != null) {
-            selectType = savedInstanceState.getString("selectType");
-            fileType = savedInstanceState.getString("fileType");
+            selectType = savedInstanceState.getString(KEY_FILE_PICKER_TYPE);
+            fileType = savedInstanceState.getString(KEY_FILE_EXTENSION);
         } else {
-            selectType = this.getArguments().getString("selectType");
-            fileType = this.getArguments().getString("fileType");
+            selectType = this.getArguments().getString(KEY_FILE_PICKER_TYPE);
+            fileType = this.getArguments().getString(KEY_FILE_EXTENSION);
         }
         View rootView = inflater.inflate(R.layout.fragment_file_picker, container, false);
 
         btnOk = (Button) rootView.findViewById(R.id.btnOk);
         if (selectType.equals("Delete")) {
-            btnOk.setText("Delete");
+            btnOk.setText(getResources().getString(R.string.delete));
+        }
+        if (selectType.equals("Share")) {
+            btnOk.setText(R.string.share);
         }
         btnOk.setOnClickListener(this);
         btnOk.setTextColor(Color.LTGRAY);
         btnCancel = (Button) rootView.findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(this);
+        label = (TextView) rootView.findViewById(R.id.lblFilePickerLabel);
+        label.setText(getLabelText());
         lstFiles = (ListView) rootView.findViewById(R.id.lstFiles);
         fileList = getFileList(externalDirectory);
         fileListAdapter = makeFileListAdapter();
@@ -74,6 +86,23 @@ public class FragFilePicker extends Fragment implements View.OnClickListener, Ad
         lstFiles.setOnItemClickListener(this);
 
         return rootView;
+    }
+
+    private String getLabelText() {
+
+        String label = getString(R.string.choose_file);
+
+        switch (selectType) {
+            case ("Delete"):
+                label = getString(R.string.delete_file);
+                break;
+            case ("Share"):
+                label = getString(R.string.share_file);
+                break;
+        }
+
+        return label;
+
     }
 
     private ArrayList<String> getFileList(String currentDirectory) {
@@ -159,7 +188,7 @@ public class FragFilePicker extends Fragment implements View.OnClickListener, Ad
 
         if (v == btnCancel) {
             getActivity().getFragmentManager().beginTransaction().remove(getFragmentManager().
-                    findFragmentById(R.id.fragment_container_middle)).commit();
+                    findFragmentById(R.id.info_frame_open_menu)).commit();
         }
 
         if (v == btnOk) {
@@ -174,6 +203,10 @@ public class FragFilePicker extends Fragment implements View.OnClickListener, Ad
                 if (selectType.equals("Delete")) {
                     showDeleteDialog(chosenFile);
                     updateFileList(currentDirectory);
+                }
+
+                if (selectType.equals("Share")) {
+                    emailFile(chosenFile);
                 }
             }
         }
@@ -253,6 +286,15 @@ public class FragFilePicker extends Fragment implements View.OnClickListener, Ad
         AlertDialog dialog = builder.create();
         dialog.show();
 
+    }
+
+    public void emailFile(File file) {
+        Uri fileURI = Uri.fromFile(file);
+        Intent mailIntent = new Intent(android.content.Intent.ACTION_SEND);
+        mailIntent.setType("message/rfc822");
+        mailIntent.putExtra(Intent.EXTRA_SUBJECT, "TABLETop game file: " + file.getName());
+        mailIntent.putExtra(Intent.EXTRA_STREAM, fileURI);
+        startActivity(Intent.createChooser(mailIntent, "Send Mail With..."));
     }
 
     /**

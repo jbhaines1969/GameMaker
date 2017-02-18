@@ -39,6 +39,16 @@
         <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActAttributeCreationFragmentHolder" />
         <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActHealthCreationFragmentHolder" />
         <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActAdvancementMethod" />
+        <activity android:name="com.johnhaines.boardmonkey.gamemaker.ActFileReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.gmgt" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

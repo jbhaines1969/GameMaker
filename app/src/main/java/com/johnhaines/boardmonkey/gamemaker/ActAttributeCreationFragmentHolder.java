@@ -50,9 +50,11 @@ public class ActAttributeCreationFragmentHolder extends Activity implements
 
         setBackgroundImage();
 
-        SAdapter = ArrayAdapter.createFromResource(this, R.array.AttCreationMethods, R.layout.spinner_game_type_view);
-
+        SAdapter = ArrayAdapter.createFromResource(this,
+                R.array.AttCreationMethods, R.layout.spinner_game_type_view);
+        SAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item_game_type);
         spnAttCreationMethod = (Spinner) findViewById(R.id.spnAttCreationMethod);
+        setSpinnerBackground(spnAttCreationMethod);
         spnAttCreationMethod.setAdapter(SAdapter);
         spnAttCreationMethod.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -135,6 +137,30 @@ public class ActAttributeCreationFragmentHolder extends Activity implements
         return position;
     }
 
+    public void setSpinnerBackground(Spinner spinner) {
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Sci-Fi"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Military"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Mixed"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            default:
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+        }
+    }
+
     private void setBackgroundImage() {
 
         switch (((GameApplication) getApplication()).getGame().getType()) {
@@ -142,7 +168,8 @@ public class ActAttributeCreationFragmentHolder extends Activity implements
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Sci-Fi"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.
+                        getDrawable(this, R.drawable.sci_fi_activity_background));
                 break;
             case ("Military"):
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));

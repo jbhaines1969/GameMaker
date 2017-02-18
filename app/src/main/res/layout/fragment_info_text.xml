@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30dp"
-    android:background="@drawable/fan_activity_background_1000_1667"
     tools:context="com.johnhaines.boardmonkey.gamemaker.FragInfoTextFragment">
 
     <TextView

@@ -29,6 +29,8 @@ public class ActOpenMenu extends Activity implements
         MediaPlayer.OnCompletionListener {
 
     private static final int REQUEST_WRITE_EXTERNAL_CODE = 1;
+    private static final String KEY_FILE_PICKER_TYPE = "selectType";
+    private static final String KEY_FILE_EXTENSION = "fileType";
 
     private FrameLayout fragFrame;
 
@@ -37,13 +39,12 @@ public class ActOpenMenu extends Activity implements
     private ButtonNoClick btnDelete;
     private ButtonNoClick btnShare;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_menu);
 
-        fragFrame = (FrameLayout) findViewById(R.id.fragment_container_middle);
+        fragFrame = (FrameLayout) findViewById(R.id.info_frame_open_menu);
         fragFrame.bringToFront();
 
         btnNew = (ButtonNoClick) findViewById(R.id.btnNewGame);
@@ -54,25 +55,22 @@ public class ActOpenMenu extends Activity implements
         getPrimaryButtonImage(btnDelete);
         btnShare = (ButtonNoClick) findViewById(R.id.btnShareGame);
         getPrimaryButtonImage(btnShare);
-
     }
 
     public void getPrimaryButtonImage(ButtonNoClick btn) {
-
-        btn.setBackground(ContextCompat.getDrawable(this, R.drawable.selector_button_base_primary));
-        btn.setTextColor(ContextCompat.getColorStateList(this, R.color.button_base_text_primary));
-
+        btn.setBackground(ContextCompat.
+                getDrawable(this, R.drawable.selector_button_base_primary));
+        btn.setTextColor(ContextCompat.
+                getColorStateList(this, R.color.button_base_text_primary));
     }
 
     public void playSound(int currenSoundID) {
-
         MediaPlayer mPlayer = MediaPlayer.create(this, currenSoundID);
 
         mPlayer.setVolume(1, 1);
         mPlayer.setLooping(false);
         mPlayer.setOnCompletionListener(this);
         mPlayer.start();
-
     }
 
     @Override
@@ -110,7 +108,6 @@ public class ActOpenMenu extends Activity implements
             until this code is written, the app will just ask for permission.
 
             */
-
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                         REQUEST_WRITE_EXTERNAL_CODE);
@@ -124,9 +121,7 @@ public class ActOpenMenu extends Activity implements
                 Intent intent = new Intent(this, ActGameName.class);
                 startActivity(intent);
             }
-
         } else {
-
             //TODO warn that external storage is unavailable. advise of storing internally and deleting on uninstall. advise on sharing to external when available.
             saveToInternalStorage();
         }
@@ -136,10 +131,11 @@ public class ActOpenMenu extends Activity implements
 
         FragFilePicker picker = new FragFilePicker();
         Bundle bundle = new Bundle();
-        bundle.putString("selectType", "Edit");
-        bundle.putString("fileType", ".gmgt");
+        bundle.putString(KEY_FILE_PICKER_TYPE, "Edit");
+        bundle.putString(KEY_FILE_EXTENSION, ".gmgt");
         picker.setArguments(bundle);
-        getFragmentManager().beginTransaction().add(R.id.fragment_container_middle, picker).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().
+                add(R.id.info_frame_open_menu, picker).addToBackStack(null).commit();
     }
 
     public void deleteGameClicked(View view) {
@@ -149,17 +145,25 @@ public class ActOpenMenu extends Activity implements
         bundle.putString("selectType", "Delete");
         bundle.putString("fileType", ".gmgt");
         picker.setArguments(bundle);
-        getFragmentManager().beginTransaction().add(R.id.fragment_container_middle, picker).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().
+                add(R.id.info_frame_open_menu, picker).addToBackStack(null).commit();
     }
 
     public void shareGameClicked(View view) {
-        //do stuff
+
+        FragFilePicker picker = new FragFilePicker();
+        Bundle bundle = new Bundle();
+        bundle.putString("selectType", "Share");
+        bundle.putString("fileType", ".gmgt");
+        picker.setArguments(bundle);
+        getFragmentManager().beginTransaction().
+                add(R.id.info_frame_open_menu, picker).addToBackStack(null).commit();
     }
 
     @Override
     public void filePickerFileChosen(File file) {
 
-        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.fragment_container_middle)).commit();
+        getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.info_frame_open_menu)).commit();
 
         FileInputStream fis = null;
         try {
@@ -186,7 +190,6 @@ public class ActOpenMenu extends Activity implements
 
         Intent intent = new Intent(this, ActGameEdit.class);
         startActivity(intent);
-
     }
 
     @Override

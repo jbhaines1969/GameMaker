@@ -32,7 +32,17 @@
         <activity android:name=".ActCharacteristicEditorFragHolder" />
         <activity android:name=".ActAttributeCreationFragmentHolder" />
         <activity android:name=".ActHealthCreationFragmentHolder" />
-        <activity android:name=".ActAdvancementMethod"></activity>
+        <activity android:name=".ActAdvancementMethod" />
+        <activity android:name=".ActFileReceiver">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.gmgt" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

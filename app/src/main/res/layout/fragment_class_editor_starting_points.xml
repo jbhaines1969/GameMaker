@@ -9,18 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="25dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/lblStartingPointsClassName"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/class_name"
-            android:paddingBottom="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="28sp" />
+        android:layout_margin="20dp">
 
         <TextView
             android:layout_width="wrap_content"

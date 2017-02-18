@@ -50,8 +50,9 @@ public class ActHealthCreationFragmentHolder extends Activity implements
         lblGameName.setText(((GameApplication) getApplication()).getGame().getName());
 
         SAdapter = ArrayAdapter.createFromResource(this, R.array.HealthCreationMethods, R.layout.spinner_game_type_view);
-
+        SAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item_game_type);
         spnHealthCreationMethod = (Spinner) findViewById(R.id.spnHealthCreationMethod);
+        setSpinnerBackground(spnHealthCreationMethod);
         spnHealthCreationMethod.setAdapter(SAdapter);
 
         spnHealthCreationMethod.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -69,21 +70,18 @@ public class ActHealthCreationFragmentHolder extends Activity implements
                                 replace(R.id.fragment_container_health_creation, fragHealthCreationEditor).
                                 commit();
                         break;
-
                     case 1:
                         fragHealthCreationEditor = new FragHealthCreationAttributeBased();
                         getFragmentManager().beginTransaction().
                                 replace(R.id.fragment_container_health_creation, fragHealthCreationEditor).
                                 commit();
                         break;
-
                     case 2:
                         fragHealthCreationEditor = new FragHealthCreationAccessory();
                         getFragmentManager().beginTransaction().
                                 replace(R.id.fragment_container_health_creation, fragHealthCreationEditor).
                                 commit();
                         break;
-
                     default:
                         break;
                 }
@@ -98,14 +96,38 @@ public class ActHealthCreationFragmentHolder extends Activity implements
         spnHealthCreationMethod.setSelection(getSpinnerPosition());
     }
 
-    private void setBackgroundImage() {
+    public void setSpinnerBackground(Spinner spinner) {
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Sci-Fi"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Military"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Mixed"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            default:
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+        }
+    }
 
+    private void setBackgroundImage() {
         switch (((GameApplication) getApplication()).getGame().getType()) {
             case ("Fantasy"):
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Sci-Fi"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.
+                        getDrawable(this, R.drawable.sci_fi_activity_background));
                 break;
             case ("Military"):
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
@@ -138,14 +160,12 @@ public class ActHealthCreationFragmentHolder extends Activity implements
     }
 
     public void playSound(int currenSoundID) {
-
         MediaPlayer mPlayer = MediaPlayer.create(this, currenSoundID);
 
         mPlayer.setVolume(1, 1);
         mPlayer.setLooping(false);
         mPlayer.setOnCompletionListener(this);
         mPlayer.start();
-
     }
 
     @Override
@@ -156,7 +176,6 @@ public class ActHealthCreationFragmentHolder extends Activity implements
 
     @Override
     public void onClick(View view) {
-
         if (view instanceof ButtonNoClick) {
             String gameType = ((GameApplication) getApplication()).getGame().getType();
 
@@ -179,7 +198,6 @@ public class ActHealthCreationFragmentHolder extends Activity implements
         }
 
         if (view == btnInfo) {
-
             FragInfoTextFragment fragInfo = new FragInfoTextFragment();
             String infoText = getResources().getString(R.string.health_creation_info);
             Bundle bundle = new Bundle();
@@ -207,7 +225,6 @@ public class ActHealthCreationFragmentHolder extends Activity implements
         }
 
         if (isExternalStorageWritable) {
-
             try {
                 File file = new File(getExternalFilesDir(null), filename);
                 FileOutputStream fos = new FileOutputStream(file);

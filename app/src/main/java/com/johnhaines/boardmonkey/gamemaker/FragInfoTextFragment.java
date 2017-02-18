@@ -78,7 +78,6 @@ public class FragInfoTextFragment extends Fragment implements
                 backgroundLayout.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.fan_info_background));
                 break;
         }
-
     }
 
     public void getPrimaryButtonImage(ButtonNoClick btn) {
@@ -137,6 +136,12 @@ public class FragInfoTextFragment extends Fragment implements
 
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outstate) {
+        super.onSaveInstanceState(outstate);
+        outstate.putString("text", text);
+    }
+
     public void playSound(int currenSoundID) {
 
         MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
@@ -145,7 +150,6 @@ public class FragInfoTextFragment extends Fragment implements
         mPlayer.setLooping(false);
         mPlayer.setOnCompletionListener(this);
         mPlayer.start();
-
     }
 
     @Override

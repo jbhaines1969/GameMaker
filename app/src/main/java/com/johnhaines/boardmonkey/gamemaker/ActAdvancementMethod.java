@@ -46,7 +46,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
     private FrameLayout frmInfoFrame;
     private RelativeLayout backgroundLayout;
     private Spinner spnAdvancementMethod;
-    private SpinnerAdapter SAdapter;
+    private ArrayAdapter SAdapter;
     private TextView lblGameName;
     private EditText edtAttPointCost;
     private EditText edtAttNonPrefPenalty;
@@ -74,6 +74,10 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
         game = ((GameApplication) getApplication()).getGame();
 
         setContentView(R.layout.activity_advancement_method);
+
+        SAdapter = ArrayAdapter.createFromResource(this,
+                R.array.AdvancementMethods, R.layout.spinner_game_type_view);
+        SAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item_game_type);
 
         frmInfoFrame = (FrameLayout) findViewById(R.id.frmAdvancementMethodInfo);
         frmInfoFrame.bringToFront();
@@ -122,9 +126,11 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
         setBackgroundImage();
 
-        SAdapter = ArrayAdapter.createFromResource(this, R.array.AdvancementMethods, R.layout.spinner_game_type_view);
+
 
         spnAdvancementMethod = (Spinner) findViewById(R.id.spnAdvancementMethod);
+        setSpinnerBackground(spnAdvancementMethod);
+
         spnAdvancementMethod.setAdapter(SAdapter);
 
         spnAdvancementMethod.setSelection(((GameApplication) getApplication()).getGame().getAdvancementMethod().getType() - 1);
@@ -132,7 +138,32 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
+
         super.onSaveInstanceState(outState);
+    }
+
+    public void setSpinnerBackground(Spinner spinner) {
+        switch (((GameApplication) getApplication()).getGame().getType()) {
+            case ("Fantasy"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Sci-Fi"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Military"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            case ("Mixed"):
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+                break;
+            default:
+                spinner.setBackground(ContextCompat.getDrawable(this,
+                        R.drawable.fan_spinner));
+        }
     }
 
     @Override
@@ -140,6 +171,8 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
 
         if (view instanceof ButtonNoClick) {
             String gameType = ((GameApplication) getApplication()).getGame().getType();
+            float lVolume = 0.4f;
+            float rVolume = 0.4f;
 
             int soundID = 0;
             switch (gameType) {
@@ -156,7 +189,7 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
                     soundID = R.raw.fan_hit;
                     break;
             }
-            playSound(soundID);
+            playSound(soundID, lVolume, rVolume);
         }
 
         if (view == btnSave) {
@@ -176,7 +209,8 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Sci-Fi"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.
+                        getDrawable(this, R.drawable.sci_fi_activity_background));
                 break;
             case ("Military"):
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
@@ -233,11 +267,11 @@ public class ActAdvancementMethod extends Activity implements View.OnClickListen
         }
     }
 
-    public void playSound(int currenSoundID) {
+    public void playSound(int currenSoundID, float lVolume, float rVolume) {
 
         MediaPlayer mPlayer = MediaPlayer.create(this, currenSoundID);
 
-        mPlayer.setVolume(1, 1);
+        mPlayer.setVolume(lVolume, rVolume);
         mPlayer.setLooping(false);
         mPlayer.setOnCompletionListener(this);
         mPlayer.start();

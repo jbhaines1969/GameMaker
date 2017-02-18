@@ -401,6 +401,9 @@
     /n/n
     These ranks can be used to add a game element, if the game includes a heirarchy of command, such as in military scenarios or
     guild based games.</string>
+    <string name="share">Share</string>
+    <string name="delete_file">Choose Game to Delete</string>
+    <string name="share_file">Choose Game to Share</string>
 
 
 </resources>

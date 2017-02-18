@@ -69,7 +69,7 @@ public class ActGameName extends Activity implements MediaPlayer.OnCompletionLis
         SAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item_game_type);
 
         spnGameType.setAdapter(SAdapter);
-
+        spnGameType.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_spinner));
         spnGameType.setSelection(setSpinnerSelection());
         spnGameType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

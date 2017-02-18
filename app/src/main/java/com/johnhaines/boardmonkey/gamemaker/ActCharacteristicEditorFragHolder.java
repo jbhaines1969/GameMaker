@@ -118,7 +118,8 @@ public class ActCharacteristicEditorFragHolder extends Activity implements
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
             case ("Sci-Fi"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
+                backgroundLayout.setBackground(ContextCompat.
+                        getDrawable(this, R.drawable.sci_fi_activity_background));
                 break;
             case ("Military"):
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));

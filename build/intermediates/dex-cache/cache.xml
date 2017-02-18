@@ -21,11 +21,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_80fdb1ba329548c9967c26f686292cc16e59008a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="f283c45f00f45e727eba4186b00282774290c546">
+        sha1="3236da5a7cab76cde1d2e1d6fae397574d9caa52">
         <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0f1c54cfb1626379606d2f8fed87a3041565dd99\classes.dex" />
     </item>
     <item
@@ -34,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="39d5fecff4c0e1e32f156d0dca062bb66aae96d2">
+        sha1="5f7fdab2e40a2048aec362afecbb472a4df3d3a3">
         <dex dex="C:\Users\John\Android Projects\GameMaker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_26e9b45a69fdfa7d98fbce162bfbc41d27ae8c69\classes.dex" />
     </item>
     <item
