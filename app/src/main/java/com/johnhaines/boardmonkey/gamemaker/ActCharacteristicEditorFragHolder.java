@@ -25,6 +25,7 @@ public class ActCharacteristicEditorFragHolder extends Activity implements
         FragRaceEditorControlBar.OnFragmentInteractionListener,
         FragClassEditorControlBar.OnFragmentInteractionListener,
         FragInfoTextFragment.OnFragmentInteractionListener,
+FragAbilityEditorControlBar.OnFragmentInteractionListener,
         MediaPlayer.OnCompletionListener {
 
     public static final String LIST_TYPE_KEY = "listType";
@@ -391,48 +392,51 @@ public class ActCharacteristicEditorFragHolder extends Activity implements
 
         if (listType.equals("Skills")) {
 
-            FragAttributeDescription fragEditor = new FragAttributeDescription();
+            FragAbilityEditorControlBar fragEditor = new FragAbilityEditorControlBar();
             fragEditor.setArguments(bundle);
 
             if (!(getFragmentManager().findFragmentById(R.id.fragment_container_left) instanceof FragListEdit)) {
-
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragEditor).addToBackStack(null).
+                getFragmentManager().beginTransaction().
+                        replace(R.id.fragment_container_right, fragEditor).
                         replace(R.id.fragment_container_left, fragLE).addToBackStack(null).commit();
+            } else if (!(getFragmentManager().findFragmentById(R.id.fragment_container_right) instanceof FragRaceEditorControlBar)) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragEditor).commit();
             } else {
-
-                FragAttributeDescription fragment = (FragAttributeDescription) getFragmentManager().findFragmentById(R.id.fragment_container_right);
+                FragRaceEditorControlBar fragment = (FragRaceEditorControlBar) getFragmentManager().findFragmentById(R.id.fragment_container_right);
                 fragment.updateIndex(index);
             }
         }
 
         if (listType.equals("Features")) {
 
-            FragAttributeDescription fragEditor = new FragAttributeDescription();
+            FragRaceEditorControlBar fragEditor = new FragRaceEditorControlBar();
             fragEditor.setArguments(bundle);
 
             if (!(getFragmentManager().findFragmentById(R.id.fragment_container_left) instanceof FragListEdit)) {
-
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragEditor).addToBackStack(null).
+                getFragmentManager().beginTransaction().
+                        replace(R.id.fragment_container_right, fragEditor).
                         replace(R.id.fragment_container_left, fragLE).addToBackStack(null).commit();
+            } else if (!(getFragmentManager().findFragmentById(R.id.fragment_container_right) instanceof FragRaceEditorControlBar)) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragEditor).commit();
             } else {
-
-                FragAttributeDescription fragment = (FragAttributeDescription) getFragmentManager().findFragmentById(R.id.fragment_container_right);
+                FragRaceEditorControlBar fragment = (FragRaceEditorControlBar) getFragmentManager().findFragmentById(R.id.fragment_container_right);
                 fragment.updateIndex(index);
             }
         }
 
         if (listType.equals("Traits")) {
 
-            FragAttributeDescription fragEditor = new FragAttributeDescription();
+            FragRaceEditorControlBar fragEditor = new FragRaceEditorControlBar();
             fragEditor.setArguments(bundle);
 
             if (!(getFragmentManager().findFragmentById(R.id.fragment_container_left) instanceof FragListEdit)) {
-
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragEditor).addToBackStack(null).
+                getFragmentManager().beginTransaction().
+                        replace(R.id.fragment_container_right, fragEditor).
                         replace(R.id.fragment_container_left, fragLE).addToBackStack(null).commit();
+            } else if (!(getFragmentManager().findFragmentById(R.id.fragment_container_right) instanceof FragRaceEditorControlBar)) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container_right, fragEditor).commit();
             } else {
-
-                FragAttributeDescription fragment = (FragAttributeDescription) getFragmentManager().findFragmentById(R.id.fragment_container_right);
+                FragRaceEditorControlBar fragment = (FragRaceEditorControlBar) getFragmentManager().findFragmentById(R.id.fragment_container_right);
                 fragment.updateIndex(index);
             }
         }
@@ -695,6 +699,93 @@ public class ActCharacteristicEditorFragHolder extends Activity implements
                         replace(R.id.fragment_container_right, fragLE).commit();
             }
         }
+    }
+
+    @Override
+    public void onAbilityEditorButtonClicked(String message, Integer index) {
+
+        Bundle bundle = new Bundle();
+        bundle.putInt(INDEX_KEY, index);
+        bundle.putString(LIST_TYPE_KEY, "Classes");
+        boolean controlsInLeftFrame = getFragmentManager().
+                findFragmentById(R.id.fragment_container_left)
+                instanceof FragClassEditorControlBar;
+        FragAbilityEditorControlBar fragCECB = new FragAbilityEditorControlBar();
+        fragCECB.setArguments(bundle);
+
+        switch (message) {
+            case ("Description"):
+                FragAttributeDescription fragAD = new FragAttributeDescription();
+                fragAD.setArguments(bundle);
+
+                if (!(controlsInLeftFrame)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAD).
+                            replace(R.id.fragment_container_left, fragCECB).addToBackStack(null).commit();
+                } else if (!(getFragmentManager().
+                        findFragmentById(R.id.fragment_container_right)
+                        instanceof FragAttributeDescription)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAD).commit();
+                }
+
+                break;
+            case ("Effect"):
+
+                FragAbilityEffectTypeEditor fragAET = new FragAbilityEffectTypeEditor();
+                fragAET.setArguments(bundle);
+
+                if (!(controlsInLeftFrame)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAET).
+                            replace(R.id.fragment_container_left, fragCECB).
+                            addToBackStack(null).commit();
+                } else if (!(getFragmentManager().
+                        findFragmentById(R.id.fragment_container_right)
+                        instanceof FragAbilityEffectTypeEditor)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAET).commit();
+                }
+
+                break;
+            case ("Classes"):
+
+                FragAbilityPrefClassRaceEditor fragAPC = new FragAbilityPrefClassRaceEditor();
+                fragAPC.setArguments(bundle);
+
+                if (!(controlsInLeftFrame)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAPC).
+                            replace(R.id.fragment_container_left, fragCECB).
+                            addToBackStack(null).commit();
+                } else if (!(getFragmentManager().
+                        findFragmentById(R.id.fragment_container_right)
+                        instanceof FragAbilityPrefClassRaceEditor)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAPC).commit();
+                }
+
+                break;
+            case ("Races"):
+
+                FragAbilityPrefClassRaceEditor fragAPCR = new FragAbilityPrefClassRaceEditor();
+                fragAPCR.setArguments(bundle);
+
+                if (!(controlsInLeftFrame)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAPCR).
+                            replace(R.id.fragment_container_left, fragCECB).
+                            addToBackStack(null).commit();
+                } else if (!(getFragmentManager().
+                        findFragmentById(R.id.fragment_container_right)
+                        instanceof FragAbilityPrefClassRaceEditor)) {
+                    getFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container_right, fragAPCR).commit();
+                }
+
+                break;
+        }
+
     }
 
     @Override

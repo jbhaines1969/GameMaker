@@ -32,6 +32,9 @@ public class ClassCharClass extends ClassCharacteristic {
     private int levelsForFeatPoints = 0;
     private int featPointsPerLevelUp = 0;
 
+    private int levelsForGeneralPoints = 0;
+    private int generalPointsPerLevelUp = 0;
+
 
     public ClassCharClass(String name) {
         this.name = name;
@@ -207,6 +210,22 @@ public class ClassCharClass extends ClassCharacteristic {
 
     public void setAttributePointsPerLevelUp(int attributePointsPerLevelUp) {
         this.attributePointsPerLevelUp = attributePointsPerLevelUp;
+    }
+
+    public int getLevelsForGeneralPoints() {
+        return levelsForGeneralPoints;
+    }
+
+    public void setLevelsForGeneralPoints(int levelsForGeneralPoints) {
+        this.levelsForGeneralPoints = levelsForGeneralPoints;
+    }
+
+    public int getGeneralPointsPerLevelUp() {
+        return generalPointsPerLevelUp;
+    }
+
+    public void setGeneralPointsPerLevelUp(int generalPointsPerLevelUp) {
+        this.generalPointsPerLevelUp = generalPointsPerLevelUp;
     }
 
     public void addTrait(ClassCharTrait trait) {

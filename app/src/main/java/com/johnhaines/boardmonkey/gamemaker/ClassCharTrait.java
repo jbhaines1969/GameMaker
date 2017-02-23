@@ -6,7 +6,6 @@ public class ClassCharTrait extends ClassCharacteristic {
         this.name = name;
     }
 
-    private int minPoints = 0;
     private int maxPoints = 0;
 
 
@@ -48,20 +47,20 @@ public class ClassCharTrait extends ClassCharacteristic {
         return this.name;
     }
 
-    public int getMinPoints() {
-        return minPoints;
-    }
-
-    public void setMinPoints(int minPoints) {
-        this.minPoints = minPoints;
-    }
-
     public int getMaxPoints() {
         return maxPoints;
     }
 
     public void setMaxPoints(int maxPoints) {
         this.maxPoints = maxPoints;
+    }
+
+    public Class_S_F_T_Effect getEffectType() {
+        return this.effectType;
+    }
+
+    public void setEffectType(Class_S_F_T_Effect type) {
+        this.effectType = type;
     }
 
 }

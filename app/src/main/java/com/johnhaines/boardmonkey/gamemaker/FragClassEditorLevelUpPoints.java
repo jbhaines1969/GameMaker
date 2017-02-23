@@ -32,6 +32,8 @@ public class FragClassEditorLevelUpPoints extends Fragment implements
     private EditText edtLevelUpTraitPoints;
     private EditText edtLevelUpFeaturesLevels;
     private EditText edtLevelUpFeaturesPoints;
+    private EditText edtLevelUpGeneralLevels;
+    private EditText edtLevelUpGeneralPoints;
 
     private String gameType;
 
@@ -77,6 +79,10 @@ public class FragClassEditorLevelUpPoints extends Fragment implements
         edtLevelUpFeaturesLevels.setText(getEntry("FeatureLevels"));
         edtLevelUpFeaturesPoints = (EditText) rootView.findViewById(R.id.edtLevelUpFeaturesPoints);
         edtLevelUpFeaturesPoints.setText(getEntry("FeaturePoints"));
+        edtLevelUpGeneralLevels = (EditText) rootView.findViewById(R.id.edtLevelUpGeneralLevels);
+        edtLevelUpGeneralLevels.setText(getEntry("GeneralLevels"));
+        edtLevelUpGeneralPoints = (EditText) rootView.findViewById(R.id.edtLevelUpGeneralPoints);
+        edtLevelUpGeneralPoints.setText(getEntry("GeneralPoints"));
 
         return rootView;
     }
@@ -86,29 +92,51 @@ public class FragClassEditorLevelUpPoints extends Fragment implements
         int value = 0;
         String returnValue = "";
 
-        if (valueType.equals("AttributeLevels")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getLevelsForAttributePoints();
-        }
-        if (valueType.equals("AttributePoints")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getAttributePointsPerLevelUp();
-        }
-        if (valueType.equals("SkillLevels")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getLevelsForSkillPoints();
-        }
-        if (valueType.equals("SkillPoints")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getSkillPointsPerLevelUp();
-        }
-        if (valueType.equals("TraitLevels")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getLevelsForTraitPoints();
-        }
-        if (valueType.equals("TraitPoints")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getTraitPointsPerLevelUp();
-        }
-        if (valueType.equals("FeatureLevels")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getLevelsForFeatPoints();
-        }
-        if (valueType.equals("FeaturePoints")) {
-            value = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getFeatPointsPerLevelUp();
+        switch (valueType) {
+
+
+            case ("AttributeLevels"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getLevelsForAttributePoints();
+                break;
+            case ("AttributePoints"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getAttributePointsPerLevelUp();
+                break;
+            case ("SkillLevels"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getLevelsForSkillPoints();
+                break;
+            case ("SkillPoints"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getSkillPointsPerLevelUp();
+                break;
+            case ("TraitLevels"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getLevelsForTraitPoints();
+                break;
+            case ("TraitPoints"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getTraitPointsPerLevelUp();
+                break;
+            case ("FeatureLevels"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getLevelsForFeatPoints();
+                break;
+            case ("FeaturePoints"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getFeatPointsPerLevelUp();
+                break;
+            case ("GeneralPoints"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getGeneralPointsPerLevelUp();
+                break;
+            case ("GeneralLevels"):
+                value = ((GameApplication) getActivity().getApplication()).
+                        getGame().getClasses().get(index).getLevelsForGeneralPoints();
+                break;
+            default:
+                value = 0;
         }
 
         return Integer.toString(value);
@@ -182,28 +210,44 @@ public class FragClassEditorLevelUpPoints extends Fragment implements
             int newValue;
 
             newValue = Integer.parseInt(edtLevelUpAttributesLevels.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setLevelsForAttributePoints(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setLevelsForAttributePoints(newValue);
 
             newValue = Integer.parseInt(edtLevelUpAttributesPoints.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setAttributePointsPerLevelUp(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setAttributePointsPerLevelUp(newValue);
 
             newValue = Integer.parseInt(edtLevelUpSkillLevels.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setLevelsForSkillPoints(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setLevelsForSkillPoints(newValue);
 
             newValue = Integer.parseInt(edtLevelUpSkillPoints.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setSkillPointsPerLevelUp(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setSkillPointsPerLevelUp(newValue);
 
             newValue = Integer.parseInt(edtLevelUpTraitLevels.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setLevelsForTraitPoints(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setLevelsForTraitPoints(newValue);
 
             newValue = Integer.parseInt(edtLevelUpTraitPoints.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setTraitPointsPerLevelUp(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setTraitPointsPerLevelUp(newValue);
 
             newValue = Integer.parseInt(edtLevelUpFeaturesLevels.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setLevelsForFeatPoints(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setLevelsForFeatPoints(newValue);
 
             newValue = Integer.parseInt(edtLevelUpFeaturesPoints.getText().toString());
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setFeatPointsPerLevelUp(newValue);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setFeatPointsPerLevelUp(newValue);
+
+            newValue = Integer.parseInt(edtLevelUpGeneralLevels.getText().toString());
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setLevelsForGeneralPoints(newValue);
+
+            newValue = Integer.parseInt(edtLevelUpGeneralPoints.getText().toString());
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setGeneralPointsPerLevelUp(newValue);
 
             ((ActCharacteristicEditorFragHolder) getActivity()).saveGameToFile();
         }

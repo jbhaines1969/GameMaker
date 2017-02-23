@@ -2,7 +2,6 @@ package com.johnhaines.boardmonkey.gamemaker;
 
 public class ClassCharSkill extends ClassAbility {
 
-    private int minPoints;
     private int maxPoints;
 
     private Class_S_F_T_Effect effectType = new Class_S_F_T_Effect(0);
@@ -54,6 +53,14 @@ public class ClassCharSkill extends ClassAbility {
 
     public void setMaxPoints(int maxPoints) {
         this.maxPoints = maxPoints;
+    }
+
+    public Class_S_F_T_Effect getEffectType() {
+        return this.effectType;
+    }
+
+    public void setEffectType(Class_S_F_T_Effect type) {
+        this.effectType = type;
     }
 
 }

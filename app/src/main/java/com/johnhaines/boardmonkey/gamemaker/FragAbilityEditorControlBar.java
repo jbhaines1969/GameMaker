@@ -1,6 +1,8 @@
 package com.johnhaines.boardmonkey.gamemaker;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -26,6 +28,8 @@ public class FragAbilityEditorControlBar extends Fragment implements
     private int index;
     private String listType;
     private ClassGame game;
+
+    private OnFragmentInteractionListener mListener;
 
 
     public FragAbilityEditorControlBar() {
@@ -71,6 +75,34 @@ public class FragAbilityEditorControlBar extends Fragment implements
         return rootView;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof FragClassEditorControlBar.OnFragmentInteractionListener) {
+            mListener = (FragAbilityEditorControlBar.OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onAttach(Activity context) {
+        super.onAttach(context);
+        if (context instanceof FragClassEditorControlBar.OnFragmentInteractionListener) {
+            mListener = (FragAbilityEditorControlBar.OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
     public void playSound(int currenSoundID) {
 
         MediaPlayer mPlayer = MediaPlayer.create(getActivity(), currenSoundID);
@@ -111,6 +143,28 @@ public class FragAbilityEditorControlBar extends Fragment implements
             }
             playSound(soundID);
         }
+
+        String message = "";
+
+        if (view == btnDescription) {
+            message = "Description";
+        }
+
+        if (view == btnEffectType) {
+            message = "Effect";
+        }
+
+        if (view == btnPrefClasses) {
+            message = "Classes";
+        }
+
+        if (view == btnPrefRaces) {
+            message = "Races";
+        }
+
+        if (mListener != null) {
+            mListener.onAbilityEditorButtonClicked(message, index);
+        }
     }
 
     private String getAbilityName() {
@@ -131,8 +185,11 @@ public class FragAbilityEditorControlBar extends Fragment implements
                 break;
         }
 
-
         return name;
+    }
+
+    public interface OnFragmentInteractionListener {
+        void onAbilityEditorButtonClicked(String message, Integer index);
     }
 
 }
