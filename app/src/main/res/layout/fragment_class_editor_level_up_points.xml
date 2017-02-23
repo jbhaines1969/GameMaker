@@ -204,6 +204,41 @@
                     android:id="@+id/edtLevelUpFeaturesPoints"
                     android:selectAllOnFocus="true" />
             </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/features"
+                    android:textSize="24sp"
+                    android:id="@+id/lblLevelUpGeneral"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:textSize="24sp"
+                    android:id="@+id/edtLevelUpGeneralLevels"
+                    android:selectAllOnFocus="true" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="5"
+                    android:textSize="24sp"
+                    android:id="@+id/edtLevelUpGeneralPoints"
+                    android:selectAllOnFocus="true" />
+            </TableRow>
         </TableLayout>
 
         <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick

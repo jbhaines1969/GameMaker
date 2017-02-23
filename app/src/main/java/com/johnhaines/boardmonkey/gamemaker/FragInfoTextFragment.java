@@ -66,7 +66,7 @@ public class FragInfoTextFragment extends Fragment implements
                 backgroundLayout.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.fan_info_background));
                 break;
             case ("Sci-Fi"):
-                backgroundLayout.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.fan_info_background));
+                backgroundLayout.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.sci_fi_info_background));
                 break;
             case ("Military"):
                 backgroundLayout.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.fan_info_background));

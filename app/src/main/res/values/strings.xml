@@ -367,7 +367,7 @@
     in the game, and standard expectations of the Class within the game world</string>
 
     <string name="class_start_points_info">Use this screen to set the number of starting spendable ability points a player
-    has when creating a new character, for each ability type.  If using a single point pool for all abilities, set how many total points
+    has when creating a new character, for each ability type.  If using a single point pool for all abilities, set how many General points
     new characters of this class start with.</string>
 
     <string name="class_level_points_info">If using the Character Levels advancement method, these will be the points earned by
@@ -376,7 +376,9 @@
 
         Use the \"General\" box if the Character gains points which may be spent in any Characteristic.
 
-        Some abilities may gain points every level, while others may only advance after a certain number of levels have been reached.\n\n
+        Some abilities may gain points every level, while others may only advance after a certain number of levels have been reached,
+        or may not gain with levels at all, but by some other mechanic.  Zero values mean the character does not gain points
+        in that category with levels.\n\n
 
     Points:  Number of points gained at each advancement level.\n\n
 
@@ -404,6 +406,7 @@
     <string name="share">Share</string>
     <string name="delete_file">Choose Game to Delete</string>
     <string name="share_file">Choose Game to Share</string>
+    <string name="general">General</string>
 
 
 </resources>

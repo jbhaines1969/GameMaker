@@ -127,6 +127,33 @@
                 android:selectAllOnFocus="true" />
         </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/general"
+                android:id="@+id/lblStartingGeneral"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/edtStartingGeneral"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:textSize="24sp"
+                android:selectAllOnFocus="true" />
+        </LinearLayout>
+
         <com.johnhaines.boardmonkey.gamemaker.ButtonNoClick
             android:id="@+id/btnSaveStartingPoints"
             android:layout_width="match_parent"

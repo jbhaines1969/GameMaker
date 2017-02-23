@@ -27,6 +27,7 @@ public class FragClassEditorStartingPoints extends Fragment implements
     private EditText edtStartingSkills;
     private EditText edtStartingTraits;
     private EditText edtStartingFeatures;
+    private EditText edtStartingGeneral;
     private EditText edtHealthDice;
     private ButtonNoClick btnSave;
 
@@ -75,6 +76,8 @@ public class FragClassEditorStartingPoints extends Fragment implements
         edtStartingTraits.setText(getTraitPoints());
         edtStartingFeatures = (EditText) rootView.findViewById(R.id.edtStartingFeatures);
         edtStartingFeatures.setText(getFeaturePoints());
+        edtStartingGeneral = (EditText) rootView.findViewById(R.id.edtStartingGeneral);
+        edtStartingGeneral.setText(getGeneralPoints());
         btnSave = (ButtonNoClick) rootView.findViewById(R.id.btnSaveStartingPoints);
         btnSave.setOnClickListener(this);
         getPrimaryButtonImage(btnSave);
@@ -150,6 +153,7 @@ public class FragClassEditorStartingPoints extends Fragment implements
             Integer skillPoints = 0;
             Integer traitPoints = 0;
             Integer featurePoints = 0;
+            Integer generalPoints = 0;
             Integer healthDie = 0;
 
             try {
@@ -157,14 +161,21 @@ public class FragClassEditorStartingPoints extends Fragment implements
                 skillPoints = Integer.parseInt(edtStartingSkills.getText().toString());
                 traitPoints = Integer.parseInt(edtStartingTraits.getText().toString());
                 featurePoints = Integer.parseInt(edtStartingFeatures.getText().toString());
+                generalPoints = Integer.parseInt(edtStartingGeneral.getText().toString());
             } catch (NumberFormatException e) {
                 // TODO make toast warning about using integers for points.
             }
 
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setHealthDiceSides(healthDie);
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setStartingSkillPoints(skillPoints);
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setStartingTraitPoints(traitPoints);
-            ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).setStartingFeatPoints(featurePoints);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setHealthDiceSides(healthDie);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setStartingSkillPoints(skillPoints);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setStartingTraitPoints(traitPoints);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setStartingFeatPoints(featurePoints);
+            ((GameApplication) getActivity().getApplication()).getGame().
+                    getClasses().get(index).setStartingGeneralPoints(generalPoints);
 
             ((ActCharacteristicEditorFragHolder) getActivity()).saveGameToFile();
 
@@ -172,26 +183,34 @@ public class FragClassEditorStartingPoints extends Fragment implements
     }
 
     public String getHealthDiceSides() {
-        Integer sides = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getHealthDiceSides();
-        String healthDiceText = Integer.toString(sides);
-        return healthDiceText;
+        Integer sides = ((GameApplication) getActivity().
+                getApplication()).getGame().getClasses().get(index).getHealthDiceSides();
+        return Integer.toString(sides);
     }
 
     public String getSkillPoints() {
-        Integer speed = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getStartingSkillPoints();
-        String skillPointsText = Integer.toString(speed);
-        return skillPointsText;
+        Integer sPoints = ((GameApplication) getActivity().
+                getApplication()).getGame().getClasses().get(index).getStartingSkillPoints();
+        return Integer.toString(sPoints);
     }
 
     public String getTraitPoints() {
-        Integer speed = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getStartingTraitPoints();
-        String traitPointsText = Integer.toString(speed);
+        Integer tPoints = ((GameApplication) getActivity().
+                getApplication()).getGame().getClasses().get(index).getStartingTraitPoints();
+        String traitPointsText = Integer.toString(tPoints);
         return traitPointsText;
     }
 
     public String getFeaturePoints() {
-        Integer speed = ((GameApplication) getActivity().getApplication()).getGame().getClasses().get(index).getStartingFeatPoints();
-        String featPointsText = Integer.toString(speed);
-        return featPointsText;
+        Integer fPoints = ((GameApplication) getActivity().
+                getApplication()).getGame().getClasses().get(index).getStartingFeatPoints();
+        return Integer.toString(fPoints);
+    }
+
+    public String getGeneralPoints() {
+
+        Integer gPoints = ((GameApplication) getActivity().
+        getApplication()).getGame().getClasses().get(index).getStartingGeneralPoints();
+        return Integer.toString(gPoints);
     }
 }

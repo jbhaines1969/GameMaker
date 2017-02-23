@@ -12,11 +12,15 @@
     tools:context="com.johnhaines.boardmonkey.gamemaker.ActFileReceiver">
 
     <TextView
+        android:id="@+id/lblFileRecieverText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textColor="@android:color/black"
         android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
         android:text="BOOM! This bitch just opened when you clicked on that file." />
 
 </RelativeLayout>

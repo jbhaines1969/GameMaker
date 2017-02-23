@@ -291,7 +291,7 @@ public class FragFilePicker extends Fragment implements View.OnClickListener, Ad
     public void emailFile(File file) {
         Uri fileURI = Uri.fromFile(file);
         Intent mailIntent = new Intent(android.content.Intent.ACTION_SEND);
-        mailIntent.setType("message/rfc822");
+        mailIntent.setType("messsage/vnd.com.boardmonkey.TABLETop.gamefile");
         mailIntent.putExtra(Intent.EXTRA_SUBJECT, "TABLETop game file: " + file.getName());
         mailIntent.putExtra(Intent.EXTRA_STREAM, fileURI);
         startActivity(Intent.createChooser(mailIntent, "Send Mail With..."));

@@ -139,7 +139,6 @@ public class ActHealthCreationFragmentHolder extends Activity implements
                 backgroundLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.fan_activity_background_1000_1667));
                 break;
         }
-
     }
 
     public void setInfoButtonResources(ButtonNoClick infoBtn) {

@@ -27,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActGameName" />
+        <activity android:name=".ActGameName" /> 
         <activity android:name=".ActGameEdit" />
         <activity android:name=".ActCharacteristicEditorFragHolder" />
         <activity android:name=".ActAttributeCreationFragmentHolder" />
@@ -37,8 +37,11 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
                 <data android:mimeType="*/*" />
                 <data android:pathPattern=".*\\.gmgt" />
             </intent-filter>

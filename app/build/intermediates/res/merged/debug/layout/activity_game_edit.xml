@@ -133,7 +133,7 @@
     <FrameLayout
         android:id="@+id/frmGameEditInfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 
 </RelativeLayout>

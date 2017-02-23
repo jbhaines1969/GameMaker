@@ -13,23 +13,24 @@ public class ClassCharClass extends ClassCharacteristic {
 
     private TreeMap<Integer, String> levelNameMap = new TreeMap<>();
 
-    private int healthDiceSides;
+    private int healthDiceSides = 0;
 
-    private int startingSkillPoints;
-    private int startingTraitPoints;
-    private int startingFeatPoints;
+    private int startingSkillPoints = 0;
+    private int startingTraitPoints = 0;
+    private int startingFeatPoints = 0;
+    private int startingGeneralPoints;  //use when generic advancement points are used
 
-    private int levelsForAttributePoints;
-    private int attributePointsPerLevelUp;
+    private int levelsForAttributePoints = 0;
+    private int attributePointsPerLevelUp = 0;
 
-    private int levelsForSkillPoints;
-    private int skillPointsPerLevelUp;
+    private int levelsForSkillPoints = 0;
+    private int skillPointsPerLevelUp = 0;
 
-    private int levelsForTraitPoints;
-    private int traitPointsPerLevelUp;
+    private int levelsForTraitPoints = 0;
+    private int traitPointsPerLevelUp = 0;
 
-    private int levelsForFeatPoints;
-    private int featPointsPerLevelUp;
+    private int levelsForFeatPoints = 0;
+    private int featPointsPerLevelUp = 0;
 
 
     public ClassCharClass(String name) {
@@ -134,6 +135,14 @@ public class ClassCharClass extends ClassCharacteristic {
 
     public void setStartingFeatPoints(int startingFeatPoints) {
         this.startingFeatPoints = startingFeatPoints;
+    }
+
+    public int getStartingGeneralPoints() {
+        return startingGeneralPoints;
+    }
+
+    public void setStartingGeneralPoints(int startingGeneralPoints) {
+        this.startingGeneralPoints = startingGeneralPoints;
     }
 
     public int getLevelsForSkillPoints() {

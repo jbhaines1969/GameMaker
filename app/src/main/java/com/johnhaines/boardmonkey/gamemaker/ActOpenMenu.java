@@ -32,6 +32,7 @@ public class ActOpenMenu extends Activity implements
     private static final String KEY_FILE_PICKER_TYPE = "selectType";
     private static final String KEY_FILE_EXTENSION = "fileType";
 
+    private String buttonClicked;
     private FrameLayout fragFrame;
 
     private ButtonNoClick btnNew;
@@ -80,84 +81,106 @@ public class ActOpenMenu extends Activity implements
     }
 
     public void newGameClicked(View view) {
+        buttonClicked = "New";
         ClassGame newGame = new ClassGame("New Game", "No Type Selected");
         ((GameApplication) this.getApplication()).setGame(newGame);
         String filename = "New Game.gmgt";
 
         /* Checks if external storage is available for read and write */
-        boolean isExternalStorageWritable = false;
-        String writeState = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(writeState)) {
-            isExternalStorageWritable = true;
-        }
+
+
+        boolean isExternalStorageWritable = isStorageWritable();
 
         if (isExternalStorageWritable) {
 
-            if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    != PackageManager.PERMISSION_GRANTED) {
+            if (!permissionToWrite()) {
 
                 /* TODO warn users app is not able to write to external storage
-            warn that permission is needed, else saved files will be written to app internal storage, and deleted if app is uninstalled
-            inform user that files written to internal storage can be transferred to external storage when available
+            warn that permission is needed, else saved files will be written to app
+            internal storage, and deleted if app is uninstalled
+            inform user that files written to internal storage can be transferred
+            to external storage when available
             using the Share Game button, and choosing "to external storage".
-            inform user that internally stored files will have INTERNAL appended to the file name
+            inform user that internally stored files will have INTERNAL
+            appended to the file name
 
             after user closes warning, ask for permission.
 
             until this code is written, the app will just ask for permission.
 
             */
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                        REQUEST_WRITE_EXTERNAL_CODE);
+                requestPermissionToWriteExternal();
 
-                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                // app-defined int constant. The callback method gets the
-                // result of the request.
             } else {
                 saveToExternalStorage();
-
                 Intent intent = new Intent(this, ActGameName.class);
                 startActivity(intent);
             }
         } else {
-            //TODO warn that external storage is unavailable. advise of storing internally and deleting on uninstall. advise on sharing to external when available.
+            /**TODO warn that external storage is unavailable.
+             advise of storing internally and deleting on uninstall.
+             advise on sharing to external when available.
+             **/
             saveToInternalStorage();
         }
     }
 
     public void editGameClicked(View view) {
 
-        FragFilePicker picker = new FragFilePicker();
-        Bundle bundle = new Bundle();
-        bundle.putString(KEY_FILE_PICKER_TYPE, "Edit");
-        bundle.putString(KEY_FILE_EXTENSION, ".gmgt");
-        picker.setArguments(bundle);
-        getFragmentManager().beginTransaction().
-                add(R.id.info_frame_open_menu, picker).addToBackStack(null).commit();
+        buttonClicked = "Edit";
+        boolean isExternalStorageWritable = isStorageWritable();
+        if (isExternalStorageWritable) {
+            getFilePickerState("Edit", ".gmgt");
+        } else {
+            // TODO write edit code for external storage not available
+        }
     }
 
     public void deleteGameClicked(View view) {
 
-        FragFilePicker picker = new FragFilePicker();
-        Bundle bundle = new Bundle();
-        bundle.putString("selectType", "Delete");
-        bundle.putString("fileType", ".gmgt");
-        picker.setArguments(bundle);
-        getFragmentManager().beginTransaction().
-                add(R.id.info_frame_open_menu, picker).addToBackStack(null).commit();
+        buttonClicked = "Delete";
+
+        boolean isExternalStorageWritable = isStorageWritable();
+        if (isExternalStorageWritable) {
+            getFilePickerState("Delete", ".gmgt");
+        } else {
+            // TODO write delete code for external storage not available
+        }
     }
 
     public void shareGameClicked(View view) {
 
-        FragFilePicker picker = new FragFilePicker();
-        Bundle bundle = new Bundle();
-        bundle.putString("selectType", "Share");
-        bundle.putString("fileType", ".gmgt");
-        picker.setArguments(bundle);
-        getFragmentManager().beginTransaction().
-                add(R.id.info_frame_open_menu, picker).addToBackStack(null).commit();
+        buttonClicked = "Share";
+
+        boolean isExternalStorageWritable = isStorageWritable();
+        if (isExternalStorageWritable) {
+            getFilePickerState("Share", ".gmgt");
+        } else {
+            // TODO write share code for external storage not available
+        }
+    }
+
+    private boolean isStorageWritable() {
+        String writeState = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(writeState)) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean permissionToWrite() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            return false;
+        }
+        return true;
+    }
+
+    private void requestPermissionToWriteExternal() {
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                REQUEST_WRITE_EXTERNAL_CODE);
     }
 
     @Override
@@ -188,8 +211,36 @@ public class ActOpenMenu extends Activity implements
 
         ((GameApplication) getApplication()).setGame(editGame);
 
-        Intent intent = new Intent(this, ActGameEdit.class);
+        String fileName = file.getName();
+        if (fileName.endsWith(".gmgt")) {
+            fileName = fileName.substring(0, -5);
+        }
+        ((GameApplication) getApplication()).getGame().setName(fileName);
+
+        Intent intent = new Intent(this, ActGameName.class);
         startActivity(intent);
+    }
+
+    private void getFilePickerState(String selectType, String extension) {
+
+        if (!permissionToWrite()) {
+
+            requestPermissionToWriteExternal();
+
+        } else {
+            openFilePicker(selectType, extension);
+        }
+    }
+
+    private void openFilePicker(String selectType, String extension) {
+
+        FragFilePicker picker = new FragFilePicker();
+        Bundle bundle = new Bundle();
+        bundle.putString(KEY_FILE_PICKER_TYPE, selectType);
+        bundle.putString(KEY_FILE_EXTENSION, extension);
+        picker.setArguments(bundle);
+        getFragmentManager().beginTransaction().
+                add(R.id.info_frame_open_menu, picker).addToBackStack(null).commit();
     }
 
     @Override
@@ -198,20 +249,40 @@ public class ActOpenMenu extends Activity implements
         switch (requestCode) {
             case REQUEST_WRITE_EXTERNAL_CODE: {
                 // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (buttonClicked.equals("New")) {
 
-                    saveToExternalStorage();
+                    if (grantResults.length > 0 &&
+                            grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        saveToExternalStorage();
+                    } else {
+                        saveToInternalStorage();
+                    }
+                    Intent intent = new Intent(this, ActGameName.class);
+                    startActivity(intent);
+                } else if (buttonClicked.equals("Edit")) {
+                    if (grantResults.length > 0 &&
+                            grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        openFilePicker("Edit", ".gmgt");
+                    } else {
+                        // TODO write permission denied code
+                    }
 
-                } else {
+                } else if (buttonClicked.equals("Delete")) {
+                    if (grantResults.length > 0 &&
+                            grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        openFilePicker("Delete", ".gmgt");
+                    } else {
+                        // TODO write permission denied code
+                    }
 
-                    saveToInternalStorage();
-
+                } else if (buttonClicked.equals("Share")) {
+                    if (grantResults.length > 0 &&
+                            grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        openFilePicker("Share", ".gmgt");
+                    } else {
+                        // TODO write permission denied code
+                    }
                 }
-
-                Intent intent = new Intent(this, ActGameName.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                startActivity(intent);
 
                 return;
             }
@@ -249,6 +320,7 @@ public class ActOpenMenu extends Activity implements
     }
 
     public void saveToInternalStorage() {
-
+        //TODO write code for saving to internal storage
     }
+
 }
